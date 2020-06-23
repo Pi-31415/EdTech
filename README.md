@@ -1,5 +1,7 @@
 # EdTech Web Development Front Page
 
+>If you have any questions about the code, please contact the original developer Pi at https://github.com/Pi-31415 on Github, or https://t.me/joinchat/AAAAAEWFzdFCW_I7nipJgA on Telegram.
+
 I will be using the following tools for this single-page design.
 
 ## No Dependencies
