@@ -13,5 +13,7 @@ I will be using the following tools for this single-page design.
 
 ## Dependencies
 * Google Fonts
+* Google Material Icons
+
 
 Documentation in details is written where necessary in the source files.
