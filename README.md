@@ -14,8 +14,9 @@ I will be using the following tools for this single-page design.
 ## Dependencies
 * Google Fonts
 * Google Material Icons
+* Font Awesome ()
 
-## Stock Images Used
+## List of Stock Images Used
 * Oxford University (https://unsplash.com/photos/d6ebY-faOO0)
 
 Documentation in details is written where necessary in the source files.
