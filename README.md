@@ -33,4 +33,4 @@ sass style.sass style.css
 ## List of Stock Images Used
 * Oxford University (https://unsplash.com/photos/d6ebY-faOO0)
 
-Documentation in detail is written where necessary in the source files.
+>Further documentation in detail is written where necessary in the source files.
