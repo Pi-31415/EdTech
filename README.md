@@ -10,7 +10,7 @@ To compile sass to css, first install SASS via NPM
 npm install -g sass
 ```
 
-Then,locate to source folder and please run
+Then, locate to source folder and please run
 
 ```
 cd css
