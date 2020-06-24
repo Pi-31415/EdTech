@@ -6,19 +6,13 @@ body {
 }
 
 #component1 {
-  font: 100% "Helvetica", sans-serif;
-  color: #999999;
   background-color: #666666;
-  margin: 0;
   height: 100vh;
   width: 100vw;
 }
 
 #component2 {
-  font: 100% "Helvetica", sans-serif;
-  color: #999999;
   background-color: #cd2028;
-  margin: 0;
   height: 100vh;
   width: 100vw;
 }
