@@ -16,6 +16,7 @@ h1, h2, h3 {
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .right {
@@ -29,6 +30,12 @@ a:hover {
   height: 80vh;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.splitter {
+  height: 70px;
 }
 
 .material-icons.primary {
@@ -148,38 +155,36 @@ a:hover {
 }
 
 #component-tagline {
-  background-color: #9b1c31;
+  background: linear-gradient(-90deg, #7d1d2d, #9b1c31, #7d1d2d);
+  color: #ffffff;
+  font-size: 1.2em;
   height: 100vh;
   width: 100vw;
+  text-align: center;
 }
 
 #component-about {
   background-color: #eeeeee;
-  height: 100vh;
   width: 100vw;
 }
 
 #component-how {
   background-color: #575e67;
-  height: 100vh;
   width: 100vw;
 }
 
 #component-tutorials {
   background-color: #9b1c31;
-  height: 100vh;
   width: 100vw;
 }
 
 #component-refund {
   background-color: #575e67;
-  height: 100vh;
   width: 100vw;
 }
 
 #component-freetrial {
   background-color: #eeeeee;
-  height: 100vh;
   width: 100vw;
 }
 

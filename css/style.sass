@@ -9,6 +9,7 @@ $background-white:#eeeeee
 $text-dark: #333333
 $text-color: #999999
 $text-white: #ffffff
+$navbar-height: 70px
 
 body
 	margin:0
@@ -26,6 +27,7 @@ h1, h2, h3
 
 a:hover
 	text-decoration: underline
+	cursor: pointer
 
 .right
 	text-align: right
@@ -37,7 +39,13 @@ a:hover
 	height: 80vh
 	padding-left:15px
 	padding-right:15px
+	margin-left: auto
+	margin-right: auto
 
+//splitter class is a spacer, not to interfere with nav bar for other components at the bottom
+.splitter
+	height: $navbar-height
+	
 //Styling for material icons
 .material-icons.primary
 	color: $primary-color
@@ -69,7 +77,7 @@ a:hover
 //Style for sticky navagation bar
 .navbar
 	width: 100vw
-	height: 70px
+	height: $navbar-height
 	display: flex
 	align-items: center
 	justify-content: space-around
@@ -81,7 +89,7 @@ a:hover
 	top: 0
 
 .content
-	padding-top: 70px
+	padding-top: $navbar-height
 	background-color: $primary-color
 
 //The styles of components are arranged in the same order as in the HTML file
@@ -141,33 +149,31 @@ a:hover
 	display: none
 
 #component-tagline
-	background-color: $primary-color
+	background: linear-gradient(-90deg,$primary-gradient,$primary-color,$primary-gradient)
+	color: $text-white
+	font-size: 1.2em
 	height:100vh
 	width:100vw
+	text-align: center
 
 #component-about
 	background-color: $background-white
-	height:100vh
 	width:100vw
 
 #component-how
 	background-color: $secondary-color
-	height:100vh
 	width:100vw
 
 #component-tutorials
 	background-color: $primary-color
-	height:100vh
 	width:100vw
 
 #component-refund
 	background-color: $secondary-color
-	height:100vh
 	width:100vw
 
 #component-freetrial
 	background-color: $background-white
-	height:100vh
 	width:100vw
 
 #component-contact

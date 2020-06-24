@@ -17,6 +17,7 @@ $(document).ready(function () {
 		$(".component-loginbox").addClass("active");
 		//hides navbar for a while
 		$(".navbar").hide();
+		$(".content").hide();
 	});
 	
 	
@@ -24,6 +25,7 @@ $(document).ready(function () {
 	$('#loginbox-close').click(function () {
 		$(".component-loginbox").removeClass("active");
 		$(".navbar").show();
+		$(".content").show();
 	});
 	
 	
