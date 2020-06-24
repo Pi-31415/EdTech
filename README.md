@@ -4,14 +4,14 @@
 
 I will be using the following tools for this single-page design.
 
-## non CDN
+## Locally hosted
 
 * HTML 5
 * SASS
 * JavaScript
 * jQuery (hosted on our own)
 
-## CDN
+## via CDN
 * Google Fonts (Kodchasan,Zilla Slab,Aldrich)
 * Google Material Icons
 * Font Awesome
