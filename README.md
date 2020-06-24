@@ -12,7 +12,7 @@ I will be using the following tools for this single-page design.
 * jQuery (hosted on our own)
 
 ## Dependencies
-* Google Fonts
+* Google Fonts (Kodchasan,Zilla Slab,Aldrich)
 * Google Material Icons
 * Font Awesome
 

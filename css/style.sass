@@ -1,7 +1,7 @@
 
-$font-branding:    'Exo 2', sans-serif
-$font-title:    'Helvetica', sans-serif
-$font-text:    'Helvetica', sans-serif
+$font-branding:    'Aldrich', sans-serif
+$font-title:    'Zilla Slab', sans-serif
+$font-text:    'Kodchasan', sans-serif
 $primary-color: #9b1c31
 $primary-gradient: #7d1d2d
 $secondary-color: #575e67
@@ -16,6 +16,38 @@ body
 	font: 100% $font-text
 	color: $text-color
 
+a
+	text-decoration: none
+	transition: 0.3s
+
+h1, h2, h3
+	font-family: $font-title
+
+
+a:hover
+	text-decoration: underline
+
+.right
+	text-align: right
+	
+.center
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 80vh
+	padding-left:15px
+	padding-right:15px
+
+//Styling for material icons
+.material-icons.primary
+	color: $primary-color
+
+.material-icons.white
+	color: $text-white
+
+.material-icons.big
+	font-size: 60px
+
 //Style for login popup
 .component-loginbox
 	background-color: $primary-color
@@ -24,13 +56,15 @@ body
 	display: none
 	z-index: 2
 
+.component-loginbox a
+	color: $text-white
+
 .component-loginbox.active
 	display: block
 	z-index: 2
 
 #loginbox-close
-	position: relative
-	float: right
+	color: $text-white
 
 //Style for sticky navagation bar
 .navbar
@@ -48,6 +82,7 @@ body
 
 .content
 	padding-top: 70px
+	background-color: $primary-color
 
 //The styles of components are arranged in the same order as in the HTML file
 #component-banner
@@ -56,12 +91,21 @@ body
 	background-position: center
 	background-attachment: fixed
 	background-size: cover
+	color: $text-white
+	font-size: 1.6em
+	letter-spacing: 2px
 	background-color: $secondary-color
+	height:100vh
+	width:100vw
+	text-align: center
+
+#component-banner-overlay
+	background: rgba(0, 0, 0, 0.5)
 	height:100vh
 	width:100vw
 
 .logo
-	letter-spacing: 3px
+	font-family: $font-branding
 
 .nav
 	display: flex

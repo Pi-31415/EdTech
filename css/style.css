@@ -1,8 +1,46 @@
 body {
   margin: 0;
   padding: 0;
-  font: 100% "Helvetica", sans-serif;
+  font: 100% "Kodchasan", sans-serif;
   color: #999999;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+h1, h2, h3 {
+  font-family: "Zilla Slab", sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.material-icons.primary {
+  color: #9b1c31;
+}
+
+.material-icons.white {
+  color: #ffffff;
+}
+
+.material-icons.big {
+  font-size: 60px;
 }
 
 .component-loginbox {
@@ -13,14 +51,17 @@ body {
   z-index: 2;
 }
 
+.component-loginbox a {
+  color: #ffffff;
+}
+
 .component-loginbox.active {
   display: block;
   z-index: 2;
 }
 
 #loginbox-close {
-  position: relative;
-  float: right;
+  color: #ffffff;
 }
 
 .navbar {
@@ -47,13 +88,23 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  color: #ffffff;
+  font-size: 1.6em;
+  letter-spacing: 2px;
   background-color: #575e67;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+#component-banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100vw;
 }
 
 .logo {
-  letter-spacing: 3px;
+  font-family: "Aldrich", sans-serif;
 }
 
 .nav {

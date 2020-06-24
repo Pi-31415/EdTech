@@ -9,6 +9,10 @@
 	<meta name="author" content="ZMS Education & Technology">
 	<!--Responsive View Related Metadata-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<!--Fonts from Google Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Zilla Slab' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Kodchasan' rel='stylesheet'>
 	<!--code below loads external CSS-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +24,17 @@
 <body>
 	<!-- Log In Popup -->
 	<div class="component-loginbox">
-		<a id="loginbox-close">Close</a>
+		<br>
+		<div class="right">
+			<a id="loginbox-close" style="padding:20px 40px;">
+				<span class="material-icons white">
+					cancel
+				</span>
+			</a>
+		</div>
+		<div class="center">
+			<a href="#">Don't have an account? Contact us for a free trial.</a>
+		</div>
 	</div>
 	<!-- Navagation Bar - sticky on top-->
 	<div class="navbar">
@@ -32,6 +46,19 @@
 	<!-- Main page begins here-->
 	<div class="content">
 		<div id="component-banner">
+			<div id="component-banner-overlay">
+				<div class="center">
+					<h1>Quality Education <u>for All</u></h1>
+				</div>
+				<!--This is a reusable code for jumping between components, remember to link it with jQuery-->
+				<div>
+					<a href="#" onclick="jumpto('#component-tagline')">
+						<span class="material-icons primary big">
+							arrow_drop_down_circle
+						</span>
+					</a>
+				</div>
+			</div>
 		</div>
 		<div id="component-tagline">
 		</div>
@@ -44,6 +71,7 @@
 		<div id="component-refund">
 		</div>
 		<div id="component-freetrial">
+			Free Trial
 		</div>
 		<div id="component-contact">
 			Contact

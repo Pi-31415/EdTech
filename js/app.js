@@ -3,7 +3,12 @@ This is the main JavaScript file for all the functions running on the web page. 
 */
 
 //List of functions to use
-
+function jumpto(elementid){
+	//this is the function for smooth scrolling between the components when the buttons at the bottom of the component is clicked
+	$([document.documentElement, document.body]).animate({
+        scrollTop: $(elementid).offset().top
+    }, 1000);
+}
 
 //Main function which runs when the page loads
 $(document).ready(function () {
