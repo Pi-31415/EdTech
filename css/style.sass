@@ -7,7 +7,7 @@ $primary-gradient: #7d1d2d
 $secondary-color: #575e67
 $background-white:#eeeeee
 $text-dark: #333333
-$text-color: #999999
+$text-color: #777777
 $text-white: #ffffff
 $navbar-height: 70px
 
@@ -29,6 +29,60 @@ a:hover
 	text-decoration: underline
 	cursor: pointer
 
+//Grid management
+//Thus, the class named grid-container-3 will show 3 column container on desktop
+
+.grid
+	display: grid
+	grid-gap: 100px
+	padding-left: 100px
+	padding-right: 100px
+	padding-top: 20px
+	&-container-3
+		@extend .grid
+		grid-template-columns: auto auto auto
+	&-container-4
+		@extend .grid
+		grid-template-columns: auto auto auto auto
+
+.grid-container-3 div
+	margin-left: auto
+	margin-right: auto
+	width: 300px
+	text-align: center
+
+.grid-container-4 div
+	margin-left: auto
+	margin-right: auto
+	width: 200px
+	text-align: center
+
+//Responsive Designs
+
+@media screen and (max-width: 1200px)
+	.grid-container-3,.grid-container-4
+		grid-template-columns: auto
+		grid-gap: 50px
+		padding-left: 50px
+		padding-right: 50px
+	
+	.grid-container-3 div,.grid-container-4 div
+		width: 80vw
+
+@media screen and (max-width: 600px)
+	.grid-container-3,.grid-container-4
+		grid-gap: 25px
+		padding-left: 20px
+		padding-right: 20px
+
+	.grid-container-3 div,.grid-container-4 div
+		width: 80vw
+
+//More general CSS classes
+.avatar
+	width: 200px
+	border-radius: 50%
+
 .right
 	text-align: right
 	
@@ -45,7 +99,10 @@ a:hover
 //splitter class is a spacer, not to interfere with nav bar for other components at the bottom
 .splitter
 	height: $navbar-height
-	
+
+//cuts the screen in half, invisible div
+.splitter-half
+	height: 10vh
 //Styling for material icons
 .material-icons.primary
 	color: $primary-color
@@ -89,14 +146,12 @@ a:hover
 	top: 0
 
 .content
-	padding-top: $navbar-height
 	background-color: $primary-color
 
 //The styles of components are arranged in the same order as in the HTML file
 #component-banner
 	background-image: url("../img/oxford.jpg")
 	background-repeat: no-repeat
-	background-position: center
 	background-attachment: fixed
 	background-size: cover
 	color: $text-white
@@ -106,6 +161,11 @@ a:hover
 	height:100vh
 	width:100vw
 	text-align: center
+
+//responsive design for banner
+@media screen and (max-width: 600px)
+	#component-banner
+		background-size: auto 100vh
 
 #component-banner-overlay
 	background: rgba(0, 0, 0, 0.5)
@@ -156,13 +216,34 @@ a:hover
 	width:100vw
 	text-align: center
 
+#component-tagline h1,h2,h3,p
+	margin-left:20px
+	margin-right:20px
+
 #component-about
-	background-color: $background-white
+	background: $background-white
+	color: $text-dark
+	font-size: 1.2em
 	width:100vw
+	text-align: center
+
+#component-about h1,h2,h3,p
+	margin-left:20px
+	margin-right:20px
+
+#component-about h4
+	color: $text-color
 
 #component-how
 	background-color: $secondary-color
+	color: $text-white
+	text-align: center
+	height:100vh
 	width:100vw
+
+#component-how h1,p
+	margin-left:20px
+	margin-right:20px
 
 #component-tutorials
 	background-color: $primary-color

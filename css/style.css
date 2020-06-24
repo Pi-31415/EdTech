@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font: 100% "Kodchasan", sans-serif;
-  color: #999999;
+  color: #777777;
 }
 
 a {
@@ -17,6 +17,62 @@ h1, h2, h3 {
 a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.grid, .grid-container-4, .grid-container-3 {
+  display: grid;
+  grid-gap: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+}
+.grid-container-3 {
+  grid-template-columns: auto auto auto;
+}
+.grid-container-4 {
+  grid-template-columns: auto auto auto auto;
+}
+
+.grid-container-3 div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+}
+
+.grid-container-4 div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .grid-container-3, .grid-container-4 {
+    grid-template-columns: auto;
+    grid-gap: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .grid-container-3 div, .grid-container-4 div {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid-container-3, .grid-container-4 {
+    grid-gap: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .grid-container-3 div, .grid-container-4 div {
+    width: 80vw;
+  }
+}
+.avatar {
+  width: 200px;
+  border-radius: 50%;
 }
 
 .right {
@@ -36,6 +92,10 @@ a:hover {
 
 .splitter {
   height: 70px;
+}
+
+.splitter-half {
+  height: 10vh;
 }
 
 .material-icons.primary {
@@ -86,14 +146,12 @@ a:hover {
 }
 
 .content {
-  padding-top: 70px;
   background-color: #9b1c31;
 }
 
 #component-banner {
   background-image: url("../img/oxford.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   color: #ffffff;
@@ -105,6 +163,11 @@ a:hover {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  #component-banner {
+    background-size: auto 100vh;
+  }
+}
 #component-banner-overlay {
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
@@ -163,14 +226,39 @@ a:hover {
   text-align: center;
 }
 
+#component-tagline h1, h2, h3, p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 #component-about {
-  background-color: #eeeeee;
+  background: #eeeeee;
+  color: #333333;
+  font-size: 1.2em;
   width: 100vw;
+  text-align: center;
+}
+
+#component-about h1, h2, h3, p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#component-about h4 {
+  color: #777777;
 }
 
 #component-how {
   background-color: #575e67;
+  color: #ffffff;
+  text-align: center;
+  height: 100vh;
   width: 100vw;
+}
+
+#component-how h1, p {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #component-tutorials {
