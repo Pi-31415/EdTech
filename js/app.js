@@ -6,6 +6,10 @@ This is the main JavaScript file for all the functions running on the web page. 
 
 
 //Main function which runs when the page loads
-$(document).ready(function(){
+$(document).ready(function () {
+
+	$('#loginbutton').click(function () {
+		alert('yes');
+	});
 
 });

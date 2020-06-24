@@ -1,10 +1,13 @@
+
 $font-branding:    'Exo 2', sans-serif
 $font-title:    'Helvetica', sans-serif
 $font-text:    'Helvetica', sans-serif
-$primary-color: #cd2028
+$primary-color: #9b1c31
+$primary-gradient: #7d1d2d
 $secondary-color: #666666
 $title-color: #333333
 $text-color: #999999
+$text-white: #ffffff
 
 body
 	margin:0
@@ -12,12 +15,58 @@ body
 	font: 100% $font-text
 	color: $text-color
 
-#component1
-	background-color: #666666
+//The styles of components are arranged in the same order as in the HTML file
+
+#component-1
+	background-image: url("../img/oxford.jpg")
+	background-repeat: no-repeat
+	background-position: center
+	background-attachment: fixed
+	background-size: cover
+	background-color: $secondary-color
 	height:100vh
 	width:100vw
 
-#component2
+.navbar
+	width: 100vw
+	height: 70px
+	display: flex
+	align-items: center
+	justify-content: space-around
+	background: linear-gradient($primary-gradient,$primary-color)
+	color: $text-white
+
+.logo
+	letter-spacing: 3px
+
+.nav
+	display: flex
+	justify-content: space-around
+	width: 30%
+
+.navlink
+	list-style: none
+
+.navlink a
+	text-decoration: none
+	font-size: 1em
+	margin: 0
+	padding: 10px 15px 10px 15px
+	color: $text-white
+	border: 2px solid $text-white
+	border-radius: 5px
+	transition: 0.3s
+
+.navlink a:hover
+	color: $primary-color
+	border: 2px solid $text-white
+	background-color: $text-white
+
+.burger
+	font-size: 1.2em
+	display: none
+
+#component-2
 	background-color: $primary-color
 	height:100vh
 	width:100vw
