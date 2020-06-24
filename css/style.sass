@@ -4,8 +4,9 @@ $font-title:    'Helvetica', sans-serif
 $font-text:    'Helvetica', sans-serif
 $primary-color: #9b1c31
 $primary-gradient: #7d1d2d
-$secondary-color: #666666
-$title-color: #333333
+$secondary-color: #575e67
+$background-white:#eeeeee
+$text-dark: #333333
 $text-color: #999999
 $text-white: #ffffff
 
@@ -15,9 +16,41 @@ body
 	font: 100% $font-text
 	color: $text-color
 
-//The styles of components are arranged in the same order as in the HTML file
+//Style for login popup
+.component-loginbox
+	background-color: $primary-color
+	height:100vh
+	width:100vw
+	display: none
+	z-index: 2
 
-#component-1
+.component-loginbox.active
+	display: block
+	z-index: 2
+
+#loginbox-close
+	position: relative
+	float: right
+
+//Style for sticky navagation bar
+.navbar
+	width: 100vw
+	height: 70px
+	display: flex
+	align-items: center
+	justify-content: space-around
+	background: linear-gradient($primary-gradient,$primary-color)
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+	color: $text-white
+	position: fixed
+	z-index: 1
+	top: 0
+
+.content
+	padding-top: 70px
+
+//The styles of components are arranged in the same order as in the HTML file
+#component-banner
 	background-image: url("../img/oxford.jpg")
 	background-repeat: no-repeat
 	background-position: center
@@ -26,15 +59,6 @@ body
 	background-color: $secondary-color
 	height:100vh
 	width:100vw
-
-.navbar
-	width: 100vw
-	height: 70px
-	display: flex
-	align-items: center
-	justify-content: space-around
-	background: linear-gradient($primary-gradient,$primary-color)
-	color: $text-white
 
 .logo
 	letter-spacing: 3px
@@ -48,6 +72,12 @@ body
 	list-style: none
 
 .navlink a
+	list-style: none
+	color: $text-white
+	text-decoration: none
+	font-size: 1em
+
+#loginbutton
 	text-decoration: none
 	font-size: 1em
 	margin: 0
@@ -57,7 +87,7 @@ body
 	border-radius: 5px
 	transition: 0.3s
 
-.navlink a:hover
+#loginbutton:hover
 	color: $primary-color
 	border: 2px solid $text-white
 	background-color: $text-white
@@ -66,7 +96,36 @@ body
 	font-size: 1.2em
 	display: none
 
-#component-2
+#component-tagline
 	background-color: $primary-color
 	height:100vh
+	width:100vw
+
+#component-about
+	background-color: $background-white
+	height:100vh
+	width:100vw
+
+#component-how
+	background-color: $secondary-color
+	height:100vh
+	width:100vw
+
+#component-tutorials
+	background-color: $primary-color
+	height:100vh
+	width:100vw
+
+#component-refund
+	background-color: $secondary-color
+	height:100vh
+	width:100vw
+
+#component-freetrial
+	background-color: $background-white
+	height:100vh
+	width:100vw
+
+#component-contact
+	background-color: $secondary-color
 	width:100vw

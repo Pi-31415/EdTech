@@ -5,15 +5,22 @@ body {
   color: #999999;
 }
 
-#component-1 {
-  background-image: url("../img/oxford.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #666666;
+.component-loginbox {
+  background-color: #9b1c31;
   height: 100vh;
   width: 100vw;
+  display: none;
+  z-index: 2;
+}
+
+.component-loginbox.active {
+  display: block;
+  z-index: 2;
+}
+
+#loginbox-close {
+  position: relative;
+  float: right;
 }
 
 .navbar {
@@ -23,7 +30,26 @@ body {
   align-items: center;
   justify-content: space-around;
   background: linear-gradient(#7d1d2d, #9b1c31);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #ffffff;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.content {
+  padding-top: 70px;
+}
+
+#component-banner {
+  background-image: url("../img/oxford.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #575e67;
+  height: 100vh;
+  width: 100vw;
 }
 
 .logo {
@@ -41,6 +67,13 @@ body {
 }
 
 .navlink a {
+  list-style: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+#loginbutton {
   text-decoration: none;
   font-size: 1em;
   margin: 0;
@@ -51,7 +84,7 @@ body {
   transition: 0.3s;
 }
 
-.navlink a:hover {
+#loginbutton:hover {
   color: #9b1c31;
   border: 2px solid #ffffff;
   background-color: #ffffff;
@@ -62,9 +95,44 @@ body {
   display: none;
 }
 
-#component-2 {
+#component-tagline {
   background-color: #9b1c31;
   height: 100vh;
+  width: 100vw;
+}
+
+#component-about {
+  background-color: #eeeeee;
+  height: 100vh;
+  width: 100vw;
+}
+
+#component-how {
+  background-color: #575e67;
+  height: 100vh;
+  width: 100vw;
+}
+
+#component-tutorials {
+  background-color: #9b1c31;
+  height: 100vh;
+  width: 100vw;
+}
+
+#component-refund {
+  background-color: #575e67;
+  height: 100vh;
+  width: 100vw;
+}
+
+#component-freetrial {
+  background-color: #eeeeee;
+  height: 100vh;
+  width: 100vw;
+}
+
+#component-contact {
+  background-color: #575e67;
   width: 100vw;
 }
 
