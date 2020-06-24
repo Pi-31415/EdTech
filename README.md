@@ -4,6 +4,19 @@
 
 I will be using the following tools for this single-page design.
 
+To compile sass to css, first install SASS via NPM
+
+```
+npm install -g sass
+```
+
+Then,locate to source folder and please run
+
+```
+cd css
+sass style.sass style.css
+```
+
 ## No Dependencies
 
 * HTML 5
