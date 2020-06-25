@@ -18,6 +18,11 @@ function loginboxclose() {
 
 //Main function which runs when the page loads
 $(document).ready(function () {
+	//For initializing the international phone selector
+	var input = document.querySelector("#phone");
+	window.intlTelInput(input, {
+		// any initialisation options go here
+	});
 
 	$('#loginbutton').click(function () {
 		$(".component-loginbox").addClass("active");
@@ -25,7 +30,6 @@ $(document).ready(function () {
 		$(".navbar").hide();
 		$(".content").hide();
 	});
-
 
 	//Function to close the login box and 
 	$('#loginbox-close').click(function () {
