@@ -119,6 +119,10 @@ a:hover {
   height: 10vh;
 }
 
+.fab {
+  margin: 5px;
+}
+
 .material-icons.primary {
   color: #9b1c31;
 }
