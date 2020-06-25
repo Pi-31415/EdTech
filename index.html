@@ -13,7 +13,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Zilla Slab' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Kodchasan' rel='stylesheet'>
-	
+
 	<!--code below loads external CSS-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,12 +30,25 @@
 		<br>
 		<div class="right">
 			<a id="loginbox-close" style="padding:20px 40px;">
-				<span class="material-icons white">
+				<span class="material-icons primary">
 					cancel
 				</span>
 			</a>
 		</div>
-		<div class="center">
+		<div>
+			<div class='splitter-half'></div>
+			<!--Login Form-->
+			<div class="form__group field">
+				<input type="email" class="form__field" placeholder="Email" name="email-login" id='email-login' required />
+				<label for="email-login" class="form__label">Email</label>
+			</div>
+			<div class="form__group field">
+				<input type="password" class="form__field" placeholder="Password" name="password" id='password' required />
+				<label for="password" class="form__label">Password</label>
+			</div>
+			<br><br>
+					<button class="button" onclick="login()">Log In</button>
+			<div class='splitter-half'></div>
 			<a href="#" onclick="loginboxclose();jumpto('#component-freetrial')">Don't have an account?<br>Contact us for a free trial.</a>
 		</div>
 	</div>
@@ -205,7 +218,7 @@
 						<label for="phone" class="form__label">Phone</label>
 					</div>
 					<br><br>
-					<button class="button">Schedule</button>
+					<button class="button" onclick="schedule()">Schedule</button>
 				</div>
 			</div>
 			<div class='splitter'></div>

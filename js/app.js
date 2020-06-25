@@ -16,6 +16,15 @@ function loginboxclose() {
 	$(".content").show();
 }
 
+//These are pseudo functions to demonstrate login and schedule
+function login(){
+	alert('Yes');
+}
+
+function schedule(){
+	alert('Da');
+}
+
 //Main function which runs when the page loads
 $(document).ready(function () {
 	
@@ -30,7 +39,5 @@ $(document).ready(function () {
 	$('#loginbox-close').click(function () {
 		loginboxclose();
 	});
-
-
 
 });
