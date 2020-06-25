@@ -31,8 +31,6 @@ sass style.sass style.css
 
 ## List of Stock Images Used
 
-Please reduce the file size for the stock images before use.
-
 * Oxford University (https://unsplash.com/photos/d6ebY-faOO0)
 * Person holding pen (https://unsplash.com/photos/O3gOgPB4sRU)
 * Avatars of people
@@ -40,5 +38,6 @@ Please reduce the file size for the stock images before use.
 ## Todo list
 
 * Edit schedule(), logout() and login() functions in js/app.js when the backend API is available
+* Reduce the file size for the stock images before use.
 
 >Further documentation in detail is written where necessary in the source files.
