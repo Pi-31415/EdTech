@@ -32,6 +32,7 @@ sass style.sass style.css
 
 ## List of Stock Images Used
 * Oxford University (https://unsplash.com/photos/d6ebY-faOO0)
+* Person holding pen (https://unsplash.com/photos/O3gOgPB4sRU)
 * Avatars of people
 
 >Further documentation in detail is written where necessary in the source files.
