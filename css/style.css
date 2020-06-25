@@ -106,11 +106,7 @@ a:hover {
   color: #ffffff;
 }
 
-.material-icons.big {
-  font-size: 60px;
-}
-
-.fa.big {
+.material-icons.big, .fa.big, .fas.big {
   font-size: 60px;
 }
 
