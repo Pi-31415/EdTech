@@ -325,4 +325,9 @@ a:hover {
   width: 100vw;
 }
 
+#copyright {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
