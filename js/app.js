@@ -18,20 +18,124 @@ function loginboxclose() {
 
 //These are pseudo functions to demonstrate login and schedule
 function login() {
-	var checklist = [false, false, false, false];
+	//array to validate conditions
+	/*
+	checklist[0] = Is the email field filled?
+	checklist[1] = Is the password field filled?
+	checklist[2] = Does email include an @ sign?
+	*/
+	$('#login-form-errors').html("");
+	$('#login-form-errors').hide();
+
+	var checklist = [false, false, false];
 	var email = document.getElementById("email-login").value;
 	var password = document.getElementById("password").value;
-	
-	alert(password);
+
+	if (email.length > 0) {
+		checklist[0] = true;
+	} else {
+		$('#login-form-errors').html("Please fill in your email.");
+		$('#login-form-errors').fadeIn();
+	}
+
+	if (password.length > 0) {
+		checklist[1] = true;
+	} else {
+		$('#login-form-errors').html("Please enter your password.");
+		$('#login-form-errors').fadeIn();
+	}
+
+	if (email.includes("@") == true) {
+		checklist[2] = true;
+	} else {
+		$('#login-form-errors').html("Please enter a valid email address.");
+		$('#login-form-errors').fadeIn();
+	}
+	//request to login API once all the conditions are met
+	if (checklist[0] == true && checklist[1] == true && checklist[2] == true) {
+		//create a temporary login effect
+		var logout_button = "<a href=\"#\" id='logoutbutton' onclick='logout()'><u>Log Out</u></a>";
+		$('#username_navbar').html(email + " - " + logout_button);
+		$('#username_navbar').show();
+		$('#loginbutton').hide();
+		loginboxclose();
+	}
+}
+
+function logout() {
+	//Pseudo logout function
+	$('#username_navbar').hide();
+	$('#loginbutton').show();
 }
 
 function schedule() {
-	alert('Da');
+	//array to validate conditions
+	/*
+	checklist[0] = Is the email field filled?
+	checklist[1] = Is the name field filled?
+	checklist[2] = Does email include an @ sign?
+	checklist[3] = Is the phone field filled?
+	checklist[4] = Is phone field only digits?
+	*/
+	$('#schedule-form-errors').html("");
+	$('#schedule-form-errors').hide();
+
+	var checklist = [false, false, false, false, false];
+	var name = document.getElementById("name").value;
+	var email = document.getElementById("email").value;
+	var phone = document.getElementById("phone").value;
+
+	if (email.length > 0) {
+		checklist[0] = true;
+	} else {
+		$('#login-form-errors').html("Please fill in your email.");
+		$('#login-form-errors').fadeIn();
+	}
+
+	if (name.length > 0) {
+		checklist[1] = true;
+	} else {
+		$('#schedule-form-errors').html("Please enter your full name.");
+		$('#schedule-form-errors').fadeIn();
+	}
+
+	if (email.includes("@") == true) {
+		checklist[2] = true;
+	} else {
+		$('#schedule-form-errors').html("Please enter a valid email address.");
+		$('#schedule-form-errors').fadeIn();
+	}
+	
+	if (phone.length > 0) {
+		checklist[3] = true;
+	} else {
+		$('#schedule-form-errors').html("Please enter phone number.");
+		$('#schedule-form-errors').fadeIn();
+	}
+	
+	if (/^\d+$/.test(phone)) {
+		checklist[4] = true;
+	} else {
+		$('#schedule-form-errors').html("Please enter a valid phone number.");
+		$('#schedule-form-errors').fadeIn();
+	}
+	
+	if (checklist[0] == true && checklist[1] == true && checklist[2] == true && checklist[3] == true && checklist[4] == true) {
+		//create a temporary login effect
+		var contact_message = "Thank you very much for contacting us";
+		$('#schedule-form-success').html(contact_message);
+		$('#schedule-form-success').fadeIn();
+	}
+	
 }
 
 //Main function which runs when the page loads
 $(document).ready(function () {
-
+	//Hide unnecessary components (such as notices and validation messages) for fade in
+	$('#username_navbar').hide();
+	$('#schedule-form-success').hide();
+	
+	//Log in Popup
 	$('#loginbutton').click(function () {
 		$(".component-loginbox").addClass("active");
 		//hides navbar for a while
@@ -43,5 +147,6 @@ $(document).ready(function () {
 	$('#loginbox-close').click(function () {
 		loginboxclose();
 	});
+
 
 });

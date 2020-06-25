@@ -38,6 +38,7 @@
 		<div>
 			<div class='splitter-half'></div>
 			<!--Login Form-->
+			<div id="login-form-errors"></div>
 			<div class="form__group field">
 				<input type="email" class="form__field" placeholder="Email" name="email-login" id='email-login' required />
 				<label for="email-login" class="form__label">Email</label>
@@ -47,7 +48,7 @@
 				<label for="password" class="form__label">Password</label>
 			</div>
 			<br><br>
-					<button class="button" onclick="login()">Log In</button>
+			<button class="button" onclick="login()">Log In</button>
 			<div class='splitter-half'></div>
 			<a href="#" onclick="loginboxclose();jumpto('#component-freetrial')">Don't have an account?<br>Contact us for a free trial.</a>
 		</div>
@@ -57,6 +58,7 @@
 		<h1 class="logo">ZMS</h1>
 		<ul class="nav">
 			<li class="navlink"><a href="#" id='loginbutton'>Login</a></li>
+			<li class="navlink" id="username_navbar"></li>
 		</ul>
 	</div>
 	<!-- Main page begins here-->
@@ -205,6 +207,7 @@
 					<h1>Schedule a free trial</h1>
 				</div>
 				<div>
+					<div id="schedule-form-errors"></div>
 					<div class="form__group field">
 						<input type="input" class="form__field" placeholder="Full Name" name="name" id='name' required />
 						<label for="name" class="form__label">Full Name</label>
@@ -219,6 +222,7 @@
 					</div>
 					<br><br>
 					<button class="button" onclick="schedule()">Schedule</button>
+					<div id="schedule-form-success"></div>
 				</div>
 			</div>
 			<div class='splitter'></div>
@@ -271,6 +275,13 @@
 
 				</script>
 				ZMS
+				<div>
+					<a href="#" onclick="jumpto('#component-banner')">
+						<span class="material-icons white big">
+							keyboard_arrow_up
+						</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -389,7 +389,7 @@ input {
   height: 100vh;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   #component-tutorials {
     height: auto;
   }
@@ -432,7 +432,14 @@ input {
   margin-right: auto;
   width: 100vw;
   text-align: center;
-  padding-bottom: 50px;
+}
+
+#schedule-form-errors, #login-form-errors {
+  color: red;
+}
+
+#schedule-form-success {
+  color: #228B22;
 }
 
 /*# sourceMappingURL=style.css.map */
