@@ -15,6 +15,7 @@ I will be using the following tools for this single-page design.
 * Google Fonts (Kodchasan,Zilla Slab,Aldrich)
 * Google Material Icons
 * Font Awesome
+* International Telephone Input (https://github.com/jackocnr/intl-tel-input)
 
 
 To compile sass to css, first install SASS via NPM
