@@ -80,6 +80,10 @@ a:hover {
     width: 80vw;
   }
 }
+.white {
+  color: #ffffff;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
