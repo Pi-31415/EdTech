@@ -30,6 +30,19 @@ input {
   width: 50%;
 }
 
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #333333;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
 .grid, .grid-container-4, .grid-container-3, .grid-container-2 {
   display: grid;
   grid-gap: 100px;
