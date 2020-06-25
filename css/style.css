@@ -81,7 +81,9 @@ a:hover {
   }
 }
 .overlay {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .avatar {
