@@ -31,13 +31,13 @@ input {
 }
 
 .form__field {
-  font-family: "Zilla Slab", sans-serif;
+  font-family: "Kodchasan", sans-serif;
   width: 100%;
   border: 0;
   border-bottom: 2px solid #333333;
   outline: 0;
   font-size: 1.3rem;
-  color: #ffffff;
+  color: #333333;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -52,6 +52,7 @@ input {
 }
 
 .form__label {
+  font-family: "Zilla Slab", sans-serif;
   position: absolute;
   top: 0;
   display: block;
@@ -64,7 +65,7 @@ input {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
-  border-image: linear-gradient(to right, #9b1c31, #575e67);
+  border-image: linear-gradient(to right, #7d1d2d, #9b1c31);
   border-image-slice: 1;
 }
 .form__field:focus ~ .form__label {
@@ -75,6 +76,10 @@ input {
   font-size: 1rem;
   color: #9b1c31;
   font-weight: 700;
+}
+
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
 }
 
 .grid, .grid-container-4, .grid-container-3, .grid-container-2 {
