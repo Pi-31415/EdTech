@@ -290,9 +290,14 @@ a:hover {
   color: #ffffff;
   width: 100vw;
   text-align: center;
-  width: 100vw;
+  height: 100vh;
 }
 
+@media screen and (max-width: 600px) {
+  #component-tutorials {
+    height: auto;
+  }
+}
 #component-refund {
   background-image: url("../img/pen.jpg");
   background-repeat: no-repeat;
