@@ -17,17 +17,21 @@ function loginboxclose() {
 }
 
 //These are pseudo functions to demonstrate login and schedule
-function login(){
-	alert('Yes');
+function login() {
+	var checklist = [false, false, false, false];
+	var email = document.getElementById("email-login").value;
+	var password = document.getElementById("password").value;
+	
+	alert(password);
 }
 
-function schedule(){
+function schedule() {
 	alert('Da');
 }
 
 //Main function which runs when the page loads
 $(document).ready(function () {
-	
+
 	$('#loginbutton').click(function () {
 		$(".component-loginbox").addClass("active");
 		//hides navbar for a while
