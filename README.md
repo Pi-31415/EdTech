@@ -14,7 +14,7 @@ I will be using the following tools for this single-page design.
 ## via CDN
 * Google Fonts (Kodchasan,Zilla Slab,Aldrich)
 * Google Material Icons
-* Font Awesome
+* Font Awesome (free)
 
 
 To compile sass to css, first install SASS via NPM
