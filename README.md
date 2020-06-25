@@ -37,4 +37,8 @@ Please reduce the file size for the stock images before use.
 * Person holding pen (https://unsplash.com/photos/O3gOgPB4sRU)
 * Avatars of people
 
+## To do list
+
+* Need to write validation for the form inputs
+
 >Further documentation in detail is written where necessary in the source files.
