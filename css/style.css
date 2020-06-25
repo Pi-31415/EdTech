@@ -80,6 +80,10 @@ a:hover {
     width: 80vw;
   }
 }
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .avatar {
   width: 200px;
   border-radius: 50%;
