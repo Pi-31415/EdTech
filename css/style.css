@@ -19,6 +19,10 @@ a:hover {
   cursor: pointer;
 }
 
+input {
+  width: 300px;
+}
+
 .grid, .grid-container-4, .grid-container-3, .grid-container-2 {
   display: grid;
   grid-gap: 100px;
