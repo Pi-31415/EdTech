@@ -19,18 +19,28 @@ a:hover {
   cursor: pointer;
 }
 
-.grid, .grid-container-4, .grid-container-3 {
+.grid, .grid-container-4, .grid-container-3, .grid-container-2 {
   display: grid;
   grid-gap: 100px;
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 20px;
 }
+.grid-container-2 {
+  grid-template-columns: auto auto;
+}
 .grid-container-3 {
   grid-template-columns: auto auto auto;
 }
 .grid-container-4 {
   grid-template-columns: auto auto auto auto;
+}
+
+.grid-container-2 div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
 }
 
 .grid-container-3 div {
@@ -48,25 +58,25 @@ a:hover {
 }
 
 @media screen and (max-width: 1200px) {
-  .grid-container-3, .grid-container-4 {
+  .grid-container-2, .grid-container-3, .grid-container-4 {
     grid-template-columns: auto;
     grid-gap: 50px;
     padding-left: 50px;
     padding-right: 50px;
   }
 
-  .grid-container-3 div, .grid-container-4 div {
+  .grid-container-2 div, .grid-container-3 div, .grid-container-4 div {
     width: 80vw;
   }
 }
 @media screen and (max-width: 600px) {
-  .grid-container-3, .grid-container-4 {
+  .grid-container-2, .grid-container-3, .grid-container-4 {
     grid-gap: 25px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .grid-container-3 div, .grid-container-4 div {
+  .grid-container-2 div, .grid-container-3 div, .grid-container-4 div {
     width: 80vw;
   }
 }
@@ -275,7 +285,6 @@ a:hover {
   background-position: center;
   color: #ffffff;
   background-color: #575e67;
-  height: 100vh;
   width: 100vw;
   text-align: center;
 }
