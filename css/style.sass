@@ -103,6 +103,7 @@ a:hover
 //cuts the screen in half, invisible div
 .splitter-half
 	height: 10vh
+
 //Styling for material icons
 .material-icons.primary
 	color: $primary-color
@@ -113,9 +114,12 @@ a:hover
 .material-icons.big
 	font-size: 60px
 
+.fa.big
+	font-size: 60px
+
 //Style for login popup
 .component-loginbox
-	background-color: $primary-color
+	background: linear-gradient(-90deg,$primary-gradient,$primary-color,$primary-gradient)
 	height:100vh
 	width:100vw
 	display: none
@@ -245,7 +249,10 @@ a:hover
 	margin-right:20px
 
 #component-tutorials
-	background-color: $primary-color
+	background: linear-gradient(-90deg,$primary-gradient,$primary-color,$primary-gradient)
+	color: $text-white
+	width:100vw
+	text-align: center
 	width:100vw
 
 #component-refund

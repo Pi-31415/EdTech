@@ -110,8 +110,12 @@ a:hover {
   font-size: 60px;
 }
 
+.fa.big {
+  font-size: 60px;
+}
+
 .component-loginbox {
-  background-color: #9b1c31;
+  background: linear-gradient(-90deg, #7d1d2d, #9b1c31, #7d1d2d);
   height: 100vh;
   width: 100vw;
   display: none;
@@ -261,7 +265,10 @@ a:hover {
 }
 
 #component-tutorials {
-  background-color: #9b1c31;
+  background: linear-gradient(-90deg, #7d1d2d, #9b1c31, #7d1d2d);
+  color: #ffffff;
+  width: 100vw;
+  text-align: center;
   width: 100vw;
 }
 
