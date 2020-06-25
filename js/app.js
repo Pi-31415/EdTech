@@ -19,10 +19,9 @@ function loginboxclose() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 	//For initializing the international phone selector
-	var input = document.querySelector("#phone");
-	window.intlTelInput(input, {
-		// any initialisation options go here
-	});
+	$("#phone").intlTelInput({
+      utilsScript: "/js/utils.js"
+    });
 
 	$('#loginbutton').click(function () {
 		$(".component-loginbox").addClass("active");
