@@ -303,8 +303,8 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #eeeeee;
   color: #ffffff;
-  background-color: #575e67;
   width: 100vw;
   text-align: center;
 }
