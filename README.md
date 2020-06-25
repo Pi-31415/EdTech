@@ -10,7 +10,6 @@ I will be using the following tools for this single-page design.
 * SASS
 * JavaScript
 * jQuery
-* International Telephone Input (https://github.com/jackocnr/intl-tel-input)
 
 ## via CDN
 * Google Fonts (Kodchasan,Zilla Slab,Aldrich)

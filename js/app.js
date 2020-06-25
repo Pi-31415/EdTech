@@ -18,11 +18,7 @@ function loginboxclose() {
 
 //Main function which runs when the page loads
 $(document).ready(function () {
-	//For initializing the international phone selector
-	$("#phone").intlTelInput({
-      utilsScript: "/js/utils.js"
-    });
-
+	
 	$('#loginbutton').click(function () {
 		$(".component-loginbox").addClass("active");
 		//hides navbar for a while
