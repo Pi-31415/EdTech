@@ -88,6 +88,7 @@ function schedule() {
 	if (email.includes("@") == true) {
 		checklist[2] = true;
 	} else {
+		jumpto('#schedule-form-errors');
 		$('#schedule-form-errors').html("Please enter a valid email address.");
 		$('#schedule-form-errors').fadeIn();
 	}
@@ -95,6 +96,7 @@ function schedule() {
 	if (phone.length > 0) {
 		checklist[3] = true;
 	} else {
+		jumpto('#schedule-form-errors');
 		$('#schedule-form-errors').html("Please enter phone number.");
 		$('#schedule-form-errors').fadeIn();
 	}
@@ -102,6 +104,7 @@ function schedule() {
 	if (/^\d+$/.test(phone)) {
 		checklist[4] = true;
 	} else {
+		jumpto('#schedule-form-errors');
 		$('#schedule-form-errors').html("Please enter a valid phone number.");
 		$('#schedule-form-errors').fadeIn();
 	}
@@ -109,6 +112,7 @@ function schedule() {
 	if (email.length > 0) {
 		checklist[0] = true;
 	} else {
+		jumpto('#schedule-form-errors');
 		$('#schedule-form-errors').html("Please fill in your email.");
 		$('#schedule-form-errors').fadeIn();
 	}
@@ -116,6 +120,7 @@ function schedule() {
 	if (name.length > 0) {
 		checklist[1] = true;
 	} else {
+		jumpto('#schedule-form-errors');
 		$('#schedule-form-errors').html("Please enter your full name.");
 		$('#schedule-form-errors').fadeIn();
 	}
