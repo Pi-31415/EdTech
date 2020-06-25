@@ -60,6 +60,23 @@ input {
   color: #333333;
 }
 
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #9b1c31, #575e67);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b1c31;
+  font-weight: 700;
+}
+
 .grid, .grid-container-4, .grid-container-3, .grid-container-2 {
   display: grid;
   grid-gap: 100px;

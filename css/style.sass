@@ -66,6 +66,21 @@ input
 	font-size: 1rem
 	color: $text-dark
 
+.form__field:focus
+	padding-bottom: 6px
+	font-weight: 700
+	border-width: 3px
+	border-image: linear-gradient(to right, $primary-color,$secondary-color)
+	border-image-slice: 1
+	~ .form__label
+		position: absolute
+		top: 0
+		display: block
+		transition: 0.2s
+		font-size: 1rem
+		color: $primary-color
+		font-weight:700  
+
 //Grid management
 //Thus, the class named grid-container-3 will show 3 column container on desktop
 
