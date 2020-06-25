@@ -29,7 +29,7 @@ a:hover
 	text-decoration: underline
 	cursor: pointer
 
-//input formatting
+//input formatting animation
 
 input
 	width: 300px
@@ -41,7 +41,7 @@ input
 	width: 50%
 
 .form__field
-	font-family: inherit
+	font-family: $font-title
 	width: 100%
 	border: 0
 	border-bottom: 2px solid $text-dark
@@ -51,6 +51,20 @@ input
 	padding: 7px 0
 	background: transparent
 	transition: border-color 0.2s
+	&::placeholder
+		color: transparent
+	&:placeholder-shown ~ .form__label
+		font-size: 1.3rem
+		cursor: text
+		top: 20px
+
+.form__label
+	position: absolute
+	top: 0
+	display: block
+	transition: 0.2s
+	font-size: 1rem
+	color: $text-dark
 
 //Grid management
 //Thus, the class named grid-container-3 will show 3 column container on desktop
