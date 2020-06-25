@@ -29,6 +29,22 @@ a:hover
 	text-decoration: underline
 	cursor: pointer
 
+.button
+	background-color: $primary-color
+	border: none
+	font-family: $font-title
+	border-radius: 5px
+	color: $text-white
+	padding: 15px 32px
+	text-align: center
+	text-decoration: none
+	display: inline-block
+	font-size: 16px
+	margin: 4px 2px
+	cursor: pointer
+	-webkit-transition-duration: 0.4s
+	transition-duration: 0.4s
+
 //input formatting animation
 input
 	width: 300px
@@ -195,14 +211,14 @@ input
 
 //Style for login popup
 .component-loginbox
-	background: linear-gradient(-90deg,$primary-gradient,$primary-color,$primary-gradient)
+	background: $background-white
 	height:100vh
 	width:100vw
 	display: none
 	z-index: 2
 
 .component-loginbox a
-	color: $text-white
+	color: $primary-color
 
 .component-loginbox.active
 	display: block

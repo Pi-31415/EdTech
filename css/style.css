@@ -19,6 +19,23 @@ a:hover {
   cursor: pointer;
 }
 
+.button {
+  background-color: #9b1c31;
+  border: none;
+  font-family: "Zilla Slab", sans-serif;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
 input {
   width: 300px;
 }
@@ -199,7 +216,7 @@ input {
 }
 
 .component-loginbox {
-  background: linear-gradient(-90deg, #7d1d2d, #9b1c31, #7d1d2d);
+  background: #eeeeee;
   height: 100vh;
   width: 100vw;
   display: none;
@@ -207,7 +224,7 @@ input {
 }
 
 .component-loginbox a {
-  color: #ffffff;
+  color: #9b1c31;
 }
 
 .component-loginbox.active {
