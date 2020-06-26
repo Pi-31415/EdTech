@@ -284,6 +284,10 @@ input {
   text-align: center;
 }
 
+#component-banner > h1 {
+  font-size: 2em;
+}
+
 @media screen and (max-width: 600px) {
   #component-banner {
     background-size: auto 100vh;
