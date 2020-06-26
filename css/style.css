@@ -271,15 +271,34 @@ input {
 .navbar {
   width: 100vw;
   height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   background: linear-gradient(#7d1d2d, #9b1c31);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #ffffff;
   position: fixed;
   z-index: 1;
   top: 0;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navlink {
+  list-style: none;
+  float: left;
+}
+
+.navlink a {
+  list-style: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
 }
 
 .content {
@@ -321,23 +340,6 @@ input {
 
 .logo {
   font-family: "Aldrich", sans-serif;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-}
-
-.navlink {
-  list-style: none;
-}
-
-.navlink a {
-  list-style: none;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1em;
 }
 
 #loginbutton {

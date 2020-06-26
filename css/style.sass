@@ -256,15 +256,37 @@ input
 .navbar
 	width: 100vw
 	height: $navbar-height
-	display: flex
-	align-items: center
-	justify-content: space-around
 	background: linear-gradient($primary-gradient,$primary-color)
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 	color: $text-white
 	position: fixed
 	z-index: 1
 	top: 0
+
+.nav
+	list-style-type: none
+	margin: 0
+	padding: 0
+	overflow: hidden
+
+.navlink
+	list-style: none
+	float: left
+
+.navlink a,p
+	list-style: none
+	color: $text-white
+	text-decoration: none
+	font-size: 1em
+	display: block
+	text-align: center
+	padding: 14px 16px
+
+.logo-navbar
+	width: 80px
+
+#username_navbar
+	
 
 .content
 	background-color: $primary-color
@@ -300,20 +322,6 @@ input
 
 .logo
 	font-family: $font-branding
-
-.nav
-	display: flex
-	justify-content: space-around
-	width: 30%
-
-.navlink
-	list-style: none
-
-.navlink a
-	list-style: none
-	color: $text-white
-	text-decoration: none
-	font-size: 1em
 
 #loginbutton
 	text-decoration: none
@@ -425,5 +433,4 @@ input
 .logo-contact
 	width: 200px
 
-.logo-navbar
-	width: 80px
+

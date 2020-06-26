@@ -54,8 +54,8 @@ function login() {
 	//request to login API once all the conditions are met
 	if (checklist_login[0] == true && checklist_login[1] == true && checklist_login[2] == true) {
 		//create a temporary login effect
-		var logout_button = "<a href=\"#\" id='logoutbutton' onclick='logout()'><u>Log Out</u></a>";
-		$('#username_navbar').html(email + " - " + logout_button);
+		var logout_button = "<div class=\"navlink\"><a href=\"#\" id='logoutbutton' onclick='logout()'><u>Log Out</u></a></div>";
+		$('#username_navbar').html("<p>"+email + " - </p>" + logout_button);
 		$('#username_navbar').show();
 		$('#loginbutton').hide();
 		loginboxclose();
