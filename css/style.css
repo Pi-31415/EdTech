@@ -11,7 +11,7 @@ a {
 }
 
 h1, h2, h3 {
-  font-family: "Cinzel", sans-serif;
+  font-family: "Bungee Hairline", sans-serif;
 }
 
 hr.white {
@@ -34,7 +34,7 @@ a:hover {
 .button {
   background-color: #9b1c31;
   border: none;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Bungee Hairline", sans-serif;
   border-radius: 5px;
   color: #ffffff;
   padding: 15px 32px;
@@ -85,7 +85,7 @@ input {
 }
 
 .form__label {
-  font-family: "Cinzel", sans-serif;
+  font-family: "Bungee Hairline", sans-serif;
   position: absolute;
   top: 0;
   display: block;
@@ -316,7 +316,7 @@ input {
 }
 
 #component-banner {
-  background-image: url("../img/oxford.jpg");
+  background-image: url("../img/mit.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
