@@ -208,7 +208,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 95vh;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -318,19 +318,22 @@ input {
 #component-banner {
   background-image: url("../img/mit.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
+  background-position: center;
+  background-color: #eeeeee;
   color: #ffffff;
-  font-size: 1.6em;
-  letter-spacing: 2px;
-  background-color: #575e67;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   text-align: center;
 }
 
+#component-banner h1, h2, h3, p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .main_banner {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 @media screen and (max-width: 600px) {
@@ -339,7 +342,7 @@ input {
   }
 
   .main_banner {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 }
 #component-banner-overlay {
