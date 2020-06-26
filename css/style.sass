@@ -154,6 +154,9 @@ input
 //Responsive Designs
 
 @media screen and (max-width: 1200px)
+	.hidemobile
+		display: block
+
 	.grid-container-2,.grid-container-3,.grid-container-4
 		grid-template-columns: auto
 		grid-gap: 50px
@@ -164,6 +167,9 @@ input
 		width: 80vw
 
 @media screen and (max-width: 600px)
+	.hidemobile
+		display: none
+
 	.form__group
 		width: 50%
 	
@@ -270,23 +276,18 @@ input
 	overflow: hidden
 
 .navlink
-	list-style: none
-	float: left
+	float: right
+	display: block
+	margin: 20px 50px 0px 0px
 
-.navlink a,p
-	list-style: none
+.navlink a
 	color: $text-white
 	text-decoration: none
 	font-size: 1em
-	display: block
-	text-align: center
-	padding: 14px 16px
 
 .logo-navbar
-	width: 80px
-
-#username_navbar
-	
+	margin: 10px 0px 20px 50px
+	width: 80px	
 
 .content
 	background-color: $primary-color
@@ -327,7 +328,7 @@ input
 	text-decoration: none
 	font-size: 1em
 	margin: 0
-	padding: 10px 15px 10px 15px
+	padding: 5px 15px 5px 15px
 	color: $text-white
 	border: 2px solid $text-white
 	border-radius: 5px
@@ -366,6 +367,12 @@ input
 
 #component-about h4
 	color: $text-color
+
+#component-do
+	background-color: $primary-color
+	color: $text-white
+	text-align: center
+	width:100vw
 
 #component-how
 	background-color: $secondary-color

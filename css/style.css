@@ -154,6 +154,10 @@ input {
 }
 
 @media screen and (max-width: 1200px) {
+  .hidemobile {
+    display: block;
+  }
+
   .grid-container-2, .grid-container-3, .grid-container-4 {
     grid-template-columns: auto;
     grid-gap: 50px;
@@ -166,6 +170,10 @@ input {
   }
 }
 @media screen and (max-width: 600px) {
+  .hidemobile {
+    display: none;
+  }
+
   .form__group {
     width: 50%;
   }
@@ -287,18 +295,20 @@ input {
 }
 
 .navlink {
-  list-style: none;
-  float: left;
+  float: right;
+  display: block;
+  margin: 20px 50px 0px 0px;
 }
 
 .navlink a {
-  list-style: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 1em;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
+}
+
+.logo-navbar {
+  margin: 10px 0px 20px 50px;
+  width: 80px;
 }
 
 .content {
@@ -346,7 +356,7 @@ input {
   text-decoration: none;
   font-size: 1em;
   margin: 0;
-  padding: 10px 15px 10px 15px;
+  padding: 5px 15px 5px 15px;
   color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 5px;
@@ -392,6 +402,13 @@ input {
 
 #component-about h4 {
   color: #777777;
+}
+
+#component-do {
+  background-color: #9b1c31;
+  color: #ffffff;
+  text-align: center;
+  width: 100vw;
 }
 
 #component-how {
@@ -468,10 +485,6 @@ input {
 
 .logo-contact {
   width: 200px;
-}
-
-.logo-navbar {
-  width: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */
