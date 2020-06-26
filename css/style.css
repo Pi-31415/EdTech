@@ -14,6 +14,18 @@ h1, h2, h3 {
   font-family: "Cinzel", sans-serif;
 }
 
+hr.white {
+  border-top: 1px dashed #ffffff;
+  border-bottom: none;
+  width: 95vw;
+}
+
+hr.primary {
+  border-top: 1px dashed #9b1c31;
+  border-bottom: none;
+  width: 95vw;
+}
+
 a:hover {
   text-decoration: underline;
   cursor: pointer;
