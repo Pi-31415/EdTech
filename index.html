@@ -152,33 +152,58 @@
 			<hr class="white">
 			<div class="grid-container-2">
 				<!-- Interactive Venn Diagram Starts-->
-				<div class="desktop-venn  hidemobile">
-					<a href="#component-do" class="white"  onmouseover="alert('yea')" style="position: absolute;">
-						Yaya
-					</a>
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="400px" width="400px" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<defs>
-							<style type="text/css">
-								path {
-									fill: transparent;
-									stroke: #fff;
-									stroke-width: 0.5;
-								}
+				<div>
+					<div class="desktop-venn hidemobile" style="position: relative;">
+						<!--links for switching between pillars-->
+						<a href="#component-do" class="venn-btn white" onmouseover="" style="top:120px;left:60px">
+							Academics
+						</a>
+						<a href="#component-do" class="venn-btn white" onmouseover="" style="top:120px;right:80px">
+							Interest
+						</a>
+						<a href="#component-do" class="venn-btn white" onmouseover="" style="top:110px;right:210px">
+							Fit
+						</a>
+						<a href="#component-do" class="venn-btn white" onmouseover="" style="top:165px;right:185px">
+							Success
+						</a>
+						<a href="#component-do" class="venn-btn white" onmouseover="" style="top:230px;left:110px">
+							Competitive
+						</a>
+						<a href="#component-do" class="venn-btn white" onmouseover="" style="top:230px;right:110px">
+							Motivation
+						</a>
+						<a href="#component-do" class="venn-btn white" onmouseover="" style="top:320px;right:185px">
+							Portfolio
+						</a>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="460px" width="460px" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<style type="text/css">
+									path {
+										fill: transparent;
+										stroke: #fff;
+										stroke-width: 0.5;
+									}
 
-								path:hover {
-									fill: rgba(255,255,255,0.24);
-								}
+									path:hover {
+										fill: rgba(255, 255, 255, 0.24);
+									}
 
-							</style>
-						</defs>
-						<path d="M 50 8 A 30 30 0 1 0 21 59 30 30 0 0 1 41 36 30 30 0 0 1 50 8" />
-						<path d="M 50 8 A 30 30 0 0 0 41 36 30 30 0 0 1 59 36 30 30 0 0 0 50 8" />
-						<path d="M 50 8 A 30 30 0 1 1 79 59 30 30 0 0 0 59 36 30 30 0 0 0 50 8" />
-						<path d="M 50 52 A 30 30 0 0 1 21 59 30 30 0 0 1 41 36 30 30 0 0 0 50 52" />
-						<path d="M 50 52 A 30 30 0 0 1 41 36 30 30 0 0 1 59 36 30 30 0 0 1 50 52" />
-						<path d="M 50 52 A 30 30 0 0 0 79 59 30 30 0 0 0 59 36 30 30 0 0 1 50 52" />
-						<path d="M 21 59 A 30 30 0 1 0 79 59 30 30 0 0 1 50 52 30 30 0 0 1 21 59" />
-					</svg>
+								</style>
+							</defs>
+							<path d="M 50 8 A 30 30 0 1 0 21 59 30 30 0 0 1 41 36 30 30 0 0 1 50 8" />
+							<path d="M 50 8 A 30 30 0 0 0 41 36 30 30 0 0 1 59 36 30 30 0 0 0 50 8" />
+							<path d="M 50 8 A 30 30 0 1 1 79 59 30 30 0 0 0 59 36 30 30 0 0 0 50 8" />
+							<path d="M 50 52 A 30 30 0 0 1 21 59 30 30 0 0 1 41 36 30 30 0 0 0 50 52" />
+							<path d="M 50 52 A 30 30 0 0 1 41 36 30 30 0 0 1 59 36 30 30 0 0 1 50 52" />
+							<path d="M 50 52 A 30 30 0 0 0 79 59 30 30 0 0 0 59 36 30 30 0 0 1 50 52" />
+							<path d="M 21 59 A 30 30 0 1 0 79 59 30 30 0 0 1 50 52 30 30 0 0 1 21 59" />
+						</svg>
+					</div>
+					<!--Venn For mobile only-->
+					<div class="showonlymobile">
+						<img src="img/vennmobile.png" width="100%">
+					</div>
 				</div>
 				<!--Venn Diagram Ends-->
 				<div>

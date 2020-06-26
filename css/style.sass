@@ -41,6 +41,9 @@ a:hover
 	text-decoration: underline
 	cursor: pointer
 
+.showonlymobile
+	display: none
+
 .button
 	font-weight: 700
 	background-color: $primary-color
@@ -161,6 +164,9 @@ input
 	.hidemobile
 		display: block
 
+	.showonlymobile
+		display: none
+
 	.grid-container-2,.grid-container-3,.grid-container-4
 		grid-template-columns: auto
 		grid-gap: 50px
@@ -173,6 +179,9 @@ input
 @media screen and (max-width: 600px)
 	.hidemobile
 		display: none
+
+	.showonlymobile
+		display: block
 
 	.form__group
 		width: 50%
@@ -455,5 +464,7 @@ input
 
 
 //Venn Diagram for What we do session
-
+.venn-btn
+	position: absolute
+	font-size: 1em
 

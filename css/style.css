@@ -33,6 +33,10 @@ a:hover {
   cursor: pointer;
 }
 
+.showonlymobile {
+  display: none;
+}
+
 .button {
   font-weight: 700;
   background-color: #9b1c31;
@@ -161,6 +165,10 @@ input {
     display: block;
   }
 
+  .showonlymobile {
+    display: none;
+  }
+
   .grid-container-2, .grid-container-3, .grid-container-4 {
     grid-template-columns: auto;
     grid-gap: 50px;
@@ -175,6 +183,10 @@ input {
 @media screen and (max-width: 600px) {
   .hidemobile {
     display: none;
+  }
+
+  .showonlymobile {
+    display: block;
   }
 
   .form__group {
@@ -500,6 +512,11 @@ input {
 
 .logo-text {
   font-family: "Bungee Hairline", sans-serif;
+}
+
+.venn-btn {
+  position: absolute;
+  font-size: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
