@@ -32,6 +32,7 @@ a:hover {
 }
 
 .button {
+  font-weight: 700;
   background-color: #9b1c31;
   border: none;
   font-family: "Bungee Hairline", sans-serif;
@@ -41,7 +42,7 @@ a:hover {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.2em;
   margin: 4px 2px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s;
@@ -408,7 +409,7 @@ input {
 }
 
 #component-about h4 {
-  color: #777777;
+  color: #575e67;
 }
 
 #component-do {
@@ -480,6 +481,7 @@ input {
   margin-right: auto;
   width: 100vw;
   text-align: center;
+  font-family: "Bungee Hairline", sans-serif;
 }
 
 #schedule-form-errors, #login-form-errors {
@@ -491,7 +493,11 @@ input {
 }
 
 .logo-contact {
-  width: 200px;
+  width: 245px;
+}
+
+.logo-text {
+  font-family: "Bungee Hairline", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
