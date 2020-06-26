@@ -308,6 +308,10 @@ input {
   #component-banner {
     background-size: auto 100vh;
   }
+
+  .main_banner {
+    font-size: 1.5em;
+  }
 }
 #component-banner-overlay {
   background: rgba(0, 0, 0, 0.5);
