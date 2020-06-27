@@ -404,9 +404,6 @@ input {
   font-family: "Source Serif Pro", "Georgia", serif;
   color: #eeeeee;
   font-size: 1.4em;
-  border: 1px dashed #ffffff;
-  padding: 15px 10px 15px 10px;
-  border-radius: 10px;
 }
 
 #loginbutton {
