@@ -30,9 +30,15 @@ cd css
 sass style.sass style.css
 ```
 
+## Venn Diagram
+The order of rotation is in the global array
+```
+var venn_id_global = ['venn-academics', 'venn-interest', 'venn-portfolio'];
+```
+
 ## List of Stock Images Used
 
-* Oxford University (https://unsplash.com/photos/d6ebY-faOO0)
+* MIT University (https://unsplash.com/photos/d6ebY-faOO0)
 * Person holding pen (https://unsplash.com/photos/O3gOgPB4sRU)
 * Avatars of people
 

@@ -2,6 +2,9 @@
 This is the main JavaScript file for all the functions running on the web page. The functions are written in mixture of jQuery and pure JavaScript.
 */
 
+//Global Variables
+var venn_id_global = ['venn-academics', 'venn-interest', 'venn-portfolio'];
+
 //List of functions to use
 function jumpto(elementid) {
 	//this is the function for smooth scrolling between the components when the buttons at the bottom of the component is clicked
@@ -22,6 +25,7 @@ function vennhighlight(vennid) {
 	$("path").removeClass();
 	//select when mouse hovers
 	$("#" + vennid).addClass("activated");
+
 }
 
 //These are pseudo functions to demonstrate login and schedule
@@ -145,17 +149,25 @@ function schedule() {
 
 //Main function which runs when the page loads
 $(document).ready(function () {
-	//Venn Diagram auto rotation code
+	//Carousel using Slick JS
+	$('.carousel-class').slick({
+		slidesToShow: 1,
+		dots: true,
+		speed: 300,
+		centerMode: false
+	});
 
+	//Venn Diagram auto rotation code
 	vennhighlight('venn-academics');
 	var venn_index = 0;
-	var venn_interval_time = 500;
-	var venn_id = ['venn-academics', 'venn-interest', 'venn-portfolio'];
+	var venn_interval_time = 2000;
+	var venn_id = venn_id_global;
 	var venn_auto_rotate = setInterval(function () {
 		if (venn_index == venn_id.length) {
 			venn_index = 0;
 		}
 		vennhighlight(venn_id[venn_index]);
+		$('.carousel-class').slick('slickGoTo', venn_index);
 		venn_index++;
 	}, venn_interval_time);
 
@@ -169,15 +181,9 @@ $(document).ready(function () {
 				venn_index = 0;
 			}
 			vennhighlight(venn_id[venn_index]);
+			$('.carousel-class').slick('slickGoTo', venn_index);
 			venn_index++;
 		}, venn_interval_time);
-	});
-
-	//Carousel using Slick JS
-	$('.carousel-class').slick({
-		slidesToShow: 1,
-		dots: true,
-		centerMode: false
 	});
 
 	//Hide unnecessary components (such as notices and validation messages) for fade in
