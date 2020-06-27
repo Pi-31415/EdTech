@@ -400,8 +400,9 @@ input {
   width: 100vw;
 }
 
-.logo {
-  font-family: "Aldrich", sans-serif;
+.quote {
+  font-family: "Source Serif Pro", "Georgia", serif;
+  font-size: 1.3em;
 }
 
 #loginbutton {
