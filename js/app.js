@@ -16,6 +16,12 @@ function loginboxclose() {
 	$(".content").show();
 }
 
+//Venn Diagram relate functions
+function vennhighlight(vennid){
+	var highlighted_venn_part = document.getElementById(vennid);
+	highlighted_venn_part.classList.add("activated");
+}
+
 //These are pseudo functions to demonstrate login and schedule
 function login() {
 	//array to validate conditions

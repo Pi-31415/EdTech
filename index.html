@@ -155,13 +155,13 @@
 				<div>
 					<div class="desktop-venn hidemobilevenn" style="position: relative;">
 						<!--links for switching between pillars-->
-						<a href="#component-do" class="venn-btn" onmouseover="" style="top:120px;left:60px">
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('academics')" style="top:120px;left:60px">
 							Academics
 						</a>
 						<a href="#component-do" class="venn-btn" onmouseover="" style="top:120px;right:80px">
 							Interest
 						</a>
-						<a href="#component-do" class="venn-btn activated" onmouseover="" style="top:110px;right:210px">
+						<a href="#component-do" class="venn-btn" onmouseover="" style="top:110px;right:210px">
 							Fit
 						</a>
 						<a href="#component-do" class="venn-btn" onmouseover="" style="top:165px;right:185px">
@@ -184,14 +184,9 @@
 										stroke: #fff;
 										stroke-width: 0.5;
 									}
-
-									path:hover {
-										fill: rgba(255, 255, 255, 0.0);
-									}
-
 								</style>
 							</defs>
-							<path d="M 50 8 A 30 30 0 1 0 21 59 30 30 0 0 1 41 36 30 30 0 0 1 50 8" />
+							<path id="venn-academics" d="M 50 8 A 30 30 0 1 0 21 59 30 30 0 0 1 41 36 30 30 0 0 1 50 8" />
 							<path d="M 50 8 A 30 30 0 0 0 41 36 30 30 0 0 1 59 36 30 30 0 0 0 50 8" />
 							<path d="M 50 8 A 30 30 0 1 1 79 59 30 30 0 0 0 59 36 30 30 0 0 0 50 8" />
 							<path d="M 50 52 A 30 30 0 0 1 21 59 30 30 0 0 1 41 36 30 30 0 0 0 50 52" />
