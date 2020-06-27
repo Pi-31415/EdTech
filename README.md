@@ -10,7 +10,6 @@ I will be using the following tools for this single-page design.
 * SASS
 * JavaScript
 * jQuery
-* Slick (https://kenwheeler.github.io/slick/)
 
 ## via CDN
 * Google Fonts (Kodchasan,Cinzel,Aldrich,Bungee Hairline)
