@@ -146,7 +146,7 @@ function schedule() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 	//Venn Diagram auto rotation code
-	
+
 	vennhighlight('venn-academics');
 	var venn_index = 0;
 	var venn_interval_time = 500;
@@ -171,6 +171,13 @@ $(document).ready(function () {
 			vennhighlight(venn_id[venn_index]);
 			venn_index++;
 		}, venn_interval_time);
+	});
+
+	//Carousel using Slick JS
+	$('.carousel-class').slick({
+		slidesToShow: 1,
+		dots: true,
+		centerMode: false
 	});
 
 	//Hide unnecessary components (such as notices and validation messages) for fade in

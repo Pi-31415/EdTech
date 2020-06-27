@@ -13,7 +13,7 @@ I will be using the following tools for this single-page design.
 * Slick
 
 ## via CDN
-* Google Fonts (Kodchasan,Cinzel,Aldrich,Bungee Hairline)
+* Google Fonts (Kodchasan,Aldrich,Bungee Hairline)
 * Google Material Icons
 * Font Awesome
 
