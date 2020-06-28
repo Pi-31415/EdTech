@@ -3,7 +3,7 @@ This is the main JavaScript file for all the functions running on the web page. 
 */
 
 //Global Variables
-var venn_id_global = ['venn-academics', 'venn-interest', 'venn-portfolio'];
+var venn_id_global = ['venn-interest', 'venn-portfolio','venn-academics'];
 
 //List of functions to use
 function jumpto(elementid) {
@@ -158,7 +158,7 @@ $(document).ready(function () {
 	});
 
 	//Venn Diagram auto rotation code
-	vennhighlight('venn-academics');
+	vennhighlight('venn-interest');
 	var venn_index = 0;
 	var venn_interval_time = 2000;
 	var venn_id = venn_id_global;
