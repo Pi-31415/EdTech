@@ -3,7 +3,7 @@ This is the main JavaScript file for all the functions running on the web page. 
 */
 
 //Global Variables
-var venn_id_global = ['venn-interest', 'venn-portfolio','venn-academics'];
+var venn_id_global = ['venn-interest', 'venn-portfolio', 'venn-academics'];
 
 //List of functions to use
 function jumpto(elementid) {
@@ -22,12 +22,12 @@ function loginboxclose() {
 //Venn Diagram relate functions
 function vennhighlight(vennid) {
 	//clear all selected
-	
 	$("path").removeClass();
 	//select when mouse hovers
 	$("#" + vennid).addClass("activated");
-
 }
+
+
 
 //These are pseudo functions to demonstrate login and schedule
 function login() {
@@ -150,6 +150,7 @@ function schedule() {
 
 //Main function which runs when the page loads
 $(document).ready(function () {
+
 	//Carousel using Slick JS
 	$('.carousel-class').slick({
 		slidesToShow: 1,
@@ -158,7 +159,17 @@ $(document).ready(function () {
 		centerMode: false
 	});
 
+	//Venn Diagram Highlight on hover
+	$(".venn-btn").hover(function (event) {
+		$(".venn-btn").css('-webkit-text-fill-color', '#fff');
+		$(".venn-btn").css('-webkit-text-stroke-width', '0px');
+		$(".venn-btn").css('-webkit-text-stroke-color', '#fff');
+		var clicked = $(this);
+		clicked.css('-webkit-text-stroke-width', '2px');
+	});
+
 	//Venn Diagram auto rotation code
+
 	vennhighlight('venn-interest');
 	var venn_index = 0;
 	var venn_interval_time = 2000;
