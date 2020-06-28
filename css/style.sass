@@ -144,6 +144,8 @@ input
 //Thus, the class named grid-container-3 will show 3 column container on desktop
 
 .grid
+	margin-left: auto
+	margin-right: auto
 	display: grid
 	grid-gap: 100px
 	padding-left: 100px
@@ -151,12 +153,23 @@ input
 	padding-top: 20px
 	&-container-2
 		@extend .grid
+		margin-left: auto
+		margin-right: auto
 		grid-template-columns: auto auto
 	&-container-3
 		@extend .grid
+		margin-left: auto
+		margin-right: auto
 		grid-template-columns: auto auto auto
+	&-container--tutorial-3
+			@extend .grid
+			margin-left: auto
+			margin-right: auto
+			grid-template-columns: auto auto auto
 	&-container-4
 		@extend .grid
+		margin-left: auto
+		margin-right: auto
 		grid-template-columns: auto auto auto auto
 
 .grid-container-2 div
@@ -166,6 +179,12 @@ input
 	text-align: center
 
 .grid-container-3 div
+	margin-left: auto
+	margin-right: auto
+	width: 300px
+	text-align: center
+
+&-container--tutorial-3 div
 	margin-left: auto
 	margin-right: auto
 	width: 300px
