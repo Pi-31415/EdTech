@@ -188,6 +188,13 @@ input {
   text-align: center;
 }
 
+.grid-container--tutorial-3 div {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  text-align: center;
+}
+
 .grid-container-4 div {
   margin-left: auto;
   margin-right: auto;
@@ -207,6 +214,12 @@ input {
   .grid-container-2, .grid-container-3, .grid-container-4 {
     grid-template-columns: auto;
     grid-gap: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .grid-container--tutorial-3 {
+    grid-template-columns: auto auto;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -261,6 +274,12 @@ input {
 
   .grid-container-2 div, .grid-container-3 div, .grid-container-4 div {
     width: 80vw;
+  }
+
+  .grid-container--tutorial-3 {
+    grid-template-columns: auto auto;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 .dark-text {
@@ -433,8 +452,32 @@ input {
 
 .quote {
   font-family: "Source Serif Pro", "Georgia", serif;
+  font-size: 1em;
+  font-style: italic;
+  width: auto;
+  line-height: 1.45;
+  position: relative;
   color: #eeeeee;
-  font-size: 1.4em;
+}
+
+.quote:before {
+  display: block;
+  content: "“";
+  font-size: 40px;
+  position: absolute;
+  left: 0px;
+  top: -25px;
+  color: #eeeeee;
+}
+
+.quote:after {
+  display: block;
+  content: "”";
+  font-size: 40px;
+  position: absolute;
+  right: 0px;
+  top: -25px;
+  color: #eeeeee;
 }
 
 #loginbutton {
@@ -460,7 +503,7 @@ input {
 }
 
 #component-tagline {
-  background: linear-gradient(-90deg, #7d1d2d, #9b1c31, #7d1d2d);
+  background: #575e67;
   color: #ffffff;
   font-size: 1.2em;
   width: 100vw;
@@ -639,6 +682,10 @@ input {
   font-size: 24px;
   border-left: 1px solid #9b1c31;
   z-index: -1;
+}
+
+.carousel-class p {
+  font-size: 1.1em;
 }
 
 /*# sourceMappingURL=style.css.map */
