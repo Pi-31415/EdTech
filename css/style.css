@@ -558,6 +558,15 @@ input {
   font-weight: 300;
 }
 
+.venn-btn:hover {
+  text-decoration: none;
+}
+
+.venn-btn.active {
+  font-weight: 700;
+  color: red;
+}
+
 .activated {
   fill: rgba(255, 255, 255, 0.25);
 }

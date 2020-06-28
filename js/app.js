@@ -22,6 +22,7 @@ function loginboxclose() {
 //Venn Diagram relate functions
 function vennhighlight(vennid) {
 	//clear all selected
+	
 	$("path").removeClass();
 	//select when mouse hovers
 	$("#" + vennid).addClass("activated");
