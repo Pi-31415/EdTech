@@ -1,6 +1,8 @@
 
 $font-quote:    'Source Serif Pro','Georgia', serif
 $font-title:    'Bungee Hairline', sans-serif
+//We need to stroke the font 'Bungee Hairline' to get the bold typeface
+$font-title-stroke: 2px
 $font-text:    'Kodchasan', sans-serif
 $font-logo:    'Bungee Hairline', sans-serif
 $primary-color: #9b1c31
@@ -10,7 +12,7 @@ $background-white:#eeeeee
 $text-dark: #333333
 $text-color: #777777
 $text-white: #ffffff
-$navbar-height: 70px
+$navbar-height: 70p
 
 body
 	margin:0
@@ -24,6 +26,10 @@ a
 
 h1, h2, h3, h4
 	font-family: $font-title
+	font-weight: lighter
+	-webkit-text-fill-color: inherit
+	-webkit-text-stroke-width: $font-title-stroke
+	-webkit-text-stroke-color: inherit
 
 hr.white
 	border-top: 1px dashed $text-white
@@ -52,6 +58,9 @@ a:hover
 	background-color: $primary-color
 	border: none
 	font-family: $font-title
+	-webkit-text-fill-color: $text-white
+	-webkit-text-stroke-width: $font-title-stroke
+	-webkit-text-stroke-color: $text-white
 	border-radius: 5px
 	color: $text-white
 	padding: 15px 32px
@@ -336,7 +345,7 @@ input
 
 //The styles of components are arranged in the same order as in the HTML file
 #component-banner
-	background-image: url("../img/mit.jpg")
+	background-image: url("../img/banner.jpg")
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center

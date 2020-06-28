@@ -13,6 +13,10 @@ a {
 
 h1, h2, h3, h4 {
   font-family: "Bungee Hairline", sans-serif;
+  font-weight: lighter;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: inherit;
 }
 
 hr.white {
@@ -47,6 +51,9 @@ a:hover {
   background-color: #9b1c31;
   border: none;
   font-family: "Bungee Hairline", sans-serif;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
   border-radius: 5px;
   color: #ffffff;
   padding: 15px 32px;
@@ -265,7 +272,7 @@ input {
 }
 
 .splitter {
-  height: 70px;
+  height: 70p;
 }
 
 .splitter-half {
@@ -327,7 +334,7 @@ input {
 
 .navbar {
   width: 100vw;
-  height: 70px;
+  height: 70p;
   background: linear-gradient(#7d1d2d, #9b1c31);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #ffffff;
@@ -366,7 +373,7 @@ input {
 }
 
 #component-banner {
-  background-image: url("../img/mit.jpg");
+  background-image: url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
