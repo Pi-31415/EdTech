@@ -38,6 +38,10 @@ a:hover {
   cursor: pointer;
 }
 
+.title-bold {
+  -webkit-text-stroke-width: 4px;
+}
+
 .showonlymobile {
   display: none;
 }
@@ -272,7 +276,7 @@ input {
 }
 
 .splitter {
-  height: 70p;
+  height: 70px;
 }
 
 .splitter-half {
@@ -334,7 +338,7 @@ input {
 
 .navbar {
   width: 100vw;
-  height: 70p;
+  height: 70px;
   background: linear-gradient(#7d1d2d, #9b1c31);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #ffffff;

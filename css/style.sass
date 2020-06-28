@@ -1,8 +1,6 @@
 
 $font-quote:    'Source Serif Pro','Georgia', serif
 $font-title:    'Bungee Hairline', sans-serif
-//We need to stroke the font 'Bungee Hairline' to get the bold typeface
-$font-title-stroke: 2px
 $font-text:    'Kodchasan', sans-serif
 $font-logo:    'Bungee Hairline', sans-serif
 $primary-color: #9b1c31
@@ -12,7 +10,7 @@ $background-white:#eeeeee
 $text-dark: #333333
 $text-color: #777777
 $text-white: #ffffff
-$navbar-height: 70p
+$navbar-height: 70px
 
 body
 	margin:0
@@ -28,7 +26,7 @@ h1, h2, h3, h4
 	font-family: $font-title
 	font-weight: lighter
 	-webkit-text-fill-color: inherit
-	-webkit-text-stroke-width: $font-title-stroke
+	-webkit-text-stroke-width: 2px
 	-webkit-text-stroke-color: inherit
 
 hr.white
@@ -47,6 +45,9 @@ a:hover
 	text-decoration: underline
 	cursor: pointer
 
+.title-bold
+	-webkit-text-stroke-width: 4px
+
 .showonlymobile
 	display: none
 
@@ -59,7 +60,7 @@ a:hover
 	border: none
 	font-family: $font-title
 	-webkit-text-fill-color: $text-white
-	-webkit-text-stroke-width: $font-title-stroke
+	-webkit-text-stroke-width: 2px
 	-webkit-text-stroke-color: $text-white
 	border-radius: 5px
 	color: $text-white
