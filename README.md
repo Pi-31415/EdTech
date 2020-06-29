@@ -13,7 +13,10 @@ I will be using the following tools for this single-page design.
 * Slick
 
 ## via CDN
-* Google Fonts (Kodchasan,Aldrich,Bungee Hairline)
+
+Note, for 'Bungee Hairline', there is only one line weight available, so it is not possible to bold. In CSS, I used font-stroke from webkit to get the bold effect on that font.
+
+* Google Fonts (Kodchasan,Bungee Hairline,Source Serif Pro)
 * Google Material Icons
 * Font Awesome
 
