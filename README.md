@@ -38,7 +38,7 @@ var venn_id_global = ['venn-academics', 'venn-interest', 'venn-portfolio'];
 
 ## List of Stock Images Used
 
-* MIT University (https://unsplash.com/photos/d6ebY-faOO0)
+* Hero Banner (from unsplash)
 * Person holding pen (https://unsplash.com/photos/O3gOgPB4sRU)
 * Avatars of people
 
