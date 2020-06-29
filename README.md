@@ -49,5 +49,7 @@ var venn_id_global = ['venn-academics', 'venn-interest', 'venn-portfolio'];
 
 * Edit schedule(), logout() and login() functions in js/app.js when the backend API is available
 * Reduce the file size for the stock images before use.
+* Venn Diagram animation for multi devices
+* Validate all parts of all the forms
 
 >Further documentation in detail is written where necessary in the source files.
