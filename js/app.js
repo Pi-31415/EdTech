@@ -1,9 +1,8 @@
 /*
 This is the main JavaScript file for all the functions running on the web page. The functions are written in mixture of jQuery and pure JavaScript.
 */
-
 //Global Variables
-var venn_id_global = ['venn-interest', 'venn-portfolio', 'venn-academics'];
+var pillar_state = "";
 
 //List of functions to use
 function jumpto(elementid) {
@@ -18,9 +17,6 @@ function loginboxclose() {
 	$(".navbar").show();
 	$(".content").show();
 }
-
-
-
 
 //These are pseudo functions to demonstrate login and schedule
 function login() {
@@ -143,6 +139,59 @@ function schedule() {
 
 }
 
+//Venn Diagram Related Functions outside DOM
+
+function color_venn() {
+	d3.selectAll("#venn .venn-circle path")
+		.style("stroke-width", 2)
+		.style("stroke", "#fff");
+
+	d3.selectAll("#venn .venn-area path").style("stroke-width", 2).style("stroke", "#fff").style("fill",
+		function (d, i) {
+			if (d.label == "ZMS") {
+				return "#ca2128";
+			} else if (d.label == "Competence" || d.label == "Motivation" || d.label == "Fit") {
+				return '#666666';
+			} else {
+				return '#9b1c31';
+			}
+		}
+	).style("fill-opacity",
+		function (d, i) {
+			if (d.label == "ZMS") {
+				return 1;
+			} else if (d.label == "Competence" || d.label == "Motivation" || d.label == "Fit") {
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+	);
+}
+
+//Venn Diagram Selection Code
+function venn_select(pillar) {
+	color_venn();
+	d3.selectAll("#venn .venn-circle path").style("fill",
+		function (d, i) {
+			if (d.label.toLowerCase() == pillar.toLowerCase()) {
+				pillar_state = d.label.toLowerCase();
+				console.log(pillar_state);
+				return '#fff';
+			} else {
+				return '#fff';
+			}
+		}).style('fill-opacity',
+		function (d, i) {
+			if (d.label.toLowerCase() == pillar.toLowerCase()) {
+				return 0.4;
+			} else {
+				return 0;
+			}
+		});
+}
+
+
 //Main function which runs when the page loads
 $(document).ready(function () {
 
@@ -188,36 +237,6 @@ $(document).ready(function () {
 	var w = window.innerWidth;
 	var div;
 	var div = d3.select("#venn");
-	var colours = ['#9b1c31', '#ca2128', '#666666'];
-
-	function color_venn() {
-		d3.selectAll("#venn .venn-circle path")
-			.style("stroke-width", 2)
-			.style("stroke", "#fff");
-
-		d3.selectAll("#venn .venn-area path").style("stroke-width", 2).style("stroke", "#fff").style("fill",
-			function (d, i) {
-				if (d.label == "ZMS") {
-					console.log(d.label);
-					return "#ca2128";
-				} else if (d.label == "Competence" || d.label == "Motivation" || d.label == "Fit") {
-					return '#666666';
-				} else {
-					return '#9b1c31';
-				}
-			}
-		).style("fill-opacity",
-			function (d, i) {
-				if (d.label == "ZMS") {
-					return 1;
-				} else if (d.label == "Competence" || d.label == "Motivation" || d.label == "Fit") {
-					return 1;
-				} else {
-					return 0;
-				}
-			}
-		);
-	}
 
 	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
 		//desktops
@@ -260,8 +279,9 @@ $(document).ready(function () {
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
 			// highlight the current path
-
 			if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
+				pillar_state = d.label.toLowerCase();
+				console.log(pillar_state);
 				$('#quotearea').html(d.label);
 				var selection = d3.select(this);
 				selection.select("path")
@@ -271,8 +291,8 @@ $(document).ready(function () {
 					.style("stroke-opacity", 1);
 			} else {
 				$('#quotearea').html("");
+				//To-do: Change Quote Function here
 			}
-
 		})
 		.on("mouseout", function (d, i) {
 			var selection = d3.select(this);
@@ -286,7 +306,21 @@ $(document).ready(function () {
 		});
 	//Venn Diagram Mouse hover code ends
 
+	//Quote Carousel using slick - initiate
+	$('.carousel-class').slick({
+		slidesToShow: 1,
+		dots: true,
+		speed: 300,
+		centerMode: false
+	});
 	
+
+
+	//System Runtime Code for whole venn diagram interaction
+
+
+
+	//All Venn Diagram Related Functions ends
 
 	//Hide unnecessary components (such as notices and validation messages) for fade in
 	$('#username_navbar').hide();
@@ -304,6 +338,4 @@ $(document).ready(function () {
 	$('#loginbox-close').click(function () {
 		loginboxclose();
 	});
-
-
 });
