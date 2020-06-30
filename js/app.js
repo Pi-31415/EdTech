@@ -317,7 +317,7 @@ $(document).ready(function () {
 				venn_interact = false;
 				var selection = d3.select(this);
 				selection.select("path")
-					.style("stroke-width", 4)
+					.style("stroke-width", 2)
 					.style("fill", "#fff")
 					.style("fill-opacity", '0.4')
 					.style("stroke-opacity", 1);
@@ -358,10 +358,7 @@ $(document).ready(function () {
 
 	//Linking between venn -> slick carousel (quotes)
 
-
 	//System Runtime Code for whole venn diagram interaction
-
-
 
 	//All Venn Diagram Related Functions ends
 
