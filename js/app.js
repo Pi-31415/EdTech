@@ -138,6 +138,8 @@ function schedule() {
 		$("#name").val("");
 		$("#email").val("");
 		$("#phone").val("");
+		$("#school").val("");
+		$("#howhelp").val("");
 		//create a temporary login effect
 		var contact_message = "Thank you very much. We will be contacting you soon.";
 		$('#schedule-form-success').html("<br>" + contact_message);
