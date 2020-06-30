@@ -19,13 +19,6 @@ function loginboxclose() {
 	$(".content").show();
 }
 
-//Venn Diagram relate functions
-function vennhighlight(vennid) {
-	//clear all selected
-	$("path").removeClass();
-	//select when mouse hovers
-	$("#" + vennid).addClass("activated");
-}
 
 
 
@@ -153,7 +146,7 @@ function schedule() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 
-	//venn new test
+	//Venn Diagram Mouse hover code using D3 js and venn js
 	var sets = [{
 			sets: ['A'],
 			label: 'Portfolio',
@@ -264,9 +257,6 @@ $(document).ready(function () {
 		d3.selectAll("#venn text").style("font-size", "0.8em");
 	}
 
-
-
-
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
 			// highlight the current path
@@ -294,47 +284,9 @@ $(document).ready(function () {
 				.style("stroke-opacity", 1);
 			color_venn();
 		});
+	//Venn Diagram Mouse hover code ends
 
-
-
-	//Venn Diagram Highlight on hover
-	$(".venn-btn").hover(function (event) {
-		$(".venn-btn").css('-webkit-text-fill-color', '#fff');
-		$(".venn-btn").css('-webkit-text-stroke-width', '0px');
-		$(".venn-btn").css('-webkit-text-stroke-color', '#fff');
-		var clicked = $(this);
-		clicked.css('-webkit-text-stroke-width', '2px');
-	});
-
-	//Venn Diagram auto rotation code
-
-	vennhighlight('venn-interest');
-	var venn_index = 0;
-	var venn_interval_time = 2000;
-	var venn_id = venn_id_global;
-	var venn_auto_rotate = setInterval(function () {
-		if (venn_index == venn_id.length) {
-			venn_index = 0;
-		}
-		vennhighlight(venn_id[venn_index]);
-		$('.carousel-class').slick('slickGoTo', venn_index);
-		venn_index++;
-	}, venn_interval_time);
-
-	//venn diagram rotate pause when mouse in
-	$(".venn-btn").mouseover(function () {
-		clearInterval(venn_auto_rotate);
-	});
-	$(".venn-btn").mouseout(function () {
-		venn_auto_rotate = setInterval(function () {
-			if (venn_index == venn_id.length) {
-				venn_index = 0;
-			}
-			vennhighlight(venn_id[venn_index]);
-			$('.carousel-class').slick('slickGoTo', venn_index);
-			venn_index++;
-		}, venn_interval_time);
-	});
+	
 
 	//Hide unnecessary components (such as notices and validation messages) for fade in
 	$('#username_navbar').hide();
