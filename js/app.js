@@ -248,7 +248,7 @@ function startCount() {
 	console.log('Venn Diagram Timer Started');
 	if (!timer_is_on) {
 		timer_is_on = 1;
-		timedCount(modulo);
+		timedCount();
 	}
 }
 
