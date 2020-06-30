@@ -237,10 +237,11 @@ var t;
 var timer_is_on = 0;
 
 function timedCount(seconds) {
+	next_slide();
 	console.log(c);
 	c = c + 1;
 	//here is the number of seconds for rotation
-	t = setTimeout(timedCount, 3000);
+	t = setTimeout(timedCount, 1000);
 }
 
 function startCount(modulo) {
