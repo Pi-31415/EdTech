@@ -400,6 +400,7 @@ $(document).ready(function () {
 
 		} else {
 			console.log('User interacts with quotes');
+			stopCount();
 			venn_select(pillar_name[currentSlide]);
 		}
 	});
