@@ -127,7 +127,7 @@ function schedule() {
 
 	if (checklist[0] == true && checklist[1] == true && checklist[2] == true && checklist[3] == true && checklist[4] == true) {
 		//Send form
-		
+
 		var customer = $("#customer").val();
 		var name = $("#name").val();
 		var email = $("#email").val();
@@ -135,17 +135,26 @@ function schedule() {
 		var school = $("#school").val();
 		var howhelp = $("#howhelp").val();
 
-		var query = "?customer="+customer+"&name="+name+"&email="+email+"&phone="+phone+"&school="+school+"&howhelp="+howhelp;
-		
+		var query = "?customer=" + customer + "&name=" + name + "&email=" + email + "&phone=" + phone + "&school=" + school + "&howhelp=" + howhelp;
+
 		console.log(query);
-		
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				alert(this.responseText);
+			}
+		};
+		xhttp.open("GET", "temp_register.php"+query, true);
+		xhttp.send();
+
 		//clear the form fields
 		$("#name").val("");
 		$("#email").val("");
 		$("#phone").val("");
 		$("#school").val("");
 		$("#howhelp").val("");
-		
+
 		//create a temporary login effect
 		var contact_message = "Thank you very much. We will be contacting you soon.";
 		$('#schedule-form-success').html("<br>" + contact_message);
