@@ -21,8 +21,7 @@ $new_content .= "Name : ".$name."\n";
 $new_content .= "Email : ".$email."\n";
 $new_content .= "Phone : ".$phone."\n";
 $new_content .= "School : ".$school."\n";
-$new_content .= "How can we help: ".$howhelp."\n";
-$new_content .= "-----------------\n";
+$new_content .= "How can we help: ".$howhelp."\n\n";
 
 $txt = $original_content.$new_content;
 
