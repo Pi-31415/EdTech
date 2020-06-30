@@ -195,7 +195,8 @@ $(document).ready(function () {
 
 
 	var w = window.innerWidth;
-
+	var div;
+	
 	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
 		//desktops
 		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
@@ -258,7 +259,6 @@ $(document).ready(function () {
 		.on("mouseover", function (d, i) {
 			// highlight the current path
 			var selection = d3.select(this);
-			console.log(selection);
 			selection.select("path")
 				.style("stroke-width", 3)
 				.style("fill", "#fff")
@@ -274,6 +274,8 @@ $(document).ready(function () {
 				.style("stroke-opacity", 1);
 		});
 
+	
+	
 	//Venn Diagram Highlight on hover
 	$(".venn-btn").hover(function (event) {
 		$(".venn-btn").css('-webkit-text-fill-color', '#fff');
