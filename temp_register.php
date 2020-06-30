@@ -6,7 +6,17 @@ $original_content =  fread($myfile,filesize("customer.txt"));
 $myfile = fopen("customer.txt", "w") or die("Unable to open file!");
 
 
-$txt = $original_content."John Doe\n";
+$("#name").val("");
+		$("#email").val("");
+		$("#phone").val("");
+		$("#school").val("");
+		$("#howhelp").val("");
+
+$new_content = "";
+
+$txt = $original_content.$new_content;
+
+
 fwrite($myfile, $txt);
 
 fclose($myfile);
