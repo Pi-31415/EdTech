@@ -127,13 +127,13 @@ function schedule() {
 
 	if (checklist[0] == true && checklist[1] == true && checklist[2] == true && checklist[3] == true && checklist[4] == true) {
 		//Send form
-		$("#name").val("");
-		$("#email").val("");
-		$("#phone").val("");
-		$("#school").val("");
-		$("#howhelp").val("");
+		var name = $("#name").val("");
+		var email = $("#email").val("");
+		var phone = $("#phone").val("");
+		var school = $("#school").val("");
+		var howhelp = $("#howhelp").val("");
 
-
+		
 
 		//clear the form fields
 		$("#name").val("");
@@ -141,10 +141,6 @@ function schedule() {
 		$("#phone").val("");
 		$("#school").val("");
 		$("#howhelp").val("");
-
-
-
-
 		//create a temporary login effect
 		var contact_message = "Thank you very much. We will be contacting you soon.";
 		$('#schedule-form-success').html("<br>" + contact_message);
