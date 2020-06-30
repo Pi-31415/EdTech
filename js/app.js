@@ -258,6 +258,7 @@ $(document).ready(function () {
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
 			// highlight the current path
+			$('#quotearea').html(d.label);
 			var selection = d3.select(this);
 			selection.select("path")
 				.style("stroke-width", 3)
