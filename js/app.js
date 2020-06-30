@@ -196,7 +196,7 @@ $(document).ready(function () {
 
 	var w = window.innerWidth;
 
-	if (window.innerWidth > 900 && window.innerWidth < 1600) {
+	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
 		//desktops
 		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
 		var div = d3.select("#venn");
@@ -208,9 +208,9 @@ $(document).ready(function () {
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.8em");
 
-	} else if (window.innerWidth > 600 && window.innerWidth < 900) {
+	} else if (window.innerWidth > 1120 && window.innerWidth < 1260) {
 		//tablets
-		var chart = venn.VennDiagram().width(w / 2).height(w / 2);
+		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
 		var div = d3.select("#venn");
 		div.datum(sets).call(chart);
 		d3.selectAll("#venn .venn-circle path")
@@ -219,7 +219,18 @@ $(document).ready(function () {
 			.style("stroke", "#fff");
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.6em");
-	} else if (window.innerWidth > 200 && window.innerWidth < 600) {
+	} else if (window.innerWidth > 650 && window.innerWidth < 1175) {
+		//phones
+		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
+		var div = d3.select("#venn");
+		div.datum(sets).call(chart);
+		d3.selectAll("#venn .venn-circle path")
+			.style("fill-opacity", 0)
+			.style("stroke-width", 2)
+			.style("stroke", "#fff");
+		d3.selectAll("#venn text").style("fill", "#fff");
+		d3.selectAll("#venn text").style("font-size", "1em");
+	} else if (window.innerWidth > 400 && window.innerWidth < 650) {
 		//phones
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
 		var div = d3.select("#venn");
@@ -245,15 +256,14 @@ $(document).ready(function () {
 
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
-			alert(w);
 			// highlight the current path
 			var selection = d3.select(this);
+			console.log(selection);
 			selection.select("path")
 				.style("stroke-width", 3)
 				.style("fill", "#fff")
 				.style("fill-opacity", '0.4')
-				.style("stroke-opacity", 1)
-				.duration(400);
+				.style("stroke-opacity", 1);
 		})
 		.on("mouseout", function (d, i) {
 			var selection = d3.select(this);
@@ -261,8 +271,7 @@ $(document).ready(function () {
 				.style("stroke-width", 2)
 				.style("fill", "#fff")
 				.style("fill-opacity", '0')
-				.style("stroke-opacity", 1)
-				.duration(400);
+				.style("stroke-opacity", 1);
 		});
 
 	//Venn Diagram Highlight on hover
