@@ -179,7 +179,7 @@ $(document).ready(function () {
 			size: 3
 		},
 		{
-			sets: ['A','B', 'C'],
+			sets: ['A', 'B', 'C'],
 			size: 3
 		}
 	];
@@ -188,6 +188,11 @@ $(document).ready(function () {
 
 	var div = d3.select("#venn")
 	div.datum(sets).call(chart);
+
+	d3.selectAll("#venn .venn-circle path")
+		.style("fill-opacity", .8);
+
+	d3.selectAll("#venn text").style("fill", "white");
 
 
 	//Venn Diagram Highlight on hover
