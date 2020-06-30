@@ -7,16 +7,19 @@ $myfile = fopen("customer.txt", "w") or die("Unable to open file!");
 
 $date = date("Y/m/d");
 
+$customer = $_GET['customer'];
 $name = $_GET['name'];
 $email = $_GET['email'];
+$phone = $_GET['phone'];
+$school = $_GET['school'];
+$howhelp = $_GET['howhelp'];
 
-$("#name").val("");
-	$("#email").val("");
-		$("#phone").val("");
-		$("#school").val("");
-		$("#howhelp").val("");
+$new_content .= "-----------------";
 
-$new_content = "";
+
+
+
+$new_content .= "-----------------";
 
 $txt = $original_content.$new_content;
 
