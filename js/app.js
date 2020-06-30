@@ -258,13 +258,18 @@ $(document).ready(function () {
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
 			// highlight the current path
+		
 			$('#quotearea').html(d.label);
+		
+			
+		
 			var selection = d3.select(this);
 			selection.select("path")
 				.style("stroke-width", 3)
 				.style("fill", "#fff")
 				.style("fill-opacity", '0.4')
 				.style("stroke-opacity", 1);
+		
 		})
 		.on("mouseout", function (d, i) {
 			var selection = d3.select(this);
