@@ -241,7 +241,7 @@ function timedCount() {
 	console.log(c);
 	c = c + 1;
 	//here is the number of seconds for rotation
-	t = setTimeout(timedCount, 1000);
+	t = setTimeout(timedCount, 3000);
 }
 
 function startCount() {
