@@ -154,7 +154,7 @@ function schedule() {
 				$('#schedule-form-success').fadeIn();
 			}
 			else{
-				var contact_message = "There seems to be an error.";
+				var contact_message = "";//loading bar
 				$('#schedule-form-success').html("<br>" + contact_message);
 				$('#schedule-form-success').fadeIn();
 			}
