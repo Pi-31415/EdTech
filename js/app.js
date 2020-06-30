@@ -407,12 +407,13 @@ $(document).ready(function () {
 	//System Runtime Code for whole venn diagram interaction
 	startCount();
 
+	/* To Fix
 	$("#quotecontainer").mouseover(function () {
 		stopCount();
 	});
 	$('#quotecontainer').mouseout(function () {
 		startCount();
-	});
+	});*/
 
 	//All Venn Diagram Related Functions ends
 
