@@ -204,7 +204,6 @@ $(document).ready(function () {
 
 		d3.selectAll("#venn .venn-area path").style("stroke-width", 2).style("stroke", "#fff").style("fill",
 			function (d, i) {
-				console.log(d.sets);
 				if (d.label == "ZMS") {
 					console.log(d.label);
 					return "#ca2128";
@@ -217,7 +216,6 @@ $(document).ready(function () {
 		).style("fill-opacity",
 			function (d, i) {
 				if (d.label == "ZMS") {
-					console.log(d.label);
 					return 1;
 				} else if (d.label == "Competence" || d.label == "Motivation" || d.label == "Fit") {
 					return 1;
