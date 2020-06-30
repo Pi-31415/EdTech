@@ -135,7 +135,9 @@ function schedule() {
 		var school = $("#school").val();
 		var howhelp = $("#howhelp").val();
 
-		alert("?customer="+customer+"&name="+name+"&email="+email+"&phone="+phone+"&school="+school+"&howhelp="+howhelp);
+		var query = "?customer="+customer+"&name="+name+"&email="+email+"&phone="+phone+"&school="+school+"&howhelp="+howhelp;
+		
+		console.log(query);
 		
 		//clear the form fields
 		$("#name").val("");
