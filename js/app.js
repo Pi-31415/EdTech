@@ -142,23 +142,25 @@ function schedule() {
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
-				alert(this.responseText);
+				//clear the form fields
+				$("#name").val("");
+				$("#email").val("");
+				$("#phone").val("");
+				$("#school").val("");
+				$("#howhelp").val("");
+				//create a temporary login effect
+				var contact_message = "Thank you very much. We will be contacting you soon.";
+				$('#schedule-form-success').html("<br>" + contact_message);
+				$('#schedule-form-success').fadeIn();
+			}
+			else{
+				var contact_message = "There seems to be an error.";
+				$('#schedule-form-success').html("<br>" + contact_message);
+				$('#schedule-form-success').fadeIn();
 			}
 		};
-		xhttp.open("GET", "temp_register.php"+query, true);
+		xhttp.open("GET", "temp_register.php" + query, true);
 		xhttp.send();
-
-		//clear the form fields
-		$("#name").val("");
-		$("#email").val("");
-		$("#phone").val("");
-		$("#school").val("");
-		$("#howhelp").val("");
-
-		//create a temporary login effect
-		var contact_message = "Thank you very much. We will be contacting you soon.";
-		$('#schedule-form-success').html("<br>" + contact_message);
-		$('#schedule-form-success').fadeIn();
 	} else {
 		jumpto('#component-freetrial');
 	}
