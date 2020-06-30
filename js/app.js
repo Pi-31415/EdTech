@@ -237,10 +237,8 @@ var t;
 var timer_is_on = 0;
 
 function timedCount(seconds) {
-	alert(parseInt(seconds));
-	if(c % parseInt(seconds) === 0){
-		console.log(c);
-	}
+	var x = parseInt(seconds,10);
+	console.log(c%x);
 	c = c + 1;
 	t = setTimeout(timedCount, 1000);
 }
