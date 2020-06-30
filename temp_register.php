@@ -15,10 +15,12 @@ $school = $_GET['school'];
 $howhelp = $_GET['howhelp'];
 
 $new_content .= "-----------------";
-
-
-
-
+$new_content .= $customer;
+$new_content .= $name;
+$new_content .= $email;
+$new_content .= $phone;
+$new_content .= $school;
+$new_content .= $howhelp;
 $new_content .= "-----------------";
 
 $txt = $original_content.$new_content;
