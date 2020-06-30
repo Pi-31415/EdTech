@@ -305,26 +305,32 @@ $(document).ready(function () {
 
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
-			color_venn();
-			// highlight the current path
-			if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
-				console.log('User interacts with venn diagram');
-				venn_interact = true;
-				pillar_state = d.label.toLowerCase();
-				update_slick_id(pillar_state);
-				$('.carousel-class').slick('slickGoTo', slick_id);
-				$('#quotearea').html(d.label);
-				venn_interact = false;
-				var selection = d3.select(this);
-				selection.select("path")
-					.style("stroke-width", 2)
-					.style("fill", "#fff")
-					.style("fill-opacity", '0.4')
-					.style("stroke-opacity", 1);
-			} else {
-				
-				//To-do: Change Quote Function here
+
+			//disable interaction with venn diagram if it is viewed on phone
+
+			if (w >= 600) {
+				color_venn();
+				// highlight the current path
+				if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
+					console.log('User interacts with venn diagram');
+					venn_interact = true;
+					pillar_state = d.label.toLowerCase();
+					update_slick_id(pillar_state);
+					$('.carousel-class').slick('slickGoTo', slick_id);
+					$('#quotearea').html(d.label);
+					venn_interact = false;
+					var selection = d3.select(this);
+					selection.select("path")
+						.style("stroke-width", 2)
+						.style("fill", "#fff")
+						.style("fill-opacity", '0.4')
+						.style("stroke-opacity", 1);
+				} else {
+
+					//To-do: Change Quote Function here
+				}
 			}
+
 		})
 		.on("mouseout", function (d, i) {
 			var selection = d3.select(this);
