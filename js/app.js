@@ -235,16 +235,15 @@ function update_slick_id(pillar) {
 var c = 0;
 var t;
 var timer_is_on = 0;
-var x;
 
 function timedCount(seconds) {
-	x = parseInt(seconds,10);
-	console.log(x);
+	console.log(c);
 	c = c + 1;
 	t = setTimeout(timedCount, 1000);
 }
 
 function startCount(modulo) {
+	console.log('Venn Diagram Timer Started');
 	if (!timer_is_on) {
 		timer_is_on = 1;
 		timedCount(modulo);
@@ -252,6 +251,7 @@ function startCount(modulo) {
 }
 
 function stopCount() {
+	console.log('Venn Diagram Timer Paused');
 	clearTimeout(t);
 	timer_is_on = 0;
 }
