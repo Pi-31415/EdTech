@@ -156,44 +156,90 @@ $(document).ready(function () {
 	//venn new test
 	var sets = [{
 			sets: ['A'],
+			label: 'Interest',
 			size: 12
 		},
 		{
 			sets: ['B'],
+			label: 'Portfolio',
 			size: 12
 		},
 		{
 			sets: ['C'],
+			label: 'Academics',
 			size: 12
 		},
 		{
 			sets: ['A', 'B'],
+			label: 'Fit',
 			size: 3
 		},
 		{
 			sets: ['A', 'C'],
+			label: 'Motivation',
 			size: 3
 		},
 		{
 			sets: ['B', 'C'],
+			label: 'Competence',
 			size: 3
 		},
 		{
 			sets: ['A', 'B', 'C'],
+			label: 'ZMS',
 			size: 3
 		}
 	];
 
-	var chart = venn.VennDiagram();
+	//Get screen sizes and font sizes for venn diagram responsive design
 
-	var div = d3.select("#venn")
+
+	var w = window.innerWidth;
+
+	if (window.innerWidth > 900 && window.innerWidth < 1600) {
+		var chart = venn.VennDiagram().width(w / 3)
+			.height(w / 3);
+	} else if (window.innerWidth > 600 && window.innerWidth < 900) {
+		var chart = venn.VennDiagram().width(w/2).height(w/2);
+	} else if (window.innerWidth > 200 && window.innerWidth < 600) {
+		var chart = venn.VennDiagram().width(w/1.2).height(w/1.2);
+	}else {
+		var chart = venn.VennDiagram().width(w/1.2).height(w/1.2);
+	}
+
+	var div = d3.select("#venn");
+
 	div.datum(sets).call(chart);
 
 	d3.selectAll("#venn .venn-circle path")
-		.style("fill-opacity", .8);
+		.style("fill-opacity", 0)
+		.style("stroke-width", 2)
+		.style("stroke", "#fff");
 
-	d3.selectAll("#venn text").style("fill", "white");
+	d3.selectAll("#venn text").style("fill", "#fff");
+	d3.selectAll("#venn text").style("font-size", "0.8em");
 
+	div.selectAll("g")
+		.on("mouseover", function (d, i) {
+			alert(this);
+			// highlight the current path
+			var selection = d3.select(this);
+			selection.select("path")
+				.style("stroke-width", 3)
+				.style("fill", "#fff")
+				.style("fill-opacity", '0.4')
+				.style("stroke-opacity", 1)
+				.duration(400);
+		})
+		.on("mouseout", function (d, i) {
+			var selection = d3.select(this);
+			selection.select("path")
+				.style("stroke-width", 2)
+				.style("fill", "#fff")
+				.style("fill-opacity", '0')
+				.style("stroke-opacity", 1)
+				.duration(400);
+		});
 
 	//Venn Diagram Highlight on hover
 	$(".venn-btn").hover(function (event) {
