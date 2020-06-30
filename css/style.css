@@ -10,6 +10,16 @@ html, body {
   overflow-x: hidden;
 }
 
+html, body, div {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+}
+
 a {
   text-decoration: none;
   transition: 0.3s;

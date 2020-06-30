@@ -5,6 +5,7 @@ This is the main JavaScript file for all the functions running on the web page. 
 var pillar_state = "";
 var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
+var venn_interact = false;
 
 //List of functions to use
 function jumpto(elementid) {
@@ -178,7 +179,7 @@ function venn_select(pillar) {
 		function (d, i) {
 			if (d.label.toLowerCase() == pillar.toLowerCase()) {
 				pillar_state = d.label.toLowerCase();
-				console.log("Pillar State : " + pillar_state);
+				update_slick_id(pillar_state);
 				return '#fff';
 			} else {
 				return '#fff';
@@ -202,7 +203,19 @@ function next_slide() {
 		slick_id++;
 	}
 	pillar_state = pillar_name[slick_id];
+	update_slick_id(pillar_state);
 	venn_select(pillar_state);
+}
+
+function update_slick_id(pillar) {
+	if (pillar == pillar_name[0]) {
+		slick_id = 0;
+	} else if (pillar == pillar_name[1]) {
+		slick_id = 1
+	} else {
+		slick_id = 2;
+	}
+	console.log("Current Slick ID : " + slick_id + " - Pillar State : " + pillar_state);
 }
 
 
@@ -296,8 +309,10 @@ $(document).ready(function () {
 			// highlight the current path
 			if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
 				console.log('User interacts with venn diagram');
+				venn_interact = true;
 				pillar_state = d.label.toLowerCase();
-				console.log("Pillar State : " + pillar_state);
+				update_slick_id(pillar_state);
+				$('.carousel-class').slick('slickGoTo', slick_id);
 				$('#quotearea').html(d.label);
 				var selection = d3.select(this);
 				selection.select("path")
@@ -332,10 +347,14 @@ $(document).ready(function () {
 
 	//Linking between slick carousel (quotes) -> venn
 	$('.carousel-class').on('afterChange', function (event, slick, currentSlide) {
-		console.log('User interacts with quotes');
-		venn_select(pillar_name[currentSlide]);
+		if (venn_interact == true) {
+
+		} else {
+			console.log('User interacts with quotes');
+			venn_select(pillar_name[currentSlide]);
+		}
 	});
-	
+
 	//Linking between venn -> slick carousel (quotes)
 
 
