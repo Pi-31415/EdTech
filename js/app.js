@@ -236,7 +236,7 @@ var c = 0;
 var t;
 var timer_is_on = 0;
 
-function timedCount(seconds) {
+function timedCount() {
 	next_slide();
 	console.log(c);
 	c = c + 1;
@@ -244,7 +244,7 @@ function timedCount(seconds) {
 	t = setTimeout(timedCount, 1000);
 }
 
-function startCount(modulo) {
+function startCount() {
 	console.log('Venn Diagram Timer Started');
 	if (!timer_is_on) {
 		timer_is_on = 1;
@@ -352,6 +352,7 @@ $(document).ready(function () {
 				color_venn();
 				// highlight the current path
 				if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
+					stopCount();
 					console.log('User interacts with venn diagram');
 					venn_interact = true;
 					pillar_state = d.label.toLowerCase();
@@ -373,6 +374,7 @@ $(document).ready(function () {
 
 		})
 		.on("mouseout", function (d, i) {
+			startCount();
 			var selection = d3.select(this);
 			$('#quotearea').html("");
 			selection.select("path")
@@ -403,7 +405,7 @@ $(document).ready(function () {
 	});
 
 	//System Runtime Code for whole venn diagram interaction
-	startCount(3);
+	startCount();
 
 	//All Venn Diagram Related Functions ends
 
