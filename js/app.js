@@ -132,19 +132,19 @@ function schedule() {
 		$("#phone").val("");
 		$("#school").val("");
 		$("#howhelp").val("");
-		
-		
-		
+
+
+
 		//clear the form fields
 		$("#name").val("");
 		$("#email").val("");
 		$("#phone").val("");
 		$("#school").val("");
 		$("#howhelp").val("");
-		
-		
-		
-		
+
+
+
+
 		//create a temporary login effect
 		var contact_message = "Thank you very much. We will be contacting you soon.";
 		$('#schedule-form-success').html("<br>" + contact_message);
@@ -375,9 +375,28 @@ $(document).ready(function () {
 		}
 	});
 
-	//Linking between venn -> slick carousel (quotes)
-
 	//System Runtime Code for whole venn diagram interaction
+	var c = 0;
+	var t;
+	var timer_is_on = 0;
+
+	function timedCount() {
+		console.log(c);
+		c = c + 1;
+		t = setTimeout(timedCount, 1000);
+	}
+
+	function startCount() {
+		if (!timer_is_on) {
+			timer_is_on = 1;
+			timedCount();
+		}
+	}
+
+	function stopCount() {
+		clearTimeout(t);
+		timer_is_on = 0;
+	}
 
 	//All Venn Diagram Related Functions ends
 
