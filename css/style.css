@@ -6,6 +6,10 @@ body {
   color: #777777;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   transition: 0.3s;
@@ -94,7 +98,7 @@ input {
   outline: 0;
   font-size: 1rem;
   color: #333333;
-  padding: 9px 0px 0px 0px;
+  padding: 9px 0px 2px 0px;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -130,7 +134,7 @@ input {
 }
 
 .form__field:focus {
-  padding-bottom: 0px;
+  padding-bottom: 2px;
   font-weight: 700;
   border-width: 3px;
   border-image: linear-gradient(to right, #7d1d2d, #9b1c31);

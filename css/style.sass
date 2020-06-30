@@ -18,6 +18,9 @@ body
 	font: 100% $font-text
 	color: $text-color
 
+html, body
+	overflow-x: hidden
+
 a
 	text-decoration: none
 	transition: 0.3s
@@ -95,7 +98,7 @@ input
 	outline: 0
 	font-size: 1rem
 	color: $text-dark
-	padding: 9px 0px 0px 0px
+	padding: 9px 0px 2px 0px
 	background: transparent
 	transition: border-color 0.2s
 	&::placeholder
@@ -126,7 +129,7 @@ input
 	color: $text-dark
 
 .form__field:focus
-	padding-bottom: 0px
+	padding-bottom: 2px
 	font-weight: 700
 	border-width: 3px
 	border-image: linear-gradient(to right,$primary-gradient,$primary-color)
