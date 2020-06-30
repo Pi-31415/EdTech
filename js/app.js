@@ -235,10 +235,11 @@ function update_slick_id(pillar) {
 var c = 0;
 var t;
 var timer_is_on = 0;
+var x;
 
 function timedCount(seconds) {
-	var x = parseInt(seconds,10);
-	console.log(c%x);
+	x = parseInt(seconds,10);
+	console.log(x);
 	c = c + 1;
 	t = setTimeout(timedCount, 1000);
 }
