@@ -133,7 +133,7 @@ function schedule() {
 		var school = $("#school").val("");
 		var howhelp = $("#howhelp").val("");
 
-		
+		alert(name+""+email+""+phone+""+school+""+howhelp);
 
 		//clear the form fields
 		$("#name").val("");
