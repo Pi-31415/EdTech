@@ -156,12 +156,12 @@ $(document).ready(function () {
 	//venn new test
 	var sets = [{
 			sets: ['A'],
-			label: 'Interest',
+			label: 'Portfolio',
 			size: 12
 		},
 		{
 			sets: ['B'],
-			label: 'Portfolio',
+			label: 'Interest',
 			size: 12
 		},
 		{
@@ -176,12 +176,12 @@ $(document).ready(function () {
 		},
 		{
 			sets: ['A', 'C'],
-			label: 'Motivation',
+			label: 'Competence',
 			size: 3
 		},
 		{
 			sets: ['B', 'C'],
-			label: 'Competence',
+			label: 'Motivation',
 			size: 3
 		},
 		{
@@ -192,96 +192,113 @@ $(document).ready(function () {
 	];
 
 	//Get screen sizes and font sizes for venn diagram responsive design
-
-
 	var w = window.innerWidth;
 	var div;
-	
+	var div = d3.select("#venn");
+	var colours = ['#9b1c31', '#ca2128', '#666666'];
+
+	function color_venn() {
+		d3.selectAll("#venn .venn-circle path")
+			.style("stroke-width", 2)
+			.style("stroke", "#fff");
+
+		d3.selectAll("#venn .venn-area path").style("stroke-width", 2).style("stroke", "#fff").style("fill",
+			function (d, i) {
+				console.log(d.sets);
+				if (d.label == "ZMS") {
+					console.log(d.label);
+					return "#ca2128";
+				} else if (d.label == "Competence" || d.label == "Motivation" || d.label == "Fit") {
+					return '#666666';
+				} else {
+					return '#9b1c31';
+				}
+			}
+		).style("fill-opacity",
+			function (d, i) {
+				if (d.label == "ZMS") {
+					console.log(d.label);
+					return 1;
+				} else if (d.label == "Competence" || d.label == "Motivation" || d.label == "Fit") {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+		);
+	}
+
 	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
 		//desktops
 		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
-		var div = d3.select("#venn");
 		div.datum(sets).call(chart);
-		d3.selectAll("#venn .venn-circle path")
-			.style("fill-opacity", 0)
-			.style("stroke-width", 2)
-			.style("stroke", "#fff");
+		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.8em");
 
 	} else if (window.innerWidth > 1120 && window.innerWidth < 1260) {
 		//tablets
 		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
-		var div = d3.select("#venn");
 		div.datum(sets).call(chart);
-		d3.selectAll("#venn .venn-circle path")
-			.style("fill-opacity", 0)
-			.style("stroke-width", 2)
-			.style("stroke", "#fff");
+		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.6em");
 	} else if (window.innerWidth > 650 && window.innerWidth < 1175) {
 		//phones
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
-		var div = d3.select("#venn");
 		div.datum(sets).call(chart);
-		d3.selectAll("#venn .venn-circle path")
-			.style("fill-opacity", 0)
-			.style("stroke-width", 2)
-			.style("stroke", "#fff");
+		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "1em");
 	} else if (window.innerWidth > 400 && window.innerWidth < 650) {
 		//phones
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
-		var div = d3.select("#venn");
 		div.datum(sets).call(chart);
-		d3.selectAll("#venn .venn-circle path")
-			.style("fill-opacity", 0)
-			.style("stroke-width", 2)
-			.style("stroke", "#fff");
+		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.7em");
 	} else {
 		//fallback
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
-		var div = d3.select("#venn");
 		div.datum(sets).call(chart);
-		d3.selectAll("#venn .venn-circle path")
-			.style("fill-opacity", 0)
-			.style("stroke-width", 2)
-			.style("stroke", "#fff");
+		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.8em");
 	}
 
+
+
+
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
 			// highlight the current path
-		
-			$('#quotearea').html(d.label);
-		
-			
-		
-			var selection = d3.select(this);
-			selection.select("path")
-				.style("stroke-width", 3)
-				.style("fill", "#fff")
-				.style("fill-opacity", '0.4')
-				.style("stroke-opacity", 1);
-		
+
+			if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
+				$('#quotearea').html(d.label);
+				var selection = d3.select(this);
+				selection.select("path")
+					.style("stroke-width", 4)
+					.style("fill", "#fff")
+					.style("fill-opacity", '0.4')
+					.style("stroke-opacity", 1);
+			} else {
+				$('#quotearea').html("");
+			}
+
 		})
 		.on("mouseout", function (d, i) {
 			var selection = d3.select(this);
+			$('#quotearea').html("");
 			selection.select("path")
 				.style("stroke-width", 2)
 				.style("fill", "#fff")
 				.style("fill-opacity", '0')
 				.style("stroke-opacity", 1);
+			color_venn();
 		});
 
-	
-	
+
+
 	//Venn Diagram Highlight on hover
 	$(".venn-btn").hover(function (event) {
 		$(".venn-btn").css('-webkit-text-fill-color', '#fff');
