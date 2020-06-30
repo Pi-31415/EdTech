@@ -4,11 +4,12 @@
 
 I will be using the following tools for this single-page design.
 
-## Locally hosted
+## Languages and Locally hosted
 
 * HTML 5
 * SASS
 * JavaScript
+* PHP (for recording data)
 * jQuery
 * Slick
 
