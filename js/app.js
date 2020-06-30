@@ -3,6 +3,8 @@ This is the main JavaScript file for all the functions running on the web page. 
 */
 //Global Variables
 var pillar_state = "";
+var pillar_name = ['academics', 'interest', 'portfolio'];
+var slick_id = 0;
 
 //List of functions to use
 function jumpto(elementid) {
@@ -176,7 +178,7 @@ function venn_select(pillar) {
 		function (d, i) {
 			if (d.label.toLowerCase() == pillar.toLowerCase()) {
 				pillar_state = d.label.toLowerCase();
-				console.log(pillar_state);
+				console.log("Pillar State : " + pillar_state);
 				return '#fff';
 			} else {
 				return '#fff';
@@ -191,8 +193,16 @@ function venn_select(pillar) {
 		});
 }
 
+//carousel related functions
 function next_slide() {
 	$('.carousel-class').slick('slickNext');
+	if (slick_id >= 2) {
+		slick_id = 0;
+	} else {
+		slick_id++;
+	}
+	pillar_state = pillar_name[slick_id];
+	venn_select(pillar_state);
 }
 
 
@@ -282,10 +292,12 @@ $(document).ready(function () {
 
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
+			color_venn();
 			// highlight the current path
 			if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
+				console.log('User interacts with venn diagram');
 				pillar_state = d.label.toLowerCase();
-				console.log(pillar_state);
+				console.log("Pillar State : " + pillar_state);
 				$('#quotearea').html(d.label);
 				var selection = d3.select(this);
 				selection.select("path")
@@ -318,10 +330,12 @@ $(document).ready(function () {
 		centerMode: false
 	});
 
-
 	//Linking between slick carousel (quotes) -> venn
-
-
+	$('.carousel-class').on('afterChange', function (event, slick, currentSlide) {
+		console.log('User interacts with quotes');
+		venn_select(pillar_name[currentSlide]);
+	});
+	
 	//Linking between venn -> slick carousel (quotes)
 
 
