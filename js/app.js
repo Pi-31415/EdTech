@@ -314,6 +314,7 @@ $(document).ready(function () {
 				update_slick_id(pillar_state);
 				$('.carousel-class').slick('slickGoTo', slick_id);
 				$('#quotearea').html(d.label);
+				venn_interact = false;
 				var selection = d3.select(this);
 				selection.select("path")
 					.style("stroke-width", 4)
@@ -321,7 +322,7 @@ $(document).ready(function () {
 					.style("fill-opacity", '0.4')
 					.style("stroke-opacity", 1);
 			} else {
-				$('#quotearea').html("");
+				
 				//To-do: Change Quote Function here
 			}
 		})
@@ -341,7 +342,7 @@ $(document).ready(function () {
 	$('.carousel-class').slick({
 		slidesToShow: 1,
 		dots: true,
-		speed: 300,
+		speed: 100,
 		centerMode: false
 	});
 
