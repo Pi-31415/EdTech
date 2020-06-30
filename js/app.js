@@ -231,6 +231,29 @@ function update_slick_id(pillar) {
 	console.log("Current Slick ID : " + slick_id + " - Pillar State : " + pillar_state);
 }
 
+//Timer for Venn Diagram
+var c = 0;
+var t;
+var timer_is_on = 0;
+
+function timedCount() {
+	console.log(c);
+	c = c + 1;
+	t = setTimeout(timedCount, 1000);
+}
+
+function startCount() {
+	if (!timer_is_on) {
+		timer_is_on = 1;
+		timedCount();
+	}
+}
+
+function stopCount() {
+	clearTimeout(t);
+	timer_is_on = 0;
+}
+
 
 //Main function which runs when the page loads
 $(document).ready(function () {
@@ -376,27 +399,7 @@ $(document).ready(function () {
 	});
 
 	//System Runtime Code for whole venn diagram interaction
-	var c = 0;
-	var t;
-	var timer_is_on = 0;
-
-	function timedCount() {
-		console.log(c);
-		c = c + 1;
-		t = setTimeout(timedCount, 1000);
-	}
-
-	function startCount() {
-		if (!timer_is_on) {
-			timer_is_on = 1;
-			timedCount();
-		}
-	}
-
-	function stopCount() {
-		clearTimeout(t);
-		timer_is_on = 0;
-	}
+	startCount();
 
 	//All Venn Diagram Related Functions ends
 
