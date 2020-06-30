@@ -12,6 +12,8 @@ I will be using the following tools for this single-page design.
 * PHP (for recording data)
 * jQuery
 * Slick
+* D3js
+* Venn.js
 
 ## via CDN
 
