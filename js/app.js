@@ -191,6 +191,10 @@ function venn_select(pillar) {
 		});
 }
 
+function next_slide() {
+	$('.carousel-class').slick('slickNext');
+}
+
 
 //Main function which runs when the page loads
 $(document).ready(function () {
@@ -313,7 +317,12 @@ $(document).ready(function () {
 		speed: 300,
 		centerMode: false
 	});
-	
+
+
+	//Linking between slick carousel (quotes) -> venn
+
+
+	//Linking between venn -> slick carousel (quotes)
 
 
 	//System Runtime Code for whole venn diagram interaction
