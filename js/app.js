@@ -237,7 +237,7 @@ var t;
 var timer_is_on = 0;
 
 function timedCount(seconds) {
-	if(c % seconds == 0){
+	if(c % seconds === 0){
 		console.log(c);
 	}
 	c = c + 1;
@@ -245,6 +245,7 @@ function timedCount(seconds) {
 }
 
 function startCount(modulo) {
+	alert(modulo);
 	if (!timer_is_on) {
 		timer_is_on = 1;
 		timedCount(modulo);
