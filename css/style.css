@@ -81,7 +81,7 @@ input {
 
 .form__group {
   position: relative;
-  padding: 15px 0 0;
+  padding: 10px 0 0;
   margin-top: 10px;
   width: 25%;
 }
@@ -92,9 +92,9 @@ input {
   border: 0;
   border-bottom: 2px solid #333333;
   outline: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #333333;
-  padding: 7px 0;
+  padding: 9px 0;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -117,6 +117,15 @@ input {
   display: block;
   transition: 0.1s;
   font-size: 1rem;
+  color: #333333;
+}
+
+.selector__label {
+  font-family: "Bungee Hairline", sans-serif;
+  -webkit-text-fill-color: #333333;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333333;
+  font-size: 1.3rem;
   color: #333333;
 }
 
@@ -650,6 +659,12 @@ input {
 }
 
 .custom-select {
+  font-family: "Bungee Hairline", sans-serif;
+  -webkit-text-fill-color: #333333;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333333;
+  font-size: 1.3rem;
+  color: #333333;
   position: relative;
   display: block;
   max-width: 400px;

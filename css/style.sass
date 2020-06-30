@@ -83,7 +83,7 @@ input
 
 .form__group
 	position: relative
-	padding: 15px 0 0
+	padding: 10px 0 0
 	margin-top: 10px
 	width: 25%
 
@@ -93,9 +93,9 @@ input
 	border: 0
 	border-bottom: 2px solid $text-dark
 	outline: 0
-	font-size: 1.3rem
+	font-size: 1rem
 	color: $text-dark
-	padding: 7px 0
+	padding: 9px 0
 	background: transparent
 	transition: border-color 0.2s
 	&::placeholder
@@ -115,6 +115,14 @@ input
 	display: block
 	transition: 0.1s
 	font-size: 1rem
+	color: $text-dark
+
+.selector__label
+	font-family: $font-title
+	-webkit-text-fill-color: $text-dark
+	-webkit-text-stroke-width: 1px
+	-webkit-text-stroke-color: $text-dark
+	font-size: 1.3rem
 	color: $text-dark
 
 .form__field:focus
@@ -585,6 +593,12 @@ input
 
 //select elements
 .custom-select
+	font-family: $font-title
+	-webkit-text-fill-color: $text-dark
+	-webkit-text-stroke-width: 1px
+	-webkit-text-stroke-color: $text-dark
+	font-size: 1.3rem
+	color: $text-dark
 	position: relative
 	display: block
 	max-width: 400px
