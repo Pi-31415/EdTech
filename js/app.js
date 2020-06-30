@@ -237,7 +237,7 @@ var t;
 var timer_is_on = 0;
 
 function timedCount(seconds) {
-	if(c%seconds ==0){
+	if(c % seconds == 0){
 		console.log(c);
 	}
 	c = c + 1;
