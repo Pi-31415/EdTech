@@ -236,16 +236,18 @@ var c = 0;
 var t;
 var timer_is_on = 0;
 
-function timedCount() {
-	console.log(c);
+function timedCount(seconds) {
+	if(c%seconds ==0){
+		console.log(c);
+	}
 	c = c + 1;
 	t = setTimeout(timedCount, 1000);
 }
 
-function startCount() {
+function startCount(modulo) {
 	if (!timer_is_on) {
 		timer_is_on = 1;
-		timedCount();
+		timedCount(modulo);
 	}
 }
 
@@ -399,7 +401,7 @@ $(document).ready(function () {
 	});
 
 	//System Runtime Code for whole venn diagram interaction
-	startCount();
+	startCount(3);
 
 	//All Venn Diagram Related Functions ends
 
