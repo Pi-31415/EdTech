@@ -645,11 +645,12 @@ input {
 }
 
 .logo-contact {
-  width: 285px;
+  width: 245px;
 }
 
 .logo-text {
   font-family: "Bungee Hairline", sans-serif;
+  font-size: 0.8em;
 }
 
 .venn-btn {
