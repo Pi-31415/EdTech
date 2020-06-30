@@ -407,8 +407,13 @@ $(document).ready(function () {
 	//System Runtime Code for whole venn diagram interaction
 	startCount();
 
-	$('.carousel-class').
-	
+	$(".carousel-class").mouseover(function () {
+		stopCount();
+	});
+	$('.carousel-class').mouseout(function () {
+		startCount();
+	});
+
 	//All Venn Diagram Related Functions ends
 
 	//Hide unnecessary components (such as notices and validation messages) for fade in
