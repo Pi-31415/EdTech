@@ -5,6 +5,7 @@ $original_content =  fread($myfile,filesize("customer.txt"));
 
 $myfile = fopen("customer.txt", "w") or die("Unable to open file!");
 
+$date = date("Y/m/d");
 
 $("#name").val("");
 		$("#email").val("");
