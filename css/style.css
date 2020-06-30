@@ -94,7 +94,7 @@ input {
   outline: 0;
   font-size: 1rem;
   color: #333333;
-  padding: 9px 0;
+  padding: 9px 0px 0px 0px;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -130,7 +130,7 @@ input {
 }
 
 .form__field:focus {
-  padding-bottom: 6px;
+  padding-bottom: 0px;
   font-weight: 700;
   border-width: 3px;
   border-image: linear-gradient(to right, #7d1d2d, #9b1c31);
@@ -141,7 +141,7 @@ input {
   top: 0;
   display: block;
   transition: 0.1s;
-  font-size: 1rem;
+  font-size: 0.8rem;
   -webkit-text-fill-color: #9b1c31;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #9b1c31;
@@ -667,8 +667,7 @@ input {
   color: #333333;
   position: relative;
   display: block;
-  max-width: 400px;
-  min-width: 180px;
+  width: auto;
   height: 30px;
   margin: 0 auto;
   border: 1px solid #9b1c31;
