@@ -153,13 +153,42 @@ function schedule() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 
-	//Carousel using Slick JS
-	$('.carousel-class').slick({
-		slidesToShow: 1,
-		dots: true,
-		speed: 300,
-		centerMode: false
-	});
+	//venn new test
+	var sets = [{
+			sets: ['A'],
+			size: 12
+		},
+		{
+			sets: ['B'],
+			size: 12
+		},
+		{
+			sets: ['C'],
+			size: 12
+		},
+		{
+			sets: ['A', 'B'],
+			size: 3
+		},
+		{
+			sets: ['A', 'C'],
+			size: 3
+		},
+		{
+			sets: ['B', 'C'],
+			size: 3
+		},
+		{
+			sets: ['A','B', 'C'],
+			size: 3
+		}
+	];
+
+	var chart = venn.VennDiagram();
+
+	var div = d3.select("#venn")
+	div.datum(sets).call(chart);
+
 
 	//Venn Diagram Highlight on hover
 	$(".venn-btn").hover(function (event) {
