@@ -374,7 +374,10 @@ $(document).ready(function () {
 
 		})
 		.on("mouseout", function (d, i) {
-			setTimeout(function(){ startCount() }, 10000);
+			if(timer_is_on == 0){
+				startCount()
+			}
+		
 			var selection = d3.select(this);
 			$('#quotearea').html("");
 			selection.select("path")
