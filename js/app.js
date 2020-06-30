@@ -407,10 +407,10 @@ $(document).ready(function () {
 	//System Runtime Code for whole venn diagram interaction
 	startCount();
 
-	$(".carousel-class").mouseover(function () {
+	$("#quotecontainer").mouseover(function () {
 		stopCount();
 	});
-	$('.carousel-class').mouseout(function () {
+	$('#quotecontainer').mouseout(function () {
 		startCount();
 	});
 
