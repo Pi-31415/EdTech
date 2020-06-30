@@ -239,7 +239,8 @@ var timer_is_on = 0;
 function timedCount(seconds) {
 	console.log(c);
 	c = c + 1;
-	t = setTimeout(timedCount, 1000);
+	//here is the number of seconds for rotation
+	t = setTimeout(timedCount, 3000);
 }
 
 function startCount(modulo) {
