@@ -352,7 +352,7 @@ $(document).ready(function () {
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
-		d3.selectAll("#venn text").style("font-size", "0.5em");
+		d3.selectAll("#venn text").style("font-size", "0.7em");
 	} else if (window.innerWidth > 650 && window.innerWidth < 1175) {
 		//phones
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
