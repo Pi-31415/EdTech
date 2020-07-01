@@ -275,6 +275,26 @@ function stopCount() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 
+	var overlapping = 3;
+	//Responsive overlapping for venn diagram
+	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
+		//desktops
+		overlapping = 3;
+	} else if (window.innerWidth > 1120 && window.innerWidth < 1260) {
+		//tablets
+		overlapping = 5;
+	} else if (window.innerWidth > 650 && window.innerWidth < 1175) {
+		//phones
+		overlapping = 5;
+	} else if (window.innerWidth > 400 && window.innerWidth < 650) {
+		//phones
+		overlapping = 6;
+	} else {
+		//fallback
+		overlapping = 5;
+	}
+	
+	
 	//Venn Diagram Mouse hover code using D3 js and venn js
 	var sets = [{
 			sets: ['A'],
@@ -294,17 +314,17 @@ $(document).ready(function () {
 		{
 			sets: ['A', 'B'],
 			label: 'Fit',
-			size: 3
+			size: overlapping
 		},
 		{
 			sets: ['A', 'C'],
 			label: 'Competence',
-			size: 3
+			size: overlapping
 		},
 		{
 			sets: ['B', 'C'],
 			label: 'Motivation',
-			size: 3
+			size: overlapping
 		},
 		{
 			sets: ['A', 'B', 'C'],
