@@ -117,8 +117,9 @@ function schedule() {
 	if (email.length > 0) {
 		checklist[0] = true;
 	} else {
-		$('#schedule-form-errors').html("Please fill in your email.");
-		$('#schedule-form-errors').fadeIn();
+		checklist[0] = true;
+		//$('#schedule-form-errors').html("Please fill in your email.");
+		//$('#schedule-form-errors').fadeIn();
 	}
 
 	if (name.length > 0) {
@@ -255,7 +256,7 @@ function timedCount() {
 	console.log(c);
 	c = c + 1;
 	//here is the number of seconds for rotation
-	t = setTimeout(timedCount, 3000);
+	t = setTimeout(timedCount, 20000);
 }
 
 function startCount() {

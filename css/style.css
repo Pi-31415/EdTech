@@ -224,6 +224,7 @@ input {
   margin-left: auto;
   margin-right: auto;
   width: 400px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -365,6 +366,17 @@ input {
     grid-template-columns: auto auto;
     margin-left: 50px;
     margin-right: 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .grid-container--tutorial-3 {
+    grid-template-columns: auto auto;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .grid-container--tutorial-3 div {
+    width: 100px;
   }
 }
 .dark-text {
