@@ -167,7 +167,7 @@ input {
   box-shadow: none;
 }
 
-.grid, .grid-container-4, .grid-container--tutorial-3, .grid-container-3, .grid-container-2 {
+.grid, .grid-container-4, .grid-container-3, .grid-container-2 {
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -186,15 +186,15 @@ input {
   margin-right: auto;
   grid-template-columns: auto auto auto;
 }
-.grid-container--tutorial-3 {
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: auto auto auto;
-}
 .grid-container-4 {
   margin-left: auto;
   margin-right: auto;
   grid-template-columns: auto auto auto auto;
+}
+
+.grid-container--tutorial-3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 .grid-container-2 div {
@@ -214,7 +214,7 @@ input {
 .grid-container--tutorial-3 div {
   margin-left: auto;
   margin-right: auto;
-  width: auto;
+  width: 400px;
   text-align: center;
 }
 
@@ -227,10 +227,14 @@ input {
 
 @media screen and (max-width: 1400px) {
   .grid-container-4 {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     grid-gap: 10px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .grid-container--tutorial-3 div {
+    width: 300px;
   }
 
   .grid-container-4 div {
@@ -249,6 +253,10 @@ input {
     display: none;
   }
 
+  .grid-container--tutorial-3 div {
+    width: 200px;
+  }
+
   .grid-container-2, .grid-container-3, .grid-container-4 {
     grid-template-columns: auto;
     grid-gap: 50px;
@@ -258,8 +266,6 @@ input {
 
   .grid-container--tutorial-3 {
     grid-template-columns: auto auto;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .grid-container-2 div, .grid-container-3 div, .grid-container-4 div {
@@ -316,8 +322,8 @@ input {
 
   .grid-container--tutorial-3 {
     grid-template-columns: auto auto;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 .dark-text {

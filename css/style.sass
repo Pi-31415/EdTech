@@ -181,16 +181,15 @@ input
 		margin-left: auto
 		margin-right: auto
 		grid-template-columns: auto auto auto
-	&-container--tutorial-3
-			@extend .grid
-			margin-left: auto
-			margin-right: auto
-			grid-template-columns: auto auto auto
 	&-container-4
 		@extend .grid
 		margin-left: auto
 		margin-right: auto
 		grid-template-columns: auto auto auto auto
+
+.grid-container--tutorial-3
+	display: grid
+	grid-template-columns: auto auto auto
 
 .grid-container-2 div
 	margin-left: auto
@@ -207,7 +206,7 @@ input
 .grid-container--tutorial-3 div
 	margin-left: auto
 	margin-right: auto
-	width: auto
+	width: 400px
 	text-align: center
 
 .grid-container-4 div
@@ -220,11 +219,14 @@ input
 
 @media screen and (max-width: 1400px)
 	.grid-container-4
-		grid-template-columns: auto auto auto
+		grid-template-columns: auto auto
 		grid-gap: 10px
 		padding-left: 10px
 		padding-right: 10px
 
+	.grid-container--tutorial-3 div
+		width: 300px
+	
 	.grid-container-4 div
 		margin-left: auto
 		margin-right: auto
@@ -238,6 +240,9 @@ input
 	.showonlymobile
 		display: none
 
+	.grid-container--tutorial-3 div
+		width: 200px
+
 	.grid-container-2,.grid-container-3,.grid-container-4
 		grid-template-columns: auto
 		grid-gap: 50px
@@ -246,8 +251,6 @@ input
 
 	.grid-container--tutorial-3
 		grid-template-columns: auto auto
-		padding-left: 50px
-		padding-right: 50px
 
 	.grid-container-2 div,.grid-container-3 div,.grid-container-4 div
 		width: 80vw
@@ -293,8 +296,8 @@ input
 
 	.grid-container--tutorial-3
 		grid-template-columns: auto auto
-		padding-left: 50px
-		padding-right: 50px
+		margin-left: 50px
+		margin-right: 50px
 
 
 //More general CSS classes
