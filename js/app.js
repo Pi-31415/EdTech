@@ -448,20 +448,15 @@ $(document).ready(function () {
 		}
 	});
 
+	$("#quotecontainer").mouseover(function () {
+		console.log("pause quote mouse in");
+		$('.carousel-class').slick('slickPause');
+	});
 	
 	$('#quotecontainer').mouseout(function () {
 		console.log("counting again after quote mouse out");
 		$('.carousel-class').slick('slickPlay');
 	});
-	
-	//System Runtime Code for whole venn diagram interaction
-	//startCount();
-
-	/* To Fix
-	$("#quotecontainer").mouseover(function () {
-		stopCount();
-	});
-	*/
 	
 
 	//All Venn Diagram Related Functions ends
