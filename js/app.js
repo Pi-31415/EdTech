@@ -6,7 +6,7 @@ var pillar_state = "";
 var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
 var venn_interact = false;
-var venn_rotation_speed = 3000;
+var venn_rotation_speed = 1000;
 
 //List of functions to use
 function jumpto(elementid) {
