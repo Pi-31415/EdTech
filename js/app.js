@@ -152,9 +152,8 @@ function schedule() {
 				var contact_message = "Thank you very much. We will be contacting you soon.";
 				$('#schedule-form-success').html("<br>" + contact_message);
 				$('#schedule-form-success').fadeIn();
-			}
-			else{
-				var contact_message = "";//loading bar
+			} else {
+				var contact_message = ""; //loading bar
 				$('#schedule-form-success').html("<br>" + contact_message);
 				$('#schedule-form-success').fadeIn();
 			}
@@ -338,7 +337,7 @@ $(document).ready(function () {
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
-		d3.selectAll("#venn text").style("font-size", "1em");
+		d3.selectAll("#venn text").style("font-size", "0.8em");
 	} else if (window.innerWidth > 400 && window.innerWidth < 650) {
 		//phones
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
@@ -387,14 +386,16 @@ $(document).ready(function () {
 		})
 		.on("mouseout", function (d, i) {
 			//Bug
-			var selection = d3.select(this);
-			$('#quotearea').html("");
-			selection.select("path")
-				.style("stroke-width", 2)
-				.style("fill", "#fff")
-				.style("fill-opacity", '0')
-				.style("stroke-opacity", 1);
-			color_venn();
+			if (w >= 600) {
+				var selection = d3.select(this);
+				$('#quotearea').html("");
+				selection.select("path")
+					.style("stroke-width", 2)
+					.style("fill", "#fff")
+					.style("fill-opacity", '0')
+					.style("stroke-opacity", 1);
+				color_venn();
+			}
 		});
 	//Venn Diagram Mouse hover code ends
 
