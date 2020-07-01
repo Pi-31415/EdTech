@@ -93,8 +93,9 @@ function schedule() {
 	if (email.includes("@") == true) {
 		checklist[2] = true;
 	} else {
-		$('#schedule-form-errors').html("Please enter a valid email address.");
-		$('#schedule-form-errors').fadeIn();
+		checklist[2] = true;
+		//$('#schedule-form-errors').html("Please enter a valid email address.");
+		//$('#schedule-form-errors').fadeIn();
 	}
 
 	if (phone.length > 0) {
