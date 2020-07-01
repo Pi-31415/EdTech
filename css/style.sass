@@ -66,6 +66,14 @@ a:hover
 .showonlymobilevenn
 	display: none
 
+.biographymobile
+	font-size: 0.75em
+	text-align: left
+	margin: 0px
+	padding: 0px
+	text-align: center
+	display: none
+
 .button
 	font-weight: 700
 	background-color: $primary-color
@@ -218,6 +226,12 @@ input
 //Responsive Designs
 
 @media screen and (max-width: 1400px)
+	.biography
+		display: none
+
+	.biographymobile
+		display: block
+
 	.grid-container-4
 		grid-template-columns: auto auto
 		grid-gap: 10px
@@ -234,6 +248,12 @@ input
 		text-align: center
 
 @media screen and (max-width: 1200px)
+	.biography
+		display: none
+
+	.biographymobile
+		display: block
+
 	.hidemobile
 		display: block
 
@@ -256,6 +276,12 @@ input
 		width: 80vw
 
 @media screen and (max-width: 1024px)
+	.biography
+		display: none
+
+	.biographymobile
+		display: block
+
 	.hidemobilevenn
 		display: none
 
@@ -270,6 +296,12 @@ input
 
 
 @media screen and (max-width: 600px)
+	.biography
+		display: none
+
+	.biographymobile
+		display: block
+
 	.showonlymobilevenn,.showonlymobilevenn img
 		display: block
 		width: 100%
@@ -517,9 +549,6 @@ input
 	margin: 0px
 	padding: 0px
 	text-align: center
-
-.biography.mobile
-	display: none
 
 #component-about h1,h2,h3,p
 	margin-left:20px
