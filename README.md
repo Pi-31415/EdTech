@@ -37,10 +37,9 @@ sass style.sass style.css
 ```
 
 ## Venn Diagram
-The order of rotation is in the global array
-```
-var venn_id_global = ['venn-academics', 'venn-interest', 'venn-portfolio'];
-```
+Venn diagram is created by combining Slick and Venn js.
+
+* I am not able to solve the issue where two bubbles are highlighted simultaneously when user selects the bubble. Other people also have had this issue with Slick js (https://github.com/kenwheeler/slick/issues/1945).
 
 ## List of Stock Images Used
 
