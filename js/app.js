@@ -6,6 +6,7 @@ var pillar_state = "";
 var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
 var venn_interact = false;
+var venn_rotation_speed = 3000;
 
 //List of functions to use
 function jumpto(elementid) {
@@ -246,6 +247,7 @@ function update_slick_id(pillar) {
 	console.log("Current Slick ID : " + slick_id + " - Pillar State : " + pillar_state);
 }
 
+/*
 //Timer for Venn Diagram
 var c = 0;
 var t;
@@ -272,7 +274,7 @@ function stopCount() {
 	clearTimeout(t);
 	timer_is_on = 0;
 }
-
+*/
 
 //Main function which runs when the page loads
 $(document).ready(function () {
@@ -295,8 +297,8 @@ $(document).ready(function () {
 		//fallback
 		overlapping = 5;
 	}
-	
-	
+
+
 	//Venn Diagram Mouse hover code using D3 js and venn js
 	var sets = [{
 			sets: ['A'],
@@ -387,7 +389,8 @@ $(document).ready(function () {
 				color_venn();
 				// highlight the current path
 				if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
-					stopCount();
+					//stopCount();
+					$('.carousel-class').slick('slickPause');
 					console.log('User interacts with venn diagram');
 					venn_interact = true;
 					pillar_state = d.label.toLowerCase();
@@ -411,6 +414,7 @@ $(document).ready(function () {
 		.on("mouseout", function (d, i) {
 			//Bug
 			if (w >= 600) {
+				$('.carousel-class').slick('slickPlay');
 				var selection = d3.select(this);
 				$('#quotearea').html("");
 				selection.select("path")
@@ -428,7 +432,10 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		dots: true,
 		speed: 100,
-		centerMode: false
+		centerMode: false,
+		autoplay: true,
+		autoplaySpeed: venn_rotation_speed,
+		pauseOnDotsHover: true
 	});
 
 	//Linking between slick carousel (quotes) -> venn
@@ -441,16 +448,21 @@ $(document).ready(function () {
 		}
 	});
 
+	
+	$('#quotecontainer').mouseout(function () {
+		console.log("counting again after quote mouse out");
+		$('.carousel-class').slick('slickPlay');
+	});
+	
 	//System Runtime Code for whole venn diagram interaction
-	startCount();
+	//startCount();
 
 	/* To Fix
 	$("#quotecontainer").mouseover(function () {
 		stopCount();
 	});
-	$('#quotecontainer').mouseout(function () {
-		startCount();
-	});*/
+	*/
+	
 
 	//All Venn Diagram Related Functions ends
 
