@@ -100,15 +100,17 @@ function schedule() {
 	if (phone.length > 0) {
 		checklist[3] = true;
 	} else {
-		$('#schedule-form-errors').html("Please enter phone number.");
-		$('#schedule-form-errors').fadeIn();
+		checklist[3] = true;
+		//$('#schedule-form-errors').html("Please enter phone number.");
+		//$('#schedule-form-errors').fadeIn();
 	}
 
 	if (/^\d+$/.test(phone)) {
 		checklist[4] = true;
 	} else {
-		$('#schedule-form-errors').html("Please enter a valid phone number.");
-		$('#schedule-form-errors').fadeIn();
+		checklist[3] = true;
+		//$('#schedule-form-errors').html("Please enter a valid phone number.");
+		//$('#schedule-form-errors').fadeIn();
 	}
 
 	if (email.length > 0) {
