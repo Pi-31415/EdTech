@@ -108,7 +108,7 @@ function schedule() {
 	if (/^\d+$/.test(phone)) {
 		checklist[4] = true;
 	} else {
-		checklist[3] = true;
+		checklist[4] = true;
 		//$('#schedule-form-errors').html("Please enter a valid phone number.");
 		//$('#schedule-form-errors').fadeIn();
 	}

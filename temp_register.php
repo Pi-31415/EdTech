@@ -8,11 +8,11 @@ $myfile = fopen("customer.txt", "w") or die("Unable to open file!");
 $date = date("Y/m/d");
 $new_content = "";
 $customer = $_GET['customer'];
-$name = $_GET['name'];
-$email = $_GET['email'];
-$phone = $_GET['phone'];
-$school = $_GET['school'];
-$howhelp = $_GET['howhelp'];
+$name = htmlspecialchars($_GET['name']) ?? 'No name provided';
+$email = htmlspecialchars($_GET['email']) ?? 'No email provided';
+$phone = htmlspecialchars($_GET['phone']) ?? 'No phone provided';
+$school = htmlspecialchars($_GET['school']) ?? 'No school provided';
+$howhelp = htmlspecialchars($_GET['howhelp']) ?? 'No comment provided';
 
 $new_content .= "-----------------\n";
 $new_content .= $date."\n";
