@@ -276,13 +276,9 @@ function stopCount() {
 }
 */
 
-//Main function which runs when the page loads
-$(document).ready(function () {
-
+function venn_resize(){
 	var w = $(document).width();
-
 	//currently uses document width for venn diagram calculation
-
 	console.log("w:"+w);
 	console.log("Outer Width:"+window.outerWidth);
 	console.log("Screen Width:"+screen.width);
@@ -292,7 +288,6 @@ $(document).ready(function () {
 	//Responsive overlapping for venn diagram
 	if (w > 1260 && w < 1600) {
 		//desktops
-		
 		overlapping = 3;
 	} else if (w > 1120 && w < 1260) {
 		//tablets
@@ -307,7 +302,6 @@ $(document).ready(function () {
 		//fallback
 		overlapping = 5;
 	}
-
 
 	//Venn Diagram Mouse hover code using D3 js and venn js
 	var sets = [{
@@ -348,10 +342,7 @@ $(document).ready(function () {
 	];
 
 	//Get screen sizes and font sizes for venn diagram responsive design
-	
-	var div;
 	var div = d3.select("#venn");
-	
 
 	if (w > 1260 && w < 1600) {
 		//desktops
@@ -390,6 +381,14 @@ $(document).ready(function () {
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.5em");
 	}
+}
+
+//Main function which runs when the page loads
+$(document).ready(function () {
+
+	
+
+	var div = d3.select("#venn");
 
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
