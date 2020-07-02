@@ -9,6 +9,7 @@ var venn_interact = false;
 var venn_rotation_speed = 5000;
 var w = $(document).width(); // variable for window width
 var sets;
+var div = d3.select("#venn");
 
 //List of functions to use
 function jumpto(elementid) {
@@ -347,8 +348,8 @@ function venn_resize(){
 
 function draw_venn(){
 	console.log("Drawing Venn Diagram");
+	w = $(document).width();
 	//Get screen sizes and font sizes for venn diagram responsive design
-	var div = d3.select("#venn");
 	if (w > 1260) {
 		//desktops
 		console.log('Size: 1260 and above');
