@@ -41,6 +41,13 @@
 	<link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css" />
 	<link rel="stylesheet" href="./css/style.css">
 
+	<!--Some hard coded styles to disable bubble click in quotes carousel-->
+	<style>
+		.slick-dots{
+			pointer-events: none;
+		}
+	</style>
+
 </head>
 
 <body onresize="venn_resize();draw_venn();">
