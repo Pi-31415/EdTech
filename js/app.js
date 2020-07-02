@@ -6,7 +6,7 @@ var pillar_state = "";
 var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
 var venn_interact = false;
-var venn_rotation_speed = 5000;
+var venn_rotation_speed = 1000;
 var w = $(document).width(); // variable for window width
 var sets;
 var div = d3.select("#venn");
@@ -396,7 +396,7 @@ function draw_venn(){
 
 //Main function which runs when the page loads
 $(document).ready(function () {
-
+	
 	venn_resize();
 	draw_venn();
 
@@ -454,9 +454,12 @@ $(document).ready(function () {
 		speed: 100,
 		centerMode: false,
 		autoplay: true,
-		autoplaySpeed: venn_rotation_speed,
-		pauseOnDotsHover: true
+		autoplaySpeed: venn_rotation_speed
 	});
+
+	next_slide();
+	next_slide();
+	next_slide();
 
 	//Linking between slick carousel (quotes) -> venn
 	$('.carousel-class').on('afterChange', function (event, slick, currentSlide) {
