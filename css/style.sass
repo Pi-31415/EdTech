@@ -102,40 +102,20 @@ input
 	width: 300px
 
 .form__group
-	position: relative
-	padding: 10px 0 0
-	margin-top: 10px
-	width: 25%
+	color: $text-dark
 
 .form__field
 	font-family: $font-text
-	width: 100%
-	border: 0
-	border-bottom: 2px solid $text-dark
-	outline: 0
-	font-size: 1rem
-	color: $text-dark
-	padding: 9px 0px 2px 0px
-	background: transparent
-	transition: border-color 0.2s
-	&::placeholder
-		color: transparent
-	&:placeholder-shown ~ .form__label
-		font-size: 1.3rem
-		cursor: text
-		top: 20px
+	
 
 .form__label
 	font-family: $font-title
 	-webkit-text-fill-color: $text-dark
 	-webkit-text-stroke-width: 1px
 	-webkit-text-stroke-color: $text-dark
-	position: absolute
-	top: 0
-	display: block
-	transition: 0.1s
-	font-size: 1rem
+	font-size: 1.3rem
 	color: $text-dark
+	
 
 .selector__label
 	font-family: $font-title
@@ -147,21 +127,7 @@ input
 
 .form__field:focus
 	padding-bottom: 2px
-	font-weight: 700
-	border-width: 3px
-	border-image: linear-gradient(to right,$primary-gradient,$primary-color)
-	border-image-slice: 1
-	~ .form__label
-		position: absolute
-		top: 0
-		display: block
-		transition: 0.1s
-		font-size: 0.8rem
-		-webkit-text-fill-color: $primary-color
-		-webkit-text-stroke-width: 1px
-		-webkit-text-stroke-color: $primary-color
-		color: $primary-color
-		font-weight:700  
+	
 
 .form__field
 	&:required,&:invalid
@@ -180,6 +146,11 @@ input
 	padding-right: 100px
 	padding-top: 20px
 	&-container-2
+		@extend .grid
+		margin-left: auto
+		margin-right: auto
+		grid-template-columns: auto auto
+	&-container-2-form
 		@extend .grid
 		margin-left: auto
 		margin-right: auto
@@ -204,6 +175,11 @@ input
 	margin-right: auto
 	width: 450px
 	text-align: center
+
+.grid-container-2-form div
+	margin-left: auto
+	margin-right: auto
+	width: 450px
 
 .grid-container-3 div
 	margin-left: auto
@@ -264,7 +240,7 @@ input
 	.grid-container--tutorial-3 div
 		width: 200px
 
-	.grid-container-2,.grid-container-3,.grid-container-4
+	.grid-container-2,.grid-container-2-form,.grid-container-3,.grid-container-4
 		grid-template-columns: auto
 		grid-gap: 50px
 		padding-left: 50px
@@ -273,7 +249,7 @@ input
 	.grid-container--tutorial-3
 		grid-template-columns: auto auto
 
-	.grid-container-2 div,.grid-container-3 div,.grid-container-4 div
+	.grid-container-2 div,.grid-container-2-form div,.grid-container-3 div,.grid-container-4 div
 		width: 80vw
 
 @media screen and (max-width: 1024px)
@@ -319,12 +295,12 @@ input
 	.form__group
 		width: 50%
 	
-	.grid-container-2,.grid-container-3,.grid-container-4
+	.grid-container-2,.grid-container-2-form,.grid-container-3,.grid-container-4
 		grid-gap: 25px
 		padding-left: 20px
 		padding-right: 20px
 
-	.grid-container-2 div,.grid-container-3 div,.grid-container-4 div
+	.grid-container-2 div,.grid-container-2-form div,.grid-container-3 div,.grid-container-4 div
 		width: 80vw
 
 	.grid-container--tutorial-3
