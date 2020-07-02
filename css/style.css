@@ -438,7 +438,7 @@ input {
   font-size: 120px;
 }
 
-.component-loginbox {
+#component-loginbox {
   background: #eeeeee;
   height: 100vh;
   width: 100vw;
@@ -451,17 +451,17 @@ input {
   z-index: 200;
 }
 
-.component-loginbox a {
+#component-loginbox a {
   color: #9b1c31;
 }
 
-.component-loginbox .right {
+#component-loginbox .right {
   text-align: right;
   margin-left: 0px;
   margin-right: 0px;
 }
 
-.component-loginbox div {
+#component-loginbox div {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
