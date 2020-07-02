@@ -279,7 +279,7 @@ function stopCount() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 
-	var w = window.outerWidth;
+	var w = window.innerWidth;
 
 	var overlapping = 3;
 	//Responsive overlapping for venn diagram
