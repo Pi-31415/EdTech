@@ -280,6 +280,8 @@ function stopCount() {
 $(document).ready(function () {
 
 	var w = window.innerWidth;
+	console.log("Inner Width:"+w);
+	console.log("Outer Width:"+window.outerWidth);
 
 	var overlapping = 3;
 	//Responsive overlapping for venn diagram
@@ -344,7 +346,7 @@ $(document).ready(function () {
 	
 	var div;
 	var div = d3.select("#venn");
-	console.log(w);
+	
 
 	if (w > 1260 && w < 1600) {
 		//desktops
