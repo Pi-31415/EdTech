@@ -287,13 +287,13 @@ $(document).ready(function () {
 		//desktops
 		
 		overlapping = 3;
-	} else if (window.innerWidth > 1120 && window.innerWidth < 1260) {
+	} else if (w > 1120 && w < 1260) {
 		//tablets
 		overlapping = 5;
-	} else if (window.innerWidth > 650 && window.innerWidth < 1175) {
+	} else if (w > 650 && w < 1175) {
 		//phones
 		overlapping = 5;
-	} else if (window.innerWidth > 400 && window.innerWidth < 650) {
+	} else if (w > 400 && w < 650) {
 		//phones
 		overlapping = 6;
 	} else {
