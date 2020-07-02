@@ -279,10 +279,13 @@ function stopCount() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 
+	var w = window.outerWidth;
+
 	var overlapping = 3;
 	//Responsive overlapping for venn diagram
-	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
+	if (w > 1260 && w < 1600) {
 		//desktops
+		
 		overlapping = 3;
 	} else if (window.innerWidth > 1120 && window.innerWidth < 1260) {
 		//tablets
@@ -338,7 +341,7 @@ $(document).ready(function () {
 	];
 
 	//Get screen sizes and font sizes for venn diagram responsive design
-	var w = window.innerWidth;
+	
 	var div;
 	var div = d3.select("#venn");
 	console.log(w);
