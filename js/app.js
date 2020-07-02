@@ -6,7 +6,7 @@ var pillar_state = "";
 var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
 var venn_interact = false;
-var venn_rotation_speed = 1000;
+var venn_rotation_speed = 5000;
 var w = $(document).width(); // variable for window width
 var sets;
 var div = d3.select("#venn");
@@ -425,7 +425,7 @@ $(document).ready(function () {
 						.style("fill-opacity", '0.4')
 						.style("stroke-opacity", 1);
 				} else {
-
+					$('.carousel-class').slick('slickPlay');	
 					//To-do: Change Quote Function here
 				}
 			}
@@ -457,8 +457,6 @@ $(document).ready(function () {
 		autoplaySpeed: venn_rotation_speed
 	});
 
-	next_slide();
-	next_slide();
 	next_slide();
 
 	//Linking between slick carousel (quotes) -> venn
