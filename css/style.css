@@ -386,6 +386,7 @@ input[type=text]:focus {
 
 #particles-js {
   width: 100%;
+  height: 100%;
   z-index: -1;
 }
 
@@ -625,6 +626,7 @@ input[type=text]:focus {
   color: #ffffff;
   font-size: 1.2em;
   width: 100vw;
+  height: 100vh;
   text-align: center;
   z-index: -2;
 }
