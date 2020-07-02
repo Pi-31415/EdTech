@@ -67,12 +67,15 @@
 			<!--Login Form-->
 			<div id="login-form-errors"></div>
 			<div class="form__group field">
-				<input type="email" class="form__field" placeholder="Email" name="email-login" id='email-login' required />
 				<label for="email-login" class="form__label">Email</label>
+				<br>
+				<input type="email" class="form__field" name="email-login" id='email-login' required />
 			</div>
+			<br>
 			<div class="form__group field">
-				<input type="password" class="form__field" placeholder="Password" name="password" id='password' required />
 				<label for="password" class="form__label">Password</label>
+				<br>
+				<input type="password" class="form__field" name="password" id='password' required />
 			</div>
 			<br><br>
 			<button class="button" onclick="login()">Log In</button>
@@ -369,7 +372,7 @@
 		</div>
 		<div id="component-freetrial">
 			<div class='splitter hidemobile'></div>
-			<div class="grid-container-2">
+			<div class="grid-container-2-form">
 				<div>
 					<h1>Schedule a free trial</h1>
 				</div>
@@ -392,8 +395,7 @@
 						<table style="width:100%;padding:0px;margin:0px;border-style: none;">
 							<tr>
 								<td>
-									<label for="name" class="form__label">Full Name</label>
-									<input type="input" class="form__field" placeholder="Full Name" name="name" id='name' required />
+									<input type="input" class="form__field" name="name" id='name' placeholder="Full Name" required />
 								</td>
 							</tr>
 						</table>
@@ -402,8 +404,7 @@
 						<table style="width:100%;padding:0px;margin:0px;border-style: none;">
 							<tr>
 								<td>
-									<label for="email" class="form__label">Email</label>
-									<input type="email" class="form__field" placeholder="Email" name="email" id='email' required />
+									<input type="email" class="form__field" name="email" id='email' placeholder="Email"/>
 								</td>
 							</tr>
 						</table>
@@ -412,19 +413,7 @@
 						<table style="width:100%;padding:0px;margin:0px;border-style: none;">
 							<tr>
 								<td>
-									<label for="phone" class="form__label">Phone</label>
-									<input type="tel" class="form__field" placeholder="Phone" name="phone" id='phone' required />
-								</td>
-							</tr>
-						</table>
-					</div>
-
-					<div class="form__group field">
-						<table style="width:100%;padding:0px;margin:0px;border-style: none;">
-							<tr>
-								<td>
-									<label for="school" class="form__label">School Name</label>
-									<input type="input" class="form__field" placeholder="School" name="school" id='school' required />
+									<input type="tel" class="form__field" name="phone" id='phone' placeholder="Phone"/>
 								</td>
 							</tr>
 						</table>
@@ -434,9 +423,17 @@
 						<table style="width:100%;padding:0px;margin:0px;border-style: none;">
 							<tr>
 								<td>
-									<label for="howhelp" class="form__label">How can we help you?</label>
-									<br>
-									<textarea id="howhelp" type="tel" class="form__field" name="howhelp" rows="4" cols="50" placeholder="How can we help you?"></textarea>
+									<input type="input" class="form__field" name="school" id='school' placeholder="School Name"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="form__group field">
+						<table style="width:100%;padding:0px;margin:0px;border-style: none;">
+							<tr>
+								<td>
+									<textarea id="howhelp" class="form__field" name="howhelp" rows="4" placeholder="How can we help you?"></textarea>
 								</td>
 							</tr>
 						</table>

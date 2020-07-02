@@ -108,6 +108,8 @@ input {
 
 .form__field {
   font-family: "Kodchasan", sans-serif;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .form__label {
@@ -115,7 +117,16 @@ input {
   -webkit-text-fill-color: #333333;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #333333;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.form__field::placeholder {
+  font-family: "Bungee Hairline", sans-serif;
+  -webkit-text-fill-color: #333333;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333333;
+  font-size: 1rem;
   color: #333333;
 }
 
@@ -124,12 +135,8 @@ input {
   -webkit-text-fill-color: #333333;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #333333;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #333333;
-}
-
-.form__field:focus {
-  padding-bottom: 2px;
 }
 
 .form__field:required, .form__field:invalid {
@@ -730,7 +737,7 @@ input {
   -webkit-text-fill-color: #333333;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #333333;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #333333;
   position: relative;
   display: block;

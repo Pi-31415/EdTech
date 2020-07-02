@@ -286,12 +286,12 @@ function stopCount() {
 function venn_resize(){
 
 	var chart;
-
+	/*
 	console.log("w:"+w);
 	console.log("Outer Width:"+window.outerWidth);
 	console.log("Screen Width:"+screen.width);
 	console.log("jquery Window Width:"+$(window).width())
-
+	*/
 	var overlapping = 3;
 	//Responsive overlapping for venn diagram
 	if (w > 1260 && w < 1600) {
@@ -403,7 +403,6 @@ $(document).ready(function () {
 
 	window.addEventListener("scroll", function (event) {
 		scroll = this.scrollY;
-		console.log(scroll)
 	});
 	
 	venn_resize();

@@ -106,6 +106,8 @@ input
 
 .form__field
 	font-family: $font-text
+	width: 100%
+	margin-bottom: 5px
 	
 
 .form__label
@@ -113,21 +115,25 @@ input
 	-webkit-text-fill-color: $text-dark
 	-webkit-text-stroke-width: 1px
 	-webkit-text-stroke-color: $text-dark
-	font-size: 1.3rem
+	font-size: 1rem
 	color: $text-dark
 	
-
+.form__field::placeholder
+	font-family: $font-title
+	-webkit-text-fill-color: $text-dark
+	-webkit-text-stroke-width: 1px
+	-webkit-text-stroke-color: $text-dark
+	font-size: 1rem
+	color: $text-dark
+	
 .selector__label
 	font-family: $font-title
 	-webkit-text-fill-color: $text-dark
 	-webkit-text-stroke-width: 1px
 	-webkit-text-stroke-color: $text-dark
-	font-size: 1.3rem
+	font-size: 1rem
 	color: $text-dark
 
-.form__field:focus
-	padding-bottom: 2px
-	
 
 .form__field
 	&:required,&:invalid
@@ -650,7 +656,7 @@ input
 	-webkit-text-fill-color: $text-dark
 	-webkit-text-stroke-width: 1px
 	-webkit-text-stroke-color: $text-dark
-	font-size: 1.3rem
+	font-size: 1rem
 	color: $text-dark
 	position: relative
 	display: block
