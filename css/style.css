@@ -111,6 +111,14 @@ input {
   width: 100%;
   margin-bottom: 5px;
   margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #9b1c31;
+  background-color: #eeeeee;
+}
+
+.form__field:focus {
+  border: 1px solid #9b1c31;
 }
 
 .form__label {
@@ -746,7 +754,7 @@ input {
   height: 30px;
   margin: 0 auto;
   border: 1px solid #9b1c31;
-  background-color: #ffffff;
+  background-color: #eeeeee;
 }
 .custom-select select {
   border: none;
