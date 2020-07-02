@@ -346,7 +346,7 @@ $(document).ready(function () {
 	var div = d3.select("#venn");
 	console.log(w);
 
-	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
+	if (w > 1260 && w < 1600) {
 		//desktops
 		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
 		div.datum(sets).call(chart);
@@ -354,21 +354,21 @@ $(document).ready(function () {
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.8em");
 
-	} else if (window.innerWidth > 1120 && window.innerWidth < 1260) {
+	} else if (w > 1120 && w < 1260) {
 		//tablets
 		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.7em");
-	} else if (window.innerWidth > 650 && window.innerWidth < 1175) {
+	} else if (w > 650 && w < 1175) {
 		//phones
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.8em");
-	} else if (window.innerWidth > 400 && window.innerWidth < 650) {
+	} else if (w > 400 && w < 650) {
 		//phones
 		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
 		div.datum(sets).call(chart);
