@@ -41,6 +41,8 @@ Venn diagram is created by combining Slick and Venn js.
 
 * I am not able to solve the issue where two bubbles are highlighted simultaneously when user selects the bubble. Other people also have had this issue with Slick js (https://github.com/kenwheeler/slick/issues/1945).
 
+* Currently uses document width for venn diagram calculation
+
 ## List of Stock Images Used
 
 * Hero Banner (from unsplash)

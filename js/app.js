@@ -280,6 +280,9 @@ function stopCount() {
 $(document).ready(function () {
 
 	var w = $(document).width();
+
+	//currently uses document width for venn diagram calculation
+
 	console.log("w:"+w);
 	console.log("Outer Width:"+window.outerWidth);
 	console.log("Screen Width:"+screen.width);
