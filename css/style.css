@@ -379,6 +379,10 @@ input {
     width: 100px;
   }
 }
+.primary {
+  color: #9b1c31;
+}
+
 .dark-text {
   color: #333333;
 }
