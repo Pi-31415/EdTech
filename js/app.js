@@ -21,8 +21,8 @@ function jumpto(elementid) {
 
 function loginboxclose() {
 	$(".component-loginbox").removeClass("active");
-	$(".navbar").show();
-	$(".content").show();
+	//$(".navbar").show();
+	//$(".content").show();
 }
 
 //These are pseudo functions to demonstrate login and schedule
@@ -490,8 +490,8 @@ $(document).ready(function () {
 	$('#loginbutton').click(function () {
 		$(".component-loginbox").addClass("active");
 		//hides navbar for a while
-		$(".navbar").hide();
-		$(".content").hide();
+		//$(".navbar").hide();
+		//$(".content").hide();
 	});
 
 	//Function to close the login box and 
