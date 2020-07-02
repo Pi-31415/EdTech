@@ -7,6 +7,7 @@ var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
 var venn_interact = false;
 var venn_rotation_speed = 5000;
+var w = $(document).width(); // variable for window width
 
 //List of functions to use
 function jumpto(elementid) {
@@ -277,8 +278,7 @@ function stopCount() {
 */
 
 function venn_resize(){
-	var w = $(document).width();
-	//currently uses document width for venn diagram calculation
+
 	console.log("w:"+w);
 	console.log("Outer Width:"+window.outerWidth);
 	console.log("Screen Width:"+screen.width);
@@ -386,15 +386,13 @@ function venn_resize(){
 //Main function which runs when the page loads
 $(document).ready(function () {
 
-	
+	venn_resize();
 
 	var div = d3.select("#venn");
 
 	div.selectAll("g")
 		.on("mouseover", function (d, i) {
-
 			//disable interaction with venn diagram if it is viewed on phone
-
 			if (w >= 600) {
 				color_venn();
 				// highlight the current path
