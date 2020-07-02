@@ -115,9 +115,15 @@ input {
   padding-bottom: 5px;
   border: 1px solid #9b1c31;
   background-color: #eeeeee;
+  outline: none;
 }
 
-.form__field:focus {
+input[type=text] {
+  border: 1px solid #9b1c31;
+  outline: none;
+}
+
+input[type=text]:focus {
   border: 1px solid #9b1c31;
 }
 
