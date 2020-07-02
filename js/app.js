@@ -6,7 +6,7 @@ var pillar_state = "";
 var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
 var venn_interact = false;
-var venn_rotation_speed = 1000;
+var venn_rotation_speed = 5000;
 
 //List of functions to use
 function jumpto(elementid) {
@@ -142,7 +142,7 @@ function schedule() {
 
 		var query = "?customer=" + customer + "&name=" + name + "&email=" + email + "&phone=" + phone + "&school=" + school + "&howhelp=" + howhelp;
 
-		console.log(query);
+		//console.log(query);
 
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function () {
@@ -244,7 +244,7 @@ function update_slick_id(pillar) {
 	} else {
 		slick_id = 2;
 	}
-	console.log("Current Slick ID : " + slick_id + " - Pillar State : " + pillar_state);
+	//console.log("Current Slick ID : " + slick_id + " - Pillar State : " + pillar_state);
 }
 
 /*
@@ -279,10 +279,11 @@ function stopCount() {
 //Main function which runs when the page loads
 $(document).ready(function () {
 
-	var w = window.innerWidth;
-	console.log("Inner Width:"+w);
+	var w = $(document).width();
+	console.log("w:"+w);
 	console.log("Outer Width:"+window.outerWidth);
 	console.log("Screen Width:"+screen.width);
+	console.log("jquery Window Width:"+$(window).width())
 
 	var overlapping = 3;
 	//Responsive overlapping for venn diagram
@@ -398,7 +399,7 @@ $(document).ready(function () {
 				if (d.label == "Academics" || d.label == "Portfolio" || d.label == "Interest") {
 					//stopCount();
 					$('.carousel-class').slick('slickPause');
-					console.log('User interacts with venn diagram');
+					//console.log('User interacts with venn diagram');
 					venn_interact = true;
 					pillar_state = d.label.toLowerCase();
 					update_slick_id(pillar_state);
@@ -450,18 +451,18 @@ $(document).ready(function () {
 		if (venn_interact == true) {
 
 		} else {
-			console.log('User interacts with quotes');
+			//console.log('User interacts with quotes');
 			venn_select(pillar_name[currentSlide]);
 		}
 	});
 
 	$("#quotecontainer").mouseover(function () {
-		console.log("pause quote mouse in");
+		//console.log("pause quote mouse in");
 		$('.carousel-class').slick('slickPause');
 	});
 	
 	$('#quotecontainer').mouseout(function () {
-		console.log("counting again after quote mouse out");
+		//console.log("counting again after quote mouse out");
 		$('.carousel-class').slick('slickPlay');
 	});
 	
