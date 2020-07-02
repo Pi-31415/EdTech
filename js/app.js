@@ -341,6 +341,7 @@ $(document).ready(function () {
 	var w = window.innerWidth;
 	var div;
 	var div = d3.select("#venn");
+	console.log(w);
 
 	if (window.innerWidth > 1260 && window.innerWidth < 1600) {
 		//desktops
