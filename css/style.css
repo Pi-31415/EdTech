@@ -467,11 +467,6 @@ input {
   margin-right: auto;
 }
 
-.component-loginbox.active {
-  display: block;
-  z-index: 200;
-}
-
 #loginbox-close {
   color: #9b1c31;
 }

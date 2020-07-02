@@ -20,7 +20,7 @@ function jumpto(elementid) {
 }
 
 function loginboxclose() {
-	$(".component-loginbox").removeClass("active");
+	document.getElementById("component-loginbox").style.display = "none";
 	//$(".navbar").show();
 	//$(".content").show();
 }
@@ -488,7 +488,7 @@ $(document).ready(function () {
 
 	//Log in Popup
 	$('#loginbutton').click(function () {
-		$(".component-loginbox").addClass("active");
+		document.getElementById("component-loginbox").style.display = "block";
 		//hides navbar for a while
 		//$(".navbar").hide();
 		//$(".content").hide();
