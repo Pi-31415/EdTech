@@ -8,6 +8,7 @@ var slick_id = 0;
 var venn_interact = false;
 var venn_rotation_speed = 5000;
 var w = $(document).width(); // variable for window width
+var sets;
 
 //List of functions to use
 function jumpto(elementid) {
@@ -279,6 +280,8 @@ function stopCount() {
 
 function venn_resize(){
 
+	var chart;
+
 	console.log("w:"+w);
 	console.log("Outer Width:"+window.outerWidth);
 	console.log("Screen Width:"+screen.width);
@@ -304,7 +307,7 @@ function venn_resize(){
 	}
 
 	//Venn Diagram Mouse hover code using D3 js and venn js
-	var sets = [{
+	sets = [{
 			sets: ['A'],
 			label: 'Portfolio',
 			size: 12
@@ -340,13 +343,16 @@ function venn_resize(){
 			size: 3
 		}
 	];
+}
 
+function draw_venn(){
+	console.log("Drawing Venn Diagram");
 	//Get screen sizes and font sizes for venn diagram responsive design
 	var div = d3.select("#venn");
-
-	if (w > 1260 && w < 1600) {
+	if (w > 1260) {
 		//desktops
-		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
+		console.log('Size: 1260 and above');
+		chart = venn.VennDiagram().width(w / 3).height(w / 3);
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
@@ -354,28 +360,32 @@ function venn_resize(){
 
 	} else if (w > 1120 && w < 1260) {
 		//tablets
-		var chart = venn.VennDiagram().width(w / 3).height(w / 3);
+		console.log('Size: 1120 and 1260');
+		chart = venn.VennDiagram().width(w / 3).height(w / 3);
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.7em");
 	} else if (w > 650 && w < 1175) {
 		//phones
-		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
+		console.log('Size: 650 and 1175');
+		chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.8em");
 	} else if (w > 400 && w < 650) {
 		//phones
-		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
+		console.log('Size: 400 and 650');
+		chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
 		d3.selectAll("#venn text").style("font-size", "0.5em");
 	} else {
 		//fallback
-		var chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
+		console.log('Size: others');
+		chart = venn.VennDiagram().width(w / 1.2).height(w / 1.2);
 		div.datum(sets).call(chart);
 		color_venn();
 		d3.selectAll("#venn text").style("fill", "#fff");
@@ -387,6 +397,7 @@ function venn_resize(){
 $(document).ready(function () {
 
 	venn_resize();
+	draw_venn();
 
 	var div = d3.select("#venn");
 
