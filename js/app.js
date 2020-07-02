@@ -282,6 +282,7 @@ $(document).ready(function () {
 	var w = window.innerWidth;
 	console.log("Inner Width:"+w);
 	console.log("Outer Width:"+window.outerWidth);
+	console.log("Screen Width:"+screen.width);
 
 	var overlapping = 3;
 	//Responsive overlapping for venn diagram
