@@ -10,6 +10,9 @@ var venn_rotation_speed = 5000;
 var w = $(document).width(); // variable for window width
 var sets;
 var div = d3.select("#venn");
+//for keeping track of scroll
+var scroll;
+var currentposition;
 
 //List of functions to use
 function jumpto(elementid) {
@@ -21,6 +24,7 @@ function jumpto(elementid) {
 
 function loginboxclose() {
 	document.getElementById("component-loginbox").style.display = "none";
+	window.scrollTo(0,currentposition);
 	//$(".navbar").show();
 	//$(".content").show();
 }
@@ -396,6 +400,11 @@ function draw_venn(){
 
 //Main function which runs when the page loads
 $(document).ready(function () {
+
+	window.addEventListener("scroll", function (event) {
+		scroll = this.scrollY;
+		console.log(scroll)
+	});
 	
 	venn_resize();
 	draw_venn();
@@ -488,6 +497,7 @@ $(document).ready(function () {
 
 	//Log in Popup
 	$('#loginbutton').click(function () {
+		currentposition = scroll;
 		document.getElementById("component-loginbox").style.display = "block";
 		//hides navbar for a while
 		//$(".navbar").hide();
