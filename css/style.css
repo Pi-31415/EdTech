@@ -800,7 +800,6 @@ input[type=text]:focus {
   margin: 0;
   display: block;
   width: 100%;
-  padding: 12px 55px 15px 15px;
   font-size: 14px;
   color: #9b1c31;
 }
