@@ -6,7 +6,7 @@ var pillar_state = "";
 var pillar_name = ['academics', 'interest', 'portfolio'];
 var slick_id = 0;
 var venn_interact = false;
-var venn_rotation_speed = 7000; // Venn rotation speed 7 seconds
+var venn_rotation_speed = 10000; // Venn rotation speed 10 seconds
 var w = $(document).width(); // variable for window width
 var sets;
 var div = d3.select("#venn");
