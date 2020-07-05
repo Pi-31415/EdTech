@@ -170,7 +170,7 @@ function schedule() {
                 $('#schedule-form-success').fadeIn();
             }
         };
-        console.log(query);
+        console.log("./inquiry/" + query);
         xhttp.open("GET", "./inquiry/" + query, true);
         xhttp.send();
     } else {
