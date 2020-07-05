@@ -170,7 +170,8 @@ function schedule() {
                 $('#schedule-form-success').fadeIn();
             }
         };
-        xhttp.open("GET", "temp_register.php" + query, true);
+        console.log(query);
+        xhttp.open("GET", "./inquiry/" + query, true);
         xhttp.send();
     } else {
         jumpto('#component-freetrial');
