@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="./libs/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css" />
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./css/toggle.css">
     <!--Some hard coded styles to disable bubble click in quotes carousel-->
     <style>
         .slick-dots {
@@ -76,68 +76,70 @@
             <br><br>
             <button class="button" onclick="login()">Log In</button>
             <div class='splitter-half'></div>
-            <a href="#" onclick="loginboxclose();jumpto('#component-freetrial')">Don't have an account?<br>Contact us
+            <a href="#" onclick="$('#login_mini_form').hide();$('#create_account_mini_form').show();">Don't have an account?<br>Contact us
 				for a free trial.</a>
         </div>
-        <div id="create_account_mini_form">
-            <div class='splitter-half'></div>
-            <div>
+        <div id="create_account_mini_form" style="display:none;">
+            <div class="form__group field">
+                <center>
+                    <table style="border: none;padding:0px;margin:0px;font-family: Arial, Helvetica, sans-serif;">
+                        <tr>
+                            <td colspan="2" style="border:none;text-align: center;"> I am a </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;font-family: Arial, Helvetica, sans-serif;text-align: center;">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Student</label>
+                            </td>
+                            <td style="border:none;font-family: Arial, Helvetica, sans-serif;text-align: center;">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Tutor</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_first_name' placeholder="First Name" required />
+                            </td>
+                            <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_last_name' placeholder="Last Name" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_school' placeholder="Email" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_school' placeholder="Mobile Number" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="password" class="form__field" name="name" id='register_pwd' placeholder="Password" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="password" class="form__field" name="name" id='register_pwd' placeholder="Verify Password" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <p>By clicking 'Create account' you agree to the Terms and Privacy Policy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <center>
+                                    <div class="button" onclick="alert('This needs to be connected to backend')">Create Account</div>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
 
-                <table class="invisible_table" style="border: none;padding:0px;margin:0px;font-family: Arial, Helvetica, sans-serif;">
-                    <tr>
-                        <td colspan="2" style="border:none;"> I am a </td>
-                    </tr>
-                    <tr>
-                        <td style="border:none;font-family: Arial, Helvetica, sans-serif;">
-                            <input type="radio" id="male" name="gender" value="male">
-                            <label for="male">Student</label>
-                        </td>
-                        <td style="border:none;font-family: Arial, Helvetica, sans-serif;">
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="female">Tutor</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
-                            <input type="input" class="form__field" name="name" id='register_first_name' placeholder="First Name" required />
-                        </td>
-                        <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
-                            <input type="input" class="form__field" name="name" id='register_last_name' placeholder="Last Name" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                            <input type="input" class="form__field" name="name" id='register_school' placeholder="Email" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                            <input type="input" class="form__field" name="name" id='register_school' placeholder="Mobile Number" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                            <input type="password" class="form__field" name="name" id='register_pwd' placeholder="Password" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                            <input type="password" class="form__field" name="name" id='register_pwd' placeholder="Verify Password" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                            <p>By clicking 'Create account' you agree to the Terms and Privacy Policy</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                            <div class="button" onclick="alert('This needs to be connected to backend')">Create Account</div>
-                        </td>
-                    </tr>
-                </table>
+                </center>
             </div>
-
         </div>
     </div>
     <!-- Navagation Bar - sticky on top-->
