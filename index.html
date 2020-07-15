@@ -5,11 +5,13 @@
 <head>
     <meta charset="utf-8">
     <title>ZMS Education &amp; Technology</title>
-    <meta name="description" content="ZMS is a Hong Kong based EdTech company to connect you with Oxbridge and Ivy League Tutors.">
+    <meta name="description"
+        content="ZMS is a Hong Kong based EdTech company to connect you with Oxbridge and Ivy League Tutors.">
     <meta name=”robots” content="index, follow">
     <meta name="author" content="ZMS Education & Technology ">
     <!--Responsive View Related Metadata-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <!--Fonts from Google Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Kodchasan' rel='stylesheet'>
@@ -37,8 +39,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/67e52b6d84.js" crossorigin="anonymous"></script>
     <!--Material for forms-->
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
     <!--code below loads internally hosted CSS, please compile the SASS before loading the CSS-->
     <link rel="stylesheet" type="text/css" href="./libs/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css" />
@@ -48,6 +49,113 @@
     <style>
         .slick-dots {
             pointer-events: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 1px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+
+        /*
+MAD-SELECT by Roko CB
+*/
+        .mad-select .material-icons {
+            vertical-align: middle;
+        }
+
+        .mad-select {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 8px;
+        }
+
+        .mad-select ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mad-select li {
+            vertical-align: middle;
+            white-space: nowrap;
+            height: 24px;
+            line-height: 24px;
+            display: none;
+            padding: 8px 16px;
+            margin: 0;
+            box-sizing: initial;
+        }
+
+        .mad-select>ul:first-of-type {
+            max-width: 120px;
+            /* COMMENT FOR AUTO WIDTH */
+        }
+
+        .mad-select>ul:first-of-type li.selected {
+            display: inline-block;
+            height: 24px;
+            max-width: calc(100% - 24px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .mad-select i.material-icons {
+            opacity: 0.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*jQ*/
+        .mad-select ul.mad-select-drop {
+            position: absolute;
+            z-index: 9999;
+            visibility: hidden;
+            opacity: 0;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+            top: 0;
+            left: 0;
+            transition: 0.24s;
+            max-height: 0;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .mad-select ul.mad-select-drop.show {
+            visibility: visible;
+            opacity: 1;
+            max-height: 160px;
+            /* COMMENT IF YOU DON?T NEED MAX HEIGHT */
+        }
+
+        .mad-select ul.mad-select-drop li {
+            display: block;
+            transition: background 0.24s;
+            cursor: pointer;
+        }
+
+        .mad-select ul.mad-select-drop li.selected {
+            background: rgba(0, 0, 0, 0.07);
+        }
+
+        .mad-select ul.mad-select-drop li:hover {
+            background: rgba(0, 0, 0, 0.04);
         }
     </style>
 
@@ -61,8 +169,8 @@
         <div class="right">
             <a id="loginbox-close" style="padding:20px 40px;">
                 <span class="material-icons primary">
-					cancel
-				</span>
+                    cancel
+                </span>
             </a>
         </div>
         <div id="login_mini_form" style="width:200px;">
@@ -70,17 +178,20 @@
             <!--Login Form-->
             <div id="login-form-errors"></div>
             <div class="form__group field">
-                <input type="email" class="form__field" name="email-login" id='email-login' placeholder="Email" required />
+                <input type="email" class="form__field" name="email-login" id='email-login' placeholder="Email"
+                    required />
             </div>
             <br>
             <div class="form__group field">
-                <input type="password" class="form__field" name="password" id='password' placeholder="Password" required />
+                <input type="password" class="form__field" name="password" id='password' placeholder="Password"
+                    required />
             </div>
             <br><br>
             <button class="button" onclick="login()">Log In</button>
             <div class='splitter-half'></div>
-            <a href="#" onclick="$('#login_mini_form').hide();$('#create_account_mini_form').show();">Don't have an account?<br>Contact us
-				for a free trial.</a>
+            <a href="#" onclick="$('#login_mini_form').hide();$('#create_account_mini_form').show();">Don't have an
+                account?<br>Contact us
+                for a free trial.</a>
         </div>
         <div id="create_account_mini_form" style="display:none;">
             <div class="form__group field">
@@ -101,30 +212,36 @@
                         </tr>
                         <tr>
                             <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
-                                <input type="input" class="form__field" name="name" id='register_first_name' placeholder="First Name" required />
+                                <input type="input" class="form__field" name="name" id='register_first_name'
+                                    placeholder="First Name" required />
                             </td>
                             <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
-                                <input type="input" class="form__field" name="name" id='register_last_name' placeholder="Last Name" required />
+                                <input type="input" class="form__field" name="name" id='register_last_name'
+                                    placeholder="Last Name" required />
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                                <input type="input" class="form__field" name="name" id='register_school' placeholder="Email" required />
+                                <input type="input" class="form__field" name="name" id='register_school'
+                                    placeholder="Email" required />
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                                <input type="input" class="form__field" name="name" id='register_school' placeholder="Mobile Number" required />
+                                <input type="input" class="form__field" name="name" id='register_school'
+                                    placeholder="Mobile Number" required />
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                                <input type="password" class="form__field" name="name" id='register_pwd' placeholder="Password" required />
+                                <input type="password" class="form__field" name="name" id='register_pwd'
+                                    placeholder="Password" required />
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
-                                <input type="password" class="form__field" name="name" id='register_pwd' placeholder="Verify Password" required />
+                                <input type="password" class="form__field" name="name" id='register_pwd'
+                                    placeholder="Verify Password" required />
                             </td>
                         </tr>
                         <tr>
@@ -135,13 +252,15 @@
                         <tr>
                             <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
                                 <center>
-                                    <div class="button" onclick="alert('This needs to be connected to backend')">Create Account</div>
+                                    <div class="button" onclick="alert('This needs to be connected to backend')">Create
+                                        Account</div>
                                 </center>
                             </td>
                         </tr>
                     </table>
                     <br>
-                    <a href="#" onclick="$('#login_mini_form').show();$('#create_account_mini_form').hide();">Already have an account? Sign in.</a>
+                    <a href="#" onclick="$('#login_mini_form').show();$('#create_account_mini_form').hide();">Already
+                        have an account? Sign in.</a>
 
                 </center>
             </div>
@@ -160,14 +279,15 @@
         <div id="component-banner">
             <div id="component-banner-overlay">
                 <div class="center">
-                    <h1 class="main_banner">Connect you with <br><span class="title-bold">Oxbridge</span> and <span class="title-bold">Ivy League</span> Tutors</h1>
+                    <h1 class="main_banner">Connect you with <br><span class="title-bold">Oxbridge</span> and <span
+                            class="title-bold">Ivy League</span> Tutors</h1>
                 </div>
                 <!--This is a reusable code for jumping between components, remember to link it with jQuery-->
                 <div>
                     <a href="#" onclick="jumpto('#component-tagline')">
                         <span class="material-icons white big">
-							arrow_drop_down_circle
-						</span>
+                            arrow_drop_down_circle
+                        </span>
                     </a>
                 </div>
             </div>
@@ -185,8 +305,8 @@
                     <div>
                         <a href="#" onclick="jumpto('#component-do')">
                             <span class="material-icons white big">
-						arrow_drop_down_circle
-					</span>
+                                arrow_drop_down_circle
+                            </span>
                         </a>
                     </div>
                     <div class='splitter hidemobile'></div>
@@ -207,22 +327,30 @@
                     <div class="carousel-class">
                         <div>
                             <h1>1. Academics</h1>
-                            <p>1-on-1 tutorials on international curricula, including but not limited to IB, GCSE, A-Level, and AP</p>
+                            <p>1-on-1 tutorials on international curricula, including but not limited to IB, GCSE,
+                                A-Level, and AP</p>
                             <br>
-                            <p class="quote">It's hard to find the right academic support in a boarding school. With ZMS I can have regular tutorials virtually with an attentive tutor who went to my dream school.
+                            <p class="quote">It's hard to find the right academic support in a boarding school. With ZMS
+                                I can have regular tutorials virtually with an attentive tutor who went to my dream
+                                school.
                             </p>
                         </div>
                         <div>
                             <h1>2. Interest</h1>
-                            <p>Choosing among majors but not sure what they actually entail? We provide introductory courses for a variety of majors by leveraging our vast OxBridge/Ivy League network.</p>
+                            <p>Choosing among majors but not sure what they actually entail? We provide introductory
+                                courses for a variety of majors by leveraging our vast OxBridge/Ivy League network.</p>
                             <br>
-                            <p class="quote">I have a hard time choosing between Law and Philosophy for my UK application. ZMS's classes let me know what to expect and which is a better fit.</p>
+                            <p class="quote">I have a hard time choosing between Law and Philosophy for my UK
+                                application. ZMS's classes let me know what to expect and which is a better fit.</p>
                         </div>
                         <div>
                             <h1>3. Portfolio</h1>
-                            <p>You know what to pursue, but to succeed you need to show the admission officer your dedication by building a portfolio. We have the right advisor for you.</p>
+                            <p>You know what to pursue, but to succeed you need to show the admission officer your
+                                dedication by building a portfolio. We have the right advisor for you.</p>
                             <br>
-                            <p class="quote">I'm into coding and my brother likes investing. With guidance I have a collection of cool coding projects while my brother is building his mock investment portfolio.
+                            <p class="quote">I'm into coding and my brother likes investing. With guidance I have a
+                                collection of cool coding projects while my brother is building his mock investment
+                                portfolio.
                             </p>
                         </div>
                     </div>
@@ -284,8 +412,8 @@
             <div>
                 <a href="#" onclick="jumpto('#component-how')">
                     <span class="material-icons white big">
-						arrow_drop_down_circle
-					</span>
+                        arrow_drop_down_circle
+                    </span>
                 </a>
             </div>
             <div class='splitter hidemobile'></div>
@@ -315,8 +443,8 @@
             <div>
                 <a href="#" onclick="jumpto('#component-about')">
                     <span class="material-icons white big">
-						arrow_drop_down_circle
-					</span>
+                        arrow_drop_down_circle
+                    </span>
                 </a>
             </div>
             <div class='splitter hidemobile'></div>
@@ -331,8 +459,10 @@
                     <img src="img/avatar1.jpg" class="avatar">
                     <h3 class="primary">Colin Tseung</h3>
                     <h4>Co-Founder</h4>
-                    <p class='biography'>Studied Mathematics in Keble College, Oxford, taking mostly pure and statistics courses. Built and managed businesses in Fintech, Healthcare and F&amp;B spaces.</p>
-                    <p class='biographymobile'>Studied Mathematics in Keble College, Oxford, taking mostly pure and statistics courses. Built and managed businesses in Fintech, Healthcare and F&amp;B spaces.</p>
+                    <p class='biography'>Studied Mathematics in Keble College, Oxford, taking mostly pure and statistics
+                        courses. Built and managed businesses in Fintech, Healthcare and F&amp;B spaces.</p>
+                    <p class='biographymobile'>Studied Mathematics in Keble College, Oxford, taking mostly pure and
+                        statistics courses. Built and managed businesses in Fintech, Healthcare and F&amp;B spaces.</p>
                 </div>
                 <div>
                     <img src="img/avatar2.jpg" class="avatar">
@@ -341,7 +471,8 @@
                         <p class='biography'>Graduated from Cornell<br>University with a Triple<br>Major in Statistics,
                             <br>Economics,and Philosophy.<br>Prior to that attended<br>LPC United World College.
                         </p>
-                        <p class='biographymobile'>Graduated from Cornell University with a Triple Major in Statistics, Economics,and Philosophy. Prior to that attended LPC United World College.</p>
+                        <p class='biographymobile'>Graduated from Cornell University with a Triple Major in Statistics,
+                            Economics,and Philosophy. Prior to that attended LPC United World College.</p>
                 </div>
                 <div>
                     <img src="img/avatar3.jpg" class="avatar">
@@ -350,23 +481,27 @@
                     <p class='biography'>Graduated from<br>the University of Cambridge<br>with an MPhil in Mathematics
                         <br>Education. Passionate in<br>applying the latest STEM<br>educational best practice
                         <br>to his current teaching.</p>
-                    <p class='biographymobile'>Graduated from the University of Cambridge with an MPhil in Mathematics Education. Passionate in applying the latest STEM educational best practice to his current teaching.
+                    <p class='biographymobile'>Graduated from the University of Cambridge with an MPhil in Mathematics
+                        Education. Passionate in applying the latest STEM educational best practice to his current
+                        teaching.
                     </p>
                 </div>
                 <div>
                     <img src="img/avatar4.jpg" class="avatar">
                     <h3 class="primary">Boris Chan</h3>
                     <h4>Chief Developer</h4>
-                    <p class='biography'>Studied Information Science in Cornell University. Specializes in system development and web design.</p>
-                    <p class='biographymobile'>Studied Information Science in Cornell University. Specializes in system development and web design.</p>
+                    <p class='biography'>Studied Information Science in Cornell University. Specializes in system
+                        development and web design.</p>
+                    <p class='biographymobile'>Studied Information Science in Cornell University. Specializes in system
+                        development and web design.</p>
                 </div>
             </div>
             <div class='splitter hidemobile'></div>
             <div>
                 <a href="#" onclick="jumpto('#component-tutorials')">
                     <span class="material-icons primary big">
-						arrow_drop_down_circle
-					</span>
+                        arrow_drop_down_circle
+                    </span>
                 </a>
             </div>
             <div class='splitter hidemobile'></div>
@@ -409,8 +544,8 @@
             <div class='splitter hidemobile'></div>
             <a href="#" onclick="jumpto('#component-refund')">
                 <span class="material-icons white big">
-					arrow_drop_down_circle
-				</span>
+                    arrow_drop_down_circle
+                </span>
             </a>
             <div class='splitter hidemobile'></div>
         </div>
@@ -426,7 +561,8 @@
                                 <h1>Guarantee of Excellence</h1>
                             </td>
                             <td style="text-align: left;">
-                                <p>We believe in the quality of our tutoring. <br> <br>If you are not satisfied after your first session, we'll give you a full refund.</p>
+                                <p>We believe in the quality of our tutoring. <br> <br>If you are not satisfied after
+                                    your first session, we'll give you a full refund.</p>
                             </td>
                         </tr>
 
@@ -438,7 +574,8 @@
                 <div class="overlay">
                     <div class="grid-container-2">
                         <h1>Guarantee of Excellence</h1>
-                        <p style="text-align: left">We believe in the quality of our tutoring. <br><br> If you are not satisfied after your first session, we'll give you a full refund.<br><br></p>
+                        <p style="text-align: left">We believe in the quality of our tutoring. <br><br> If you are not
+                            satisfied after your first session, we'll give you a full refund.<br><br></p>
                     </div>
                 </div>
             </div>
@@ -455,10 +592,13 @@
                 <div>
                     <div id="schedule-form-errors"></div>
                     <div class="form__group field">
-                        <table style="width:100%;padding:0px;margin:0px;border-style: none;">
-
+                        <!--
+                            <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            
                             <tr>
-                                <td colspan="2" style="border:none;text-align:center;"> I am a </td>
+                                <td style="border:none;text-align:center;">
+                                    
+                                </td>
                             </tr>
                             <tr>
                                 <td style="width:50%;text-align:center;">
@@ -471,12 +611,30 @@
                                 </td>
                             </tr>
                         </table>
+                        -->
+
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;font-family:'Bungee Hairline';-webkit-text-fill-color: inherit;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: inherit;">
+                            <tr>
+                                <td>I am a</td>
+                                <td>
+                                    <div class="mad-select" style="width:180px;">
+                                        <ul>
+                                            <li data-value="Student">Student</li>
+                                            <li data-value="Parent">Parent</li>
+                                        </ul>
+                                        <input type="hidden" name="customer" id="customer" value="Student">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
+                    
                     <div class="form__group field">
                         <table style="width:100%;padding:0px;margin:0px;border-style: none;">
                             <tr>
                                 <td>
-                                    <input type="input" class="form__field" name="name" id='name' placeholder="Full Name" required />
+                                    <input type="input" class="form__field" name="name" id='name'
+                                        placeholder="Full Name" required />
                                 </td>
                             </tr>
                         </table>
@@ -485,7 +643,8 @@
                         <table style="width:100%;padding:0px;margin:0px;border-style: none;">
                             <tr>
                                 <td>
-                                    <input type="email" class="form__field" name="email" id='email' placeholder="Email" />
+                                    <input type="email" class="form__field" name="email" id='email'
+                                        placeholder="Email" />
                                 </td>
                             </tr>
                         </table>
@@ -504,7 +663,8 @@
                         <table style="width:100%;padding:0px;margin:0px;border-style: none;">
                             <tr>
                                 <td>
-                                    <input type="input" class="form__field" name="school" id='school' placeholder="School Name" />
+                                    <input type="input" class="form__field" name="school" id='school'
+                                        placeholder="School Name" />
                                 </td>
                             </tr>
                         </table>
@@ -514,27 +674,14 @@
                         <table style="width:100%;padding:0px;margin:0px;border-style: none;">
                             <tr>
                                 <td>
-                                    <textarea id="howhelp" class="form__field" name="howhelp" rows="4" placeholder="How can we help you?"></textarea>
+                                    <textarea id="howhelp" class="form__field" name="howhelp" rows="4"
+                                        placeholder="How can we help you?"></textarea>
                                 </td>
                             </tr>
                         </table>
                     </div>
                     <br>
-                    <label class="mdc-text-field mdc-text-field--outlined">
-                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
-                        <span class="mdc-notched-outline">
-                          <span class="mdc-notched-outline__leading"></span>
-                          <span class="mdc-notched-outline__notch">
-                            <span class="mdc-floating-label" id="my-label-id">Your Name</span>
-                          </span>
-                          <span class="mdc-notched-outline__trailing"></span>
-                        </span>
-                      </label>
-                    <button class="mdc-button">
-                        <div class="mdc-button__ripple"></div>
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
-                        <span class="mdc-button__label">Button</span>
-                      </button>
+
                     <button class="button" onclick="schedule()">Schedule</button>
                     <div id="schedule-form-success"></div>
                 </div>
@@ -595,13 +742,14 @@
                 <div>
                     <a href="#" onclick="jumpto('#component-banner')">
                         <span class="material-icons white big">
-							keyboard_arrow_up
-						</span>
+                            keyboard_arrow_up
+                        </span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!--load the jQuery and main JavaScript at the end to optimize loading time-->
     <script type="text/javascript" src="./libs/jQuery.js"></script>
@@ -611,6 +759,45 @@
     <script type="text/javascript" src="./js/app.js"></script>
     <script src="./bower_components/particles.js/particles.js"></script>
     <script src="./bower_components/particles.js/demo/js/app.js"></script>
+
+    <script>
+        // /////
+        // MAD-SELECT
+        var madSelectHover = 0;
+        $(".mad-select").each(function () {
+            var $input = $(this).find("input"),
+                $ul = $(this).find("> ul"),
+                $ulDrop = $ul.clone().addClass("mad-select-drop");
+            $(this)
+                .append('<i class="material-icons">arrow_drop_down</i>', $ulDrop)
+                .on({
+                    hover: function () {
+                        madSelectHover ^= 1;
+                    },
+                    click: function () {
+                        $ulDrop.toggleClass("show");
+                    }
+                });
+            // PRESELECT
+            $ul.add($ulDrop).find("li[data-value='" + $input.val() + "']").addClass("selected");
+            // MAKE SELECTED
+            $ulDrop.on("click", "li", function (evt) {
+                evt.stopPropagation();
+                $input.val($(this).data("value")); // Update hidden input value
+                $ul.find("li").eq($(this).index()).add(this).addClass("selected")
+                    .siblings("li").removeClass("selected");
+            });
+            // UPDATE LIST SCROLL POSITION
+            $ul.on("click", function () {
+                var liTop = $ulDrop.find("li.selected").position().top;
+                $ulDrop.scrollTop(liTop + $ulDrop[0].scrollTop);
+            });
+        });
+        // CLOSE ALL OPNED
+        $(document).on("mouseup", function () {
+            if (!madSelectHover) $(".mad-select-drop").removeClass("show");
+        });
+    </script>
 </body>
 
 </html>
