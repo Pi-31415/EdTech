@@ -497,8 +497,8 @@ $(document).ready(function() {
 
     //Log in Popup
     $('#loginbutton').click(function() {
-        currentposition = scroll;
-        document.getElementById("component-loginbox").style.display = "block";
+        //currentposition = scroll;
+        //document.getElementById("component-loginbox").style.display = "block";
         //hides navbar for a while
         //$(".navbar").hide();
         //$(".content").hide();
