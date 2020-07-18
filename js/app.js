@@ -139,8 +139,8 @@ function schedule() {
 
     if (checklist[0] == true && checklist[1] == true && checklist[2] == true && checklist[3] == true && checklist[4] == true) {
         //Send form
-
-        var customer = $("#customer").val();
+        
+        var customer = $(".mad-select").find("input").val();
         var name = $("#name").val();
         var email = $("#email").val();
         var phone = $("#phone").val();
