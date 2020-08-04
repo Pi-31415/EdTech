@@ -1,0 +1,827 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ZMS Education &amp; Technology</title>
+    <meta name="description"
+        content="ZMS is a Hong Kong based EdTech company to connect you with Oxbridge and Ivy League Tutors.">
+    <meta name=”robots” content="index, follow">
+    <meta name="author" content="ZMS Education & Technology ">
+    <!--Responsive View Related Metadata-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <!--Fonts from Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kodchasan' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee Hairline' rel='stylesheet'>
+    <!--Favicon related metadata-->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--code below loads external CSS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/67e52b6d84.js" crossorigin="anonymous"></script>
+    <!--Material for forms-->
+
+    <!--code below loads internally hosted CSS, please compile the SASS before loading the CSS-->
+    <link rel="stylesheet" type="text/css" href="./libs/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/toggle.css">
+    <!--Some hard coded styles to disable bubble click in quotes carousel-->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '314391303281011'); 
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" src="https://www.facebook.com/tr?id=314391303281011&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <style>
+        .slick-dots {
+            pointer-events: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 1px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+
+        /*
+MAD-SELECT by Roko CB
+*/
+        .mad-select .material-icons {
+            vertical-align: middle;
+        }
+
+        .mad-select {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 8px;
+        }
+
+        .mad-select ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mad-select li {
+            vertical-align: middle;
+            white-space: nowrap;
+            height: 24px;
+            line-height: 24px;
+            display: none;
+            padding: 8px 16px;
+            margin: 0;
+            box-sizing: initial;
+        }
+
+        .mad-select>ul:first-of-type {
+            max-width: 120px;
+            /* COMMENT FOR AUTO WIDTH */
+        }
+
+        .mad-select>ul:first-of-type li.selected {
+            display: inline-block;
+            height: 24px;
+            max-width: calc(100% - 24px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .mad-select i.material-icons {
+            opacity: 0.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*jQ*/
+        .mad-select ul.mad-select-drop {
+            position: absolute;
+            z-index: 9999;
+            visibility: hidden;
+            opacity: 0;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+            top: 0;
+            left: 0;
+            transition: 0.24s;
+            max-height: 0;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .mad-select ul.mad-select-drop.show {
+            visibility: visible;
+            opacity: 1;
+            max-height: 160px;
+            /* COMMENT IF YOU DON?T NEED MAX HEIGHT */
+        }
+
+        .mad-select ul.mad-select-drop li {
+            display: block;
+            transition: background 0.24s;
+            cursor: pointer;
+        }
+
+        .mad-select ul.mad-select-drop li.selected {
+            background: rgba(0, 0, 0, 0.07);
+        }
+
+        .mad-select ul.mad-select-drop li:hover {
+            background: rgba(0, 0, 0, 0.04);
+        }
+    </style>
+
+</head>
+
+<body onresize="venn_resize();draw_venn();" onload="venn_resize();draw_venn();">
+    <!-- Log In Popup -->
+    <div id="component-loginbox">
+        <div class='splitter'></div>
+        <br>
+        <div class="right">
+            <a id="loginbox-close" style="padding:20px 40px;">
+                <span class="material-icons primary">
+                    cancel
+                </span>
+            </a>
+        </div>
+        <div id="login_mini_form" style="width:200px;">
+            <div class='splitter-half'></div>
+            <!--Login Form-->
+            <div id="login-form-errors"></div>
+            <div class="form__group field">
+                <input type="email" class="form__field" name="email-login" id='email-login' placeholder="Email"
+                    required />
+            </div>
+            <br>
+            <div class="form__group field">
+                <input type="password" class="form__field" name="password" id='password' placeholder="Password"
+                    required />
+            </div>
+            <br><br>
+            <button class="button" onclick="login()">Log In</button>
+            <div class='splitter-half'></div>
+            <a href="#" onclick="$('#login_mini_form').hide();$('#create_account_mini_form').show();">Don't have an
+                account?<br>Contact us
+                for a free trial.</a>
+        </div>
+        <div id="create_account_mini_form" style="display:none;">
+            <div class="form__group field">
+                <center>
+                    <table style="border: none;padding:0px;margin:0px;font-family: Arial, Helvetica, sans-serif;">
+                        <tr>
+                            <td colspan="2" style="border:none;text-align: center;"> I am a </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;font-family: Arial, Helvetica, sans-serif;text-align: center;">
+                                <input type="radio" id="male" name="gender" value="student">
+                                <label for="male">Student</label>
+                            </td>
+                            <td style="border:none;font-family: Arial, Helvetica, sans-serif;text-align: center;">
+                                <input type="radio" id="female" name="gender" value="tutor">
+                                <label for="female">Tutor</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_first_name'
+                                    placeholder="First Name" required />
+                            </td>
+                            <td style='border:none;width:50%;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_last_name'
+                                    placeholder="Last Name" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_school'
+                                    placeholder="Email" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="input" class="form__field" name="name" id='register_school'
+                                    placeholder="Mobile Number" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="password" class="form__field" name="name" id='register_pwd'
+                                    placeholder="Password" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <input type="password" class="form__field" name="name" id='register_pwd'
+                                    placeholder="Verify Password" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <p>By clicking 'Create account' you agree to the Terms and Privacy Policy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style='border:none;font-family: Arial, Helvetica, sans-serif;'>
+                                <center>
+                                    <div class="button" onclick="alert('This needs to be connected to backend')">Create
+                                        Account</div>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <a href="#" onclick="$('#login_mini_form').show();$('#create_account_mini_form').hide();">Already
+                        have an account? Sign in.</a>
+
+                </center>
+            </div>
+        </div>
+    </div>
+    <!-- Navagation Bar - sticky on top-->
+    <div class="navbar">
+        <div class="nav">
+            <img src="img/logo_small.png" class="logo-navbar">
+            <div class="navlink"><a href="https://zmsedu.com/portal" id='loginbutton'>Sign In</a></div>
+            <div class="navlink" id="username_navbar"></div>
+        </div>
+    </div>
+    <!-- Main page begins here-->
+    <div class="content">
+        <div id="component-banner">
+            <div id="component-banner-overlay">
+                <div class="center">
+                    <h1 class="main_banner">Connect you with <br><span class="title-bold">Oxbridge</span> and <span
+                            class="title-bold">Ivy League</span> Tutors</h1>
+                </div>
+                <!--This is a reusable code for jumping between components, remember to link it with jQuery-->
+                <div>
+                    <a href="#" onclick="jumpto('#component-tagline')">
+                        <span class="material-icons white big">
+                            arrow_drop_down_circle
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="component-tagline">
+            <div id="particles-js">
+                <div id="particle-overlay">
+                    <div class='splitter-half'></div>
+                    <div class='splitter-half'></div>
+                    <div class='splitter-half'></div>
+                    <p>The best tutors should be available <u>everywhere</u> for <u>everyone</u>.</p>
+                    <p>Physical constraints have limited your choice of private tutors.</p>
+                    <h2>“Not anymore”</h2>
+                    <div class='splitter hidemobile'></div>
+                    <div>
+                        <a href="#" onclick="jumpto('#component-do')">
+                            <span class="material-icons white big">
+                                arrow_drop_down_circle
+                            </span>
+                        </a>
+                    </div>
+                    <div class='splitter hidemobile'></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="component-do">
+            <div class='splitter'></div>
+            <h1>What we do</h1>
+            <hr class="white">
+            <div class="grid-container-2">
+                <!-- Interactive Venn Diagram 2 Starts-->
+                <div id="venn"></div>
+                <!--Quotes-->
+                <div id="quotecontainer">
+                    <div class="carousel-class">
+                        <div>
+                            <h1>1. Academics</h1>
+                            <p>1-on-1 tutorials on international curricula, including but not limited to IB, GCSE,
+                                A-Level, and AP</p>
+                            <br>
+                            <p class="quote">It's hard to find the right academic support in a boarding school. With ZMS
+                                I can have regular tutorials virtually with an attentive tutor who went to my dream
+                                school.
+                            </p>
+                        </div>
+                        <div>
+                            <h1>2. Interest</h1>
+                            <p>Choosing among majors but not sure what they actually entail? We provide introductory
+                                courses for a variety of majors by leveraging our vast OxBridge/Ivy League network.</p>
+                            <br>
+                            <p class="quote">I have a hard time choosing between Law and Philosophy for my UK
+                                application. ZMS's classes let me know what to expect and which is a better fit.</p>
+                        </div>
+                        <div>
+                            <h1>3. Portfolio</h1>
+                            <p>You know what to pursue, but to succeed you need to show the admission officer your
+                                dedication by building a portfolio. We have the right advisor for you.</p>
+                            <br>
+                            <p class="quote">I'm into coding and my brother likes investing. With guidance I have a
+                                collection of cool coding projects while my brother is building his mock investment
+                                portfolio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container-2">
+                <!-- Interactive Venn Diagram Starts (old)-->
+                <!--<div>
+					<div class="desktop-venn hidemobilevenn" style="position: relative;">
+						
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-interest');$('.carousel-class').slick('slickGoTo', 0);" style="top:115px;left:90px;padding:10px 30px 30px 0px;">
+							Interest
+						</a>
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-portfolio');$('.carousel-class').slick('slickGoTo', 1);" style="top:115px;right:80px;padding:10px 0px 30px 30px;">
+							Portfolio
+						</a>
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-fit')" style="top:110px;right:210px;padding:10px 0px 20px 0px;">
+							Fit
+						</a>
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-success')" style="top:175px;right:200px;padding:5px 0px 5px 0px;">
+							ZMS
+						</a>
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-motivation')" style="top:225px;left:110px;padding:0px 10px 10px 5px;transform: rotate(-30deg);">
+							Motivation
+						</a>
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-competence')" style="top:225px;right:95px;padding:0px 0px 10px 0px;transform: rotate(30deg);">
+							Competence
+						</a>
+						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-academics');$('.carousel-class').slick('slickGoTo', 2);" style="top:285px;right:170px;padding:20px 5px 20px 10px">
+							Academics
+						</a>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="460px" width="460px" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<style type="text/css">
+									path {
+										fill: transparent;
+										stroke: #fff;
+										stroke-width: 0.5;
+									}
+
+								</style>
+							</defs>
+							<path id="venn-interest" d="M 50 8 A 30 30 0 1 0 21 59 30 30 0 0 1 41 36 30 30 0 0 1 50 8" />
+							<path id="venn-fit" d="M 50 8 A 30 30 0 0 0 41 36 30 30 0 0 1 59 36 30 30 0 0 0 50 8" />
+							<path id="venn-portfolio" d="M 50 8 A 30 30 0 1 1 79 59 30 30 0 0 0 59 36 30 30 0 0 0 50 8" />
+							<path id="venn-motivation" d="M 50 52 A 30 30 0 0 1 21 59 30 30 0 0 1 41 36 30 30 0 0 0 50 52" />
+							<path id="venn-success" d="M 50 52 A 30 30 0 0 1 41 36 30 30 0 0 1 59 36 30 30 0 0 1 50 52" />
+							<path id="venn-competence" d="M 50 52 A 30 30 0 0 0 79 59 30 30 0 0 0 59 36 30 30 0 0 1 50 52" />
+							<path id="venn-academics" d="M 21 59 A 30 30 0 1 0 79 59 30 30 0 0 1 50 52 30 30 0 0 1 21 59" />
+						</svg>
+					</div>
+					<div class="showonlymobilevenn">
+						<img src="img/vennmobile.png">
+					</div>
+				</div>-->
+                <!--Venn Diagram Ends-->
+            </div>
+            <div>
+                <a href="#" onclick="jumpto('#component-how')">
+                    <span class="material-icons white big">
+                        arrow_drop_down_circle
+                    </span>
+                </a>
+            </div>
+            <div class='splitter hidemobile'></div>
+        </div>
+        <div id="component-how">
+            <div class='splitter'></div>
+            <h1>How we help you succeed</h1>
+            <hr class="white">
+            <div class="grid-container-3">
+                <div>
+                    <i class="fas fa-user-graduate big-2x"></i>
+                    <br><br>
+                    <p>Virtual private tutoring with tutors who attend OxBridge or Ivy League schools</p>
+                </div>
+                <div>
+                    <i class="fas fa-line-chart big-2x"></i>
+                    <br><br>
+                    <p>Data driven approach with efficient tracking of student’s learning progress</p>
+                </div>
+                <div>
+                    <i class="fas fa-book-reader big-2x"></i>
+                    <br><br>
+                    <p>Broad and non-traditional curricula</p>
+                </div>
+            </div>
+            <div class='splitter hidemobile'></div>
+            <div>
+                <a href="#" onclick="jumpto('#component-about')">
+                    <span class="material-icons white big">
+                        arrow_drop_down_circle
+                    </span>
+                </a>
+            </div>
+            <div class='splitter hidemobile'></div>
+        </div>
+        <div id="component-about">
+            <div class='splitter'></div>
+            <h1>Who we are</h1>
+            <hr class="primary">
+            <p>We are an EdTech startup founded by Cambridge, Oxford and Ivy League graduates.</p>
+            <div class="grid-container-4">
+                <div>
+                    <img src="img/avatar1.jpg" class="avatar">
+                    <h3 class="primary">Colin Tseung</h3>
+                    <h4>Co-Founder</h4>
+                    <p class='biography'>Studied Mathematics in Keble College, Oxford, taking mostly pure and statistics
+                        courses. Built and managed businesses in Fintech, Healthcare and F&amp;B spaces.</p>
+                    <p class='biographymobile'>Studied Mathematics in Keble College, Oxford, taking mostly pure and
+                        statistics courses. Built and managed businesses in Fintech, Healthcare and F&amp;B spaces.</p>
+                </div>
+                <div>
+                    <img src="img/avatar2.jpg" class="avatar">
+                    <h3 class="primary">Kyle Wong</h23>
+                        <h4>Co-Founder</h4>
+                        <p class='biography'>Graduated from Cornell<br>University with a Triple<br>Major in Statistics,
+                            <br>Economics,and Philosophy.<br>Prior to that attended<br>LPC United World College.
+                        </p>
+                        <p class='biographymobile'>Graduated from Cornell University with a Triple Major in Statistics,
+                            Economics,and Philosophy. Prior to that attended LPC United World College.</p>
+                </div>
+                <div>
+                    <img src="img/avatar3.jpg" class="avatar">
+                    <h3 class="primary">Mookie Chau</h3>
+                    <h4>Curriculum Leader</h4>
+                    <p class='biography'>Graduated from<br>the University of Cambridge<br>with an MPhil in Mathematics
+                        <br>Education. Passionate in<br>applying the latest STEM<br>educational best practice
+                        <br>to his current teaching.</p>
+                    <p class='biographymobile'>Graduated from the University of Cambridge with an MPhil in Mathematics
+                        Education. Passionate in applying the latest STEM educational best practice to his current
+                        teaching.
+                    </p>
+                </div>
+                <div>
+                    <img src="img/avatar4.jpg" class="avatar">
+                    <h3 class="primary">Boris Chan</h3>
+                    <h4>Chief Developer</h4>
+                    <p class='biography'>Studied Information Science in Cornell University. Specializes in system
+                        development and web design.</p>
+                    <p class='biographymobile'>Studied Information Science in Cornell University. Specializes in system
+                        development and web design.</p>
+                </div>
+            </div>
+            <div class='splitter hidemobile'></div>
+            <div>
+                <a href="#" onclick="jumpto('#component-tutorials')">
+                    <span class="material-icons primary big">
+                        arrow_drop_down_circle
+                    </span>
+                </a>
+            </div>
+            <div class='splitter hidemobile'></div>
+        </div>
+        <div id="component-tutorials">
+            <div class='splitter'></div>
+            <h1>Sample Tutorials</h1>
+            <hr class="white">
+            <p><i>For Middle School and High School students</i></p>
+            <div class='splitter hidemobile'></div>
+            <div class="grid-container--tutorial-3">
+                <div>
+                    <i class="fas fa-money-check-alt big"></i>
+                    <p class="subject-taster-header">Investing</p>
+                </div>
+                <div>
+                    <i class="fas fa-laptop-code big"></i>
+                    <p class="subject-taster-header">Coding</p>
+                </div>
+                <div>
+                    <i class="fas fa-pen-alt big"></i>
+                    <p class="subject-taster-header">Creative Writing</p>
+                </div>
+                <div>
+                    <i class='fas fa-globe big'></i>
+                    <p class="subject-taster-header">Academics</p>
+                    <p class="subject-taster-description">IB, GCSE, AL, AP, etc</p>
+                </div>
+                <div>
+                    <i class='fas fa-graduation-cap big'></i>
+                    <p class="subject-taster-header">Subject Tasters</p>
+                    <p class="subject-taster-description">Law, Psychology, Architecture, and many more</p>
+                </div>
+                <div>
+                    <i class="fas fa-user-check big"></i>
+                    <p class="subject-taster-header">Portfolio Building</p>
+                    <p class="subject-taster-description">Tailor-made</p>
+                </div>
+            </div>
+            <div class='splitter hidemobile'></div>
+            <a href="#" onclick="jumpto('#component-refund')">
+                <span class="material-icons white big">
+                    arrow_drop_down_circle
+                </span>
+            </a>
+            <div class='splitter hidemobile'></div>
+        </div>
+        <div id="component-refund">
+            <div class='splitter hidemobile'></div>
+            <div class='splitter'></div>
+
+            <div class="hidemobile">
+                <div class="overlay">
+                    <table style="width: 100%">
+                        <tr>
+                            <td>
+                                <h1>Guarantee of Excellence</h1>
+                            </td>
+                            <td style="text-align: left;">
+                                <p>We believe in the quality of our tutoring. <br> <br>If you are not satisfied after
+                                    your first session, we'll give you a full refund.</p>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="showonlymobile">
+                <div class="overlay">
+                    <div class="grid-container-2">
+                        <h1>Guarantee of Excellence</h1>
+                        <p style="text-align: left">We believe in the quality of our tutoring. <br><br> If you are not
+                            satisfied after your first session, we'll give you a full refund.<br><br></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class='splitter'></div>
+            <div class='splitter  hidemobile'></div>
+        </div>
+        <div id="component-freetrial">
+            <div class='splitter hidemobile'></div>
+            <div class="grid-container-2-form">
+                <div>
+                    <h1>Schedule a free trial</h1>
+                </div>
+                <div>
+                    <div id="schedule-form-errors"></div>
+                    <div class="form__group field">
+                        <!--
+                            <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            
+                            <tr>
+                                <td style="border:none;text-align:center;">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%;text-align:center;">
+                                    <input type="radio" name="customer" id="customer" value="Student">
+                                    <label for="customer_student">Student</label>
+                                </td>
+                                <td style="width:50%;text-align:center;">
+                                    <input type="radio" name="customer" id="customer" value="Parent">
+                                    <label for="customer_parent">Parent</label>
+                                </td>
+                            </tr>
+                        </table>
+                        -->
+
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;font-family:'Bungee Hairline';-webkit-text-fill-color: inherit;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: inherit;">
+                            <tr>
+                                <td>I am a</td>
+                                <td>
+                                    <div class="mad-select" style="width:180px;">
+                                        <ul>
+                                            <li data-value="Student">Student</li>
+                                            <li data-value="Parent">Parent</li>
+                                        </ul>
+                                        <input type="hidden" name="customer" id="customer" value="Student">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="form__group field">
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            <tr>
+                                <td>
+                                    <input type="input" class="form__field" name="name" id='name'
+                                        placeholder="Full Name" required />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form__group field">
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            <tr>
+                                <td>
+                                    <input type="email" class="form__field" name="email" id='email'
+                                        placeholder="Email" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form__group field">
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            <tr>
+                                <td>
+                                    <input type="tel" class="form__field" name="phone" id='phone' placeholder="Phone" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="form__group field">
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            <tr>
+                                <td>
+                                    <input type="input" class="form__field" name="school" id='school'
+                                        placeholder="School Name" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="form__group field">
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            <tr>
+                                <td>
+                                    <textarea id="howhelp" class="form__field" name="howhelp" rows="4"
+                                        placeholder="How can we help you?"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+
+                    <button class="button" onclick="schedule()">Schedule</button>
+                    <div id="schedule-form-success"></div>
+                </div>
+            </div>
+            <div class='splitter'></div>
+        </div>
+        <div id="component-contact">
+            <div class='splitter'></div>
+            <div class="grid-container-3">
+                <div>
+                    <div class='hidemobile'><br><br></div>
+                    <img src="img/logo_large.png" class="logo-contact">
+                    <p class="logo-text">ZMS EDUCATION &amp; TECHNOLOGY</p>
+                </div>
+                <div>
+                    <h2>Sections</h2>
+                    <p>
+                        <a href="#" class="white" onclick="jumpto('#component-do')">What we do</a>
+                    </p>
+                    <p>
+                        <a href="#" class="white" onclick="jumpto('#component-how')">How we help you succeed</a>
+                    </p>
+                    <p>
+                        <a href="#" class="white" onclick="jumpto('#component-about')">Who we are</a>
+                    </p>
+                    <p>
+                        <a href="#" class="white" onclick="jumpto('#component-tutorials')">Available Tutorials</a>
+                    </p>
+                    <br>
+                    <p>
+                        Find us on
+                        <br><br>
+                        <a style="color:#fff" href="https://www.facebook.com/zmsedu/" target="_blank"><i class="fab fa-facebook-f" style="font-size:28px;"></i> Facebook </a>
+                        <br>
+                        <a style="color:#fff" href="https://www.instagram.com/zmseducation/" target="_blank"><i class="fab fa-instagram"  style="font-size:28px;"></i> Instagram</a>
+					</p>
+                </div>
+                <div>
+                    <!--Contact Information-->
+                    <h2>Contact</h2>
+                    <p>
+                        <i class="fab fa-whatsapp"></i> :
+                        <a href="tel:85285227718" class="white">(+852) 6161 2623</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker"></i> :
+                        Based in Hong Kong, Singapore, and Taipei
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i> :
+                        <a href="mailto:info@zmsedu.com" class="white">info@zmsedu.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class='splitter'></div>
+            <!--Copyright Notice-->
+            <div id="copyright">
+                Copyright &copy;
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+                ZMS
+                <div>
+                    <a href="#" onclick="jumpto('#component-banner')">
+                        <span class="material-icons white big">
+                            keyboard_arrow_up
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--load the jQuery and main JavaScript at the end to optimize loading time-->
+    <script type="text/javascript" src="./libs/jQuery.js"></script>
+    <script type="text/javascript" src="./libs/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./libs/d3.v5.min.js"></script>
+    <script type="text/javascript" src="./libs/venn.min.js"></script>
+    <script>
+        // /////
+        // MAD-SELECT
+        var madSelectHover = 0;
+        $(".mad-select").each(function () {
+            var $input = $(this).find("input"),
+                $ul = $(this).find("> ul"),
+                $ulDrop = $ul.clone().addClass("mad-select-drop");
+            $(this)
+                .append('<i class="material-icons">arrow_drop_down</i>', $ulDrop)
+                .on({
+                    hover: function () {
+                        madSelectHover ^= 1;
+                    },
+                    click: function () {
+                        $ulDrop.toggleClass("show");
+                    }
+                });
+            // PRESELECT
+            $ul.add($ulDrop).find("li[data-value='" + $input.val() + "']").addClass("selected");
+            // MAKE SELECTED
+            $ulDrop.on("click", "li", function (evt) {
+                evt.stopPropagation();
+                $input.val($(this).data("value")); // Update hidden input value
+                $ul.find("li").eq($(this).index()).add(this).addClass("selected")
+                    .siblings("li").removeClass("selected");
+            });
+            // UPDATE LIST SCROLL POSITION
+            $ul.on("click", function () {
+                var liTop = $ulDrop.find("li.selected").position().top;
+                $ulDrop.scrollTop(liTop + $ulDrop[0].scrollTop);
+            });
+        });
+        // CLOSE ALL OPNED
+        $(document).on("mouseup", function () {
+            if (!madSelectHover) $(".mad-select-drop").removeClass("show");
+        });
+    </script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script src="./bower_components/particles.js/particles.js"></script>
+    <script src="./bower_components/particles.js/demo/js/app.js"></script>
+
+    
+</body>
+
+</html>
