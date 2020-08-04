@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <html lang="en">
@@ -49,19 +48,29 @@
     <!--Some hard coded styles to disable bubble click in quotes carousel-->
     <!-- Facebook Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window,document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '314391303281011'); 
-      fbq('track', 'PageView');
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '314391303281011');
+        fbq('track', 'PageView');
     </script>
     <noscript>
-      <img height="1" width="1" src="https://www.facebook.com/tr?id=314391303281011&ev=PageView&noscript=1"/>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=314391303281011&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
     <style>
@@ -321,7 +330,7 @@ MAD-SELECT by Roko CB
                     <h2>“Not anymore”</h2>
                     <div class='splitter hidemobile'></div>
                     <div>
-                        <a href="#" onclick="jumpto('#component-do')">
+                        <a href="#" onclick="jumpto('#component-how')">
                             <span class="material-icons white big">
                                 arrow_drop_down_circle
                             </span>
@@ -332,110 +341,7 @@ MAD-SELECT by Roko CB
             </div>
 
         </div>
-
-        <div id="component-do">
-            <div class='splitter'></div>
-            <h1>What we do</h1>
-            <hr class="white">
-            <div class="grid-container-2">
-                <!-- Interactive Venn Diagram 2 Starts-->
-                <div id="venn"></div>
-                <!--Quotes-->
-                <div id="quotecontainer">
-                    <div class="carousel-class">
-                        <div>
-                            <h1>1. Academics</h1>
-                            <p>1-on-1 tutorials on international curricula, including but not limited to IB, GCSE,
-                                A-Level, and AP</p>
-                            <br>
-                            <p class="quote">It's hard to find the right academic support in a boarding school. With ZMS
-                                I can have regular tutorials virtually with an attentive tutor who went to my dream
-                                school.
-                            </p>
-                        </div>
-                        <div>
-                            <h1>2. Interest</h1>
-                            <p>Choosing among majors but not sure what they actually entail? We provide introductory
-                                courses for a variety of majors by leveraging our vast OxBridge/Ivy League network.</p>
-                            <br>
-                            <p class="quote">I have a hard time choosing between Law and Philosophy for my UK
-                                application. ZMS's classes let me know what to expect and which is a better fit.</p>
-                        </div>
-                        <div>
-                            <h1>3. Portfolio</h1>
-                            <p>You know what to pursue, but to succeed you need to show the admission officer your
-                                dedication by building a portfolio. We have the right advisor for you.</p>
-                            <br>
-                            <p class="quote">I'm into coding and my brother likes investing. With guidance I have a
-                                collection of cool coding projects while my brother is building his mock investment
-                                portfolio.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-container-2">
-                <!-- Interactive Venn Diagram Starts (old)-->
-                <!--<div>
-					<div class="desktop-venn hidemobilevenn" style="position: relative;">
-						
-						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-interest');$('.carousel-class').slick('slickGoTo', 0);" style="top:115px;left:90px;padding:10px 30px 30px 0px;">
-							Interest
-						</a>
-						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-portfolio');$('.carousel-class').slick('slickGoTo', 1);" style="top:115px;right:80px;padding:10px 0px 30px 30px;">
-							Portfolio
-						</a>
-						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-fit')" style="top:110px;right:210px;padding:10px 0px 20px 0px;">
-							Fit
-						</a>
-						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-success')" style="top:175px;right:200px;padding:5px 0px 5px 0px;">
-							ZMS
-						</a>
-						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-motivation')" style="top:225px;left:110px;padding:0px 10px 10px 5px;transform: rotate(-30deg);">
-							Motivation
-						</a>
-						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-competence')" style="top:225px;right:95px;padding:0px 0px 10px 0px;transform: rotate(30deg);">
-							Competence
-						</a>
-						<a href="#component-do" class="venn-btn" onmouseover="vennhighlight('venn-academics');$('.carousel-class').slick('slickGoTo', 2);" style="top:285px;right:170px;padding:20px 5px 20px 10px">
-							Academics
-						</a>
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="460px" width="460px" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<defs>
-								<style type="text/css">
-									path {
-										fill: transparent;
-										stroke: #fff;
-										stroke-width: 0.5;
-									}
-
-								</style>
-							</defs>
-							<path id="venn-interest" d="M 50 8 A 30 30 0 1 0 21 59 30 30 0 0 1 41 36 30 30 0 0 1 50 8" />
-							<path id="venn-fit" d="M 50 8 A 30 30 0 0 0 41 36 30 30 0 0 1 59 36 30 30 0 0 0 50 8" />
-							<path id="venn-portfolio" d="M 50 8 A 30 30 0 1 1 79 59 30 30 0 0 0 59 36 30 30 0 0 0 50 8" />
-							<path id="venn-motivation" d="M 50 52 A 30 30 0 0 1 21 59 30 30 0 0 1 41 36 30 30 0 0 0 50 52" />
-							<path id="venn-success" d="M 50 52 A 30 30 0 0 1 41 36 30 30 0 0 1 59 36 30 30 0 0 1 50 52" />
-							<path id="venn-competence" d="M 50 52 A 30 30 0 0 0 79 59 30 30 0 0 0 59 36 30 30 0 0 1 50 52" />
-							<path id="venn-academics" d="M 21 59 A 30 30 0 1 0 79 59 30 30 0 0 1 50 52 30 30 0 0 1 21 59" />
-						</svg>
-					</div>
-					<div class="showonlymobilevenn">
-						<img src="img/vennmobile.png">
-					</div>
-				</div>-->
-                <!--Venn Diagram Ends-->
-            </div>
-            <div>
-                <a href="#" onclick="jumpto('#component-how')">
-                    <span class="material-icons white big">
-                        arrow_drop_down_circle
-                    </span>
-                </a>
-            </div>
-            <div class='splitter hidemobile'></div>
-        </div>
+       
         <div id="component-how">
             <div class='splitter'></div>
             <h1>How we help you succeed</h1>
@@ -631,7 +537,8 @@ MAD-SELECT by Roko CB
                         </table>
                         -->
 
-                        <table style="width:100%;padding:0px;margin:0px;border-style: none;font-family:'Bungee Hairline';-webkit-text-fill-color: inherit;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: inherit;">
+                        <table
+                            style="width:100%;padding:0px;margin:0px;border-style: none;font-family:'Bungee Hairline';-webkit-text-fill-color: inherit;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: inherit;">
                             <tr>
                                 <td>I am a</td>
                                 <td>
@@ -646,7 +553,7 @@ MAD-SELECT by Roko CB
                             </tr>
                         </table>
                     </div>
-                    
+
                     <div class="form__group field">
                         <table style="width:100%;padding:0px;margin:0px;border-style: none;">
                             <tr>
@@ -732,10 +639,12 @@ MAD-SELECT by Roko CB
                     <p>
                         Find us on
                         <br><br>
-                        <a style="color:#fff" href="https://www.facebook.com/zmsedu/" target="_blank"><i class="fab fa-facebook-f" style="font-size:28px;"></i> Facebook </a>
+                        <a style="color:#fff" href="https://www.facebook.com/zmsedu/" target="_blank"><i
+                                class="fab fa-facebook-f" style="font-size:28px;"></i> Facebook </a>
                         <br>
-                        <a style="color:#fff" href="https://www.instagram.com/zmseducation/" target="_blank"><i class="fab fa-instagram"  style="font-size:28px;"></i> Instagram</a>
-					</p>
+                        <a style="color:#fff" href="https://www.instagram.com/zmseducation/" target="_blank"><i
+                                class="fab fa-instagram" style="font-size:28px;"></i> Instagram</a>
+                    </p>
                 </div>
                 <div>
                     <!--Contact Information-->
@@ -821,7 +730,7 @@ MAD-SELECT by Roko CB
     <script src="./bower_components/particles.js/particles.js"></script>
     <script src="./bower_components/particles.js/demo/js/app.js"></script>
 
-    
+
 </body>
 
 </html>
