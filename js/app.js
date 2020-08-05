@@ -30,9 +30,10 @@ function loginboxclose() {
 }
 
 //Overlay
-function on(header,sentence) {
+function on(header,imgurl,sentence) {
+    var content="<h1>"+header+"</h1>"+"<img src='"+imgurl+"' height='30%'>"+sentence;
     document.getElementById("component-popup").style.display = "block";
-    document.getElementById("component-popup").innerHTML = header+"<br>"+sentence;
+    document.getElementById("component-popup").innerHTML = content;
 }
   
 function off() {
