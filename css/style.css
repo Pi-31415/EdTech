@@ -162,7 +162,6 @@ input[type=text]:focus {
   padding: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  text-decoration: underline;
 }
 
 .subject-taster-description {
@@ -645,6 +644,11 @@ input[type=text]:focus {
 }
 
 .subject-taster-icons:hover {
+  cursor: pointer;
+}
+
+.tutorial-badge:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 
