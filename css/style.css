@@ -159,6 +159,7 @@ input[type=text]:focus {
 }
 
 .subject-taster-header {
+  font-size: 1.3em;
   padding: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -671,7 +672,6 @@ input[type=text]:focus {
 }
 
 .tutorial-badge:hover {
-  text-decoration: underline;
   cursor: pointer;
 }
 
