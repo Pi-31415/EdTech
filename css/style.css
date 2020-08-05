@@ -684,12 +684,12 @@ input[type=text]:focus {
   overflow: auto;
 }
 
-#component-middleschool:hover {
+#component-middleschool:hover, #component-middleschool:active {
   filter: grayscale(0%) brightness(100%);
   transition-duration: 1s;
 }
 
-#component-highschool:hover {
+#component-highschool:hover, #component-highschool:active {
   filter: grayscale(0%) brightness(100%);
   transition-duration: 1s;
 }
