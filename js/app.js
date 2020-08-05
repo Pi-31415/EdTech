@@ -31,7 +31,7 @@ function loginboxclose() {
 
 //Overlay
 function on(header,imgurl,sentence) {
-    var content="<div id='offbtn' onclick='off()'>X</div><br>"+"<h1>"+header+"</h1>"+"<img style='margin-right:30px' src='"+imgurl+"' height='200px'><br><br>"+sentence;
+    var content="<div id='offbtn' onclick='off()'>X</div><br>"+"<h1>"+header+"</h1>"+"<img class='tutimage' style='margin-right:30px' src='"+imgurl+"'><br><br>"+sentence;
     document.getElementById("component-popup").style.display = "block";
     document.getElementById("component-popup").innerHTML = content;
 }

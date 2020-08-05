@@ -243,6 +243,10 @@ input[type=text]:focus {
 }
 
 @media screen and (max-width: 1400px) {
+  .tutimage {
+    width: 40vw;
+  }
+
   .biography {
     display: none;
   }
@@ -306,6 +310,10 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 1024px) {
+  .tutimage {
+    width: 50vw;
+  }
+
   .biography {
     display: none;
   }
@@ -508,10 +516,11 @@ input[type=text]:focus {
 }
 
 #component-popup {
+  text-align: center;
   position: fixed;
   display: none;
   width: 90vw;
-  height: 80vh;
+  height: 100vh;
   top: 70px;
   padding: 30px;
   right: 5vw;
@@ -670,7 +679,18 @@ input[type=text]:focus {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%) brightness(150%);
+  filter: grayscale(100%) brightness(200%);
+  transition-duration: 1s;
+}
+
+#component-middleschool:hover {
+  filter: grayscale(0%) brightness(150%);
+  transition-duration: 1s;
+}
+
+#component-highschool:hover {
+  filter: grayscale(0%) brightness(100%);
+  transition-duration: 1s;
 }
 
 #component-highschool {
@@ -679,7 +699,8 @@ input[type=text]:focus {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%) brightness(150%);
+  filter: grayscale(100%) brightness(200%);
+  transition-duration: 1s;
 }
 
 #component-tagline {
