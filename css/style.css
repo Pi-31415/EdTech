@@ -243,10 +243,6 @@ input[type=text]:focus {
 }
 
 @media screen and (max-width: 1400px) {
-  #component-popup {
-    height: 80vh;
-  }
-
   .biography {
     display: none;
   }
@@ -310,10 +306,6 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 1024px) {
-  #component-popup {
-    height: 90vh;
-  }
-
   .biography {
     display: none;
   }
@@ -338,10 +330,6 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 600px) {
-  #component-popup {
-    height: 90vh;
-  }
-
   .biography {
     display: none;
   }
@@ -388,10 +376,6 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 450px) {
-  #component-popup {
-    height: 90vh;
-  }
-
   .grid-container--tutorial-3 {
     grid-template-columns: auto;
     margin-left: auto;
@@ -528,7 +512,7 @@ input[type=text]:focus {
   display: none;
   width: 90vw;
   height: 80vh;
-  top: 100px;
+  top: 70px;
   padding: 30px;
   right: 5vw;
   bottom: 0;
@@ -685,7 +669,6 @@ input[type=text]:focus {
   color: #ffffff;
   font-size: 1.2em;
   width: 100vw;
-  height: 100vh;
   text-align: center;
   z-index: -2;
 }
