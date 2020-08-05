@@ -29,6 +29,16 @@ function loginboxclose() {
     //$(".content").show();
 }
 
+//Overlay
+function on(header,sentence) {
+    document.getElementById("component-popup").style.display = "block";
+    document.getElementById("component-popup").innerHTML = header+"<br>"+sentence;
+}
+  
+function off() {
+    document.getElementById("component-popup").style.display = "none";
+}
+
 //These are pseudo functions to demonstrate login and schedule
 function login() {
     //array to validate conditions

@@ -346,21 +346,23 @@ MAD-SELECT by Roko CB
         </div>
 
 
+        <div id="component-popup" onclick="off()">
+            asdf
+        </div>
+
+        
+
         <div id="component-tutorials">
             <div class='splitter'></div>
             <p>Exciting and unique classes offered by very passionate OxBridge / Ivy League graduates
                 for middle and high school students</p>
             <hr class="white">
-
             <!--Logo Begin-->
             <h2><i>STEM</i></h2>
             <div class="grid-container--tutorial-3">
-                <div>
-                    <img src="img/icon_coding.png" width="60px">
-                    <p class="subject-taster-header">Game Development
-                    </p>
-                    <p>Mini-game development provides a fun and interactive way of learning basic concepts and applications of programming. Upon completion, students will be able to build classic games like Hangman, Snakes and Alien Invaders using Python.
-                    </p>
+                <div onclick="on('Game Development','Mini-game development provides a fun and interactive way of learning basic concepts and applications of programming. Upon completion, students will be able to build classic games like Hangman, Snakes and Alien Invaders using Python.')">
+                    <img src="img/icon_coding.png" width="60px" class="subject-taster-icons" >
+                    <p class="subject-taster-header" class="subject-taster-icons" >Game Development</p>
                 </div>
                 <div>
                     <img src="img/icon_excel.png" width="60px">
@@ -454,7 +456,7 @@ MAD-SELECT by Roko CB
             <!--Logo Ends-->
 
             <div class='splitter hidemobile'></div>
-            <a href="#" onclick="jumpto('#component-refund')">
+            <a href="#" onclick="jumpto('#component-about')">
                 <span class="material-icons white big">
                     arrow_drop_down_circle
                 </span>
@@ -505,7 +507,7 @@ MAD-SELECT by Roko CB
             </div>
             <div class='splitter hidemobile'></div>
             <div>
-                <a href="#" onclick="jumpto('#component-tutorials')">
+                <a href="#" onclick="jumpto('#component-refund')">
                     <span class="material-icons primary big">
                         arrow_drop_down_circle
                     </span>
@@ -640,8 +642,19 @@ MAD-SELECT by Roko CB
                         <table style="width:100%;padding:0px;margin:0px;border-style: none;">
                             <tr>
                                 <td>
+                                    <input type="input" class="form__field" name="age" id='age'
+                                        placeholder="Age of Student" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="form__group field">
+                        <table style="width:100%;padding:0px;margin:0px;border-style: none;">
+                            <tr>
+                                <td>
                                     <textarea id="howhelp" class="form__field" name="howhelp" rows="4"
-                                        placeholder="How can we help you?"></textarea>
+                                        placeholder="What excites you?"></textarea>
                                 </td>
                             </tr>
                         </table>
@@ -665,13 +678,10 @@ MAD-SELECT by Roko CB
                 <div>
                     <h2>Sections</h2>
                     <p>
-                        <a href="#" class="white" onclick="jumpto('#component-do')">What we do</a>
-                    </p>
-                    <p>
                         <a href="#" class="white" onclick="jumpto('#component-about')">Who we are</a>
                     </p>
                     <p>
-                        <a href="#" class="white" onclick="jumpto('#component-tutorials')">Available Tutorials</a>
+                        <a href="#" class="white" onclick="jumpto('#component-tutorials')">Classes Offered</a>
                     </p>
                     <br>
                     <p>
