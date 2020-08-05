@@ -665,10 +665,21 @@ input[type=text]:focus {
 }
 
 #component-middleschool {
-  background-image: url("../img/pen.jpg");
+  color: #000;
+  background-image: url("../img/middle.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  filter: grayscale(100%) brightness(150%);
+}
+
+#component-highschool {
+  color: #000;
+  background-image: url("../img/high.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(150%);
 }
 
 #component-tagline {
