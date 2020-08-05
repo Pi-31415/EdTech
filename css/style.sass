@@ -605,9 +605,10 @@ input[type=text]:focus
 	background-position: center
 	filter: grayscale(100%) brightness(200%)
 	transition-duration: 1s
+	overflow: auto
 
 #component-middleschool:hover
-	filter: grayscale(0%) brightness(150%)
+	filter: grayscale(0%) brightness(100%)
 	transition-duration: 1s
 
 #component-highschool:hover
@@ -622,6 +623,7 @@ input[type=text]:focus
 	background-position: center
 	filter: grayscale(100%) brightness(200%)
 	transition-duration: 1s
+	overflow: auto
 
 #component-tagline
 	background: $secondary-color
@@ -630,6 +632,12 @@ input[type=text]:focus
 	width:100vw
 	text-align: center
 	z-index: -2
+
+.paper
+	background-color:#fff
+	width: 50vw
+	padding: 20px
+	opacity: 0.8
 
 #component-tagline h1,h2,h3,p
 	margin-left:20px
