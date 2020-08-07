@@ -243,6 +243,10 @@ input[type=text]:focus {
 }
 
 @media screen and (max-width: 1400px) {
+  #popup-inside {
+    width: 60vw;
+  }
+
   .tutimage {
     width: 40vw;
   }
@@ -274,6 +278,10 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 1200px) {
+  #popup-inside {
+    width: 60vw;
+  }
+
   .biography {
     display: none;
   }
@@ -310,6 +318,10 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 1024px) {
+  #popup-inside {
+    width: 90vw;
+  }
+
   .tutimage {
     width: 50vw;
   }
@@ -338,6 +350,10 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 600px) {
+  #popup-inside {
+    width: 90vw;
+  }
+
   .biography {
     display: none;
   }
@@ -519,15 +535,22 @@ input[type=text]:focus {
   text-align: center;
   position: fixed;
   display: none;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   top: 70px;
-  padding: 30px;
-  right: 5vw;
+  right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
   z-index: 100;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#popup-inside {
+  padding: 30px;
+  margin-top: 20px;
+  background-color: #ccc;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar {
