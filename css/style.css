@@ -246,6 +246,12 @@ input[type=text]:focus {
   #popup-inside {
     width: 60vw;
   }
+
+  .tutimage {
+    width: 20vw;
+    float: left;
+    overflow: auto;
+  }
 }
 @media screen and (max-width: 1400px) {
   #popup-inside {
@@ -253,7 +259,7 @@ input[type=text]:focus {
   }
 
   .tutimage {
-    width: 40vw;
+    width: 30vw;
   }
 
   .biography {
@@ -328,7 +334,7 @@ input[type=text]:focus {
   }
 
   .tutimage {
-    width: 50vw;
+    width: 30vw;
   }
 
   .biography {
@@ -355,6 +361,11 @@ input[type=text]:focus {
   }
 }
 @media screen and (max-width: 600px) {
+  .tutimage {
+    width: 70vw;
+    float: none;
+  }
+
   #popup-inside {
     width: 90vw;
   }
@@ -556,6 +567,7 @@ input[type=text]:focus {
   background-color: #fff;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
 }
 
 .navbar {
