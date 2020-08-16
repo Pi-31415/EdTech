@@ -745,6 +745,24 @@ MAD-SELECT by Roko CB
     <script type="text/javascript" src="./libs/slick/slick.min.js"></script>
     <script type="text/javascript" src="./libs/d3.v5.min.js"></script>
     <script type="text/javascript" src="./libs/venn.min.js"></script>
+    <!--Activity Track-->
+    <script>
+        function track() {
+            axios.post('https://zmsedu.com/api/get_web_log', {
+                    ID: 'zms_id',
+                })
+                .then(function (response) {
+                    //2020-08-16T11:20:27.469Z
+                    responsedata = response.data.LOG;
+                    document.getElementById("loaderbar").innerHTML = "";
+                    update_chart(responsedata);
+                    update_table(responsedata);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+    </script>
     <script>
         // /////
         // MAD-SELECT
