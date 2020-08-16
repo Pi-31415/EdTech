@@ -753,11 +753,7 @@ MAD-SELECT by Roko CB
                     ACTIVITY: 'Visited Launch Page'
                 })
                 .then(function (response) {
-                    //2020-08-16T11:20:27.469Z
-                    responsedata = response.data.LOG;
-                    document.getElementById("loaderbar").innerHTML = "";
-                    update_chart(responsedata);
-                    update_table(responsedata);
+                    console.log("Tracked");
                 })
                 .catch(function (error) {
                     console.log(error);
