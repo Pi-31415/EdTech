@@ -748,8 +748,9 @@ MAD-SELECT by Roko CB
     <!--Activity Track-->
     <script>
         function track() {
-            axios.post('https://zmsedu.com/api/get_web_log', {
-                    ID: 'zms_id',
+            axios.post('https://zmsedu.com/api/web_log', {
+                    ID: 'zms_visit_page',
+                    ACTIVITY: 'Visited Launch Page'
                 })
                 .then(function (response) {
                     //2020-08-16T11:20:27.469Z
