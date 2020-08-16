@@ -188,7 +188,7 @@ MAD-SELECT by Roko CB
 
 </head>
 
-<body onresize="venn_resize();draw_venn();" onload="venn_resize();draw_venn();">
+<body onload="track_visit()">
     <!-- Log In Popup -->
     <div id="component-loginbox">
         <div class='splitter'></div>
@@ -747,7 +747,7 @@ MAD-SELECT by Roko CB
     <script type="text/javascript" src="./libs/venn.min.js"></script>
     <!--Activity Track-->
     <script>
-        function track() {
+        function track_visit() {
             axios.post('https://zmsedu.com/api/web_log', {
                     ID: 'zms_visit_page',
                     ACTIVITY: 'Visited Launch Page'
