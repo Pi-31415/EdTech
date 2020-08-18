@@ -748,6 +748,11 @@ MAD-SELECT by Roko CB
     <!--Activity Track-->
     <script>
         function track_visit() {
+            //Use the current visit time and encode it to base 64 to get a random unique string
+            var d = new Date();
+            var identifier = btoa(d);
+            
+
             axios.post('https://zmsedu.com/api/web_log', {
                     ID: 'zms_visit_page',
                     ACTIVITY: 'Visited Launch Page'
@@ -763,7 +768,7 @@ MAD-SELECT by Roko CB
         function usr_click(subject) {
             axios.post('https://zmsedu.com/api/web_log', {
                     ID: 'zms_visit_page',
-                    ACTIVITY: 'Clicked-'+subject
+                    ACTIVITY: 'Clicked-' + subject
                 })
                 .then(function (response) {
                     console.log("Tracked click");
