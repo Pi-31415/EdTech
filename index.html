@@ -759,7 +759,7 @@ MAD-SELECT by Roko CB
 
         function track_visit() {
             //Use the current visit time and encode it to base 64 to get a random unique string
-            if (localStorage.getItem("Viewer_ID") === null) {
+            if (localStorage.getItem("Viewer_ID") === null || localStorage.getItem("Viewer_ID") === "undefined") {
                 var d = new Date();
                 var identifier = btoa(d);
                 localStorage.setItem("Viewer_ID", identifier);
@@ -770,24 +770,23 @@ MAD-SELECT by Roko CB
                     ACTIVITY: 'Visited Launch Page :' + localStorage.getItem("Viewer_ID")
                 })
                 .then(function (response) {
+                    //Begin a new session each time the page is loaded
                     console.log("Tracked");
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-
-
-
-            var d = new Date();
-            var identifier = btoa(d);
-            localStorage.setItem("Viewer_ID", identifier);
-
-            axios.post('https://zmsedu.com/api/web_log', {
-                    ID: 'zms_sessions',
-                    ACTIVITY: 'Begin Session :' + localStorage.getItem("Viewer_ID")
-                })
-                .then(function (response) {
-                    console.log("Tracked");
+                    var d2 = new Date();
+                    var identifier2 = btoa(d2 + makeid(10));
+                    //console.log(identifier2);
+                    localStorage.setItem("SESSION_ID", identifier2);
+                    localStorage.setItem("SESSION_CLICK", "false");
+                    axios.post('https://zmsedu.com/api/web_log', {
+                            ID: 'sessions_test',
+                            ACTIVITY: 'Begin Session :' + localStorage.getItem("SESSION_ID")
+                        })
+                        .then(function (response) {
+                            console.log("Session Began - " + localStorage.getItem("SESSION_ID"));
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -800,7 +799,7 @@ MAD-SELECT by Roko CB
                     ACTIVITY: 'Clicked-' + subject + " :" + localStorage.getItem("Viewer_ID")
                 })
                 .then(function (response) {
-                    console.log("Tracked click");
+                    console.log("Tracked click on dashboard");
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -846,7 +845,6 @@ MAD-SELECT by Roko CB
         });
     </script>
     <script type="text/javascript" src="./js/app.js"></script>
-    <script src="./bower_components/particles.js/demo/js/app.js"></script>
 
 
 </body>
