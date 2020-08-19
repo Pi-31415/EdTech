@@ -793,6 +793,19 @@ MAD-SELECT by Roko CB
                 });
         }
 
+        function session_click() {
+            axios.post('https://zmsedu.com/api/web_log', {
+                    ID: 'sessions_test',
+                    ACTIVITY: 'Session Click :' + localStorage.getItem("SESSION_ID")
+                })
+                .then(function (response) {
+                    console.log("Session Click - " + localStorage.getItem("SESSION_ID"));
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+
         function usr_click(subject) {
             axios.post('https://zmsedu.com/api/web_log', {
                     ID: 'zms_visit_page',
